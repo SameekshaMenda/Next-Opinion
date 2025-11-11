@@ -1,0 +1,782 @@
+Doctor's Name,Speciality,Keywords,Experience (Years),Rating,Location,Treated_Diseases,Phone,Email
+Dr. Arjun Sharma,Cardiologist,"Chest Pain, Palpitations, Breathlessness, High Cholesterol, ECG",15,4.7,Mumbai,"Hypertension, Coronary Artery Disease, Heart Failure",+91 98765 43210,arjunsharma@heartclinic.com
+Dr. Priya Patel,Dermatologist,"Acne, Eczema, Psoriasis, Hair Loss, Skin Allergies",8,4.2,Delhi,"Skin Infections, Dermatitis, Pigmentation Disorders",+91 99876 54321,priyapatel@skincaredelhi.com
+Dr. Rohan Verma,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's",22,4.9,Bangalore,"Epilepsy, Multiple Sclerosis, Neuropathy",+91 97654 32109,rohanverma@brainhealth.com
+Dr. Anjali Singh,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",12,4.5,Chennai,"Uterine Fibroids, Endometriosis, Ovarian Cysts",+91 96543 21098,anjalisingh@womenshealth.in
+Dr. Vikram Reddy,Orthopedist,"Knee Pain, Back Pain, Arthritis, Fractures, Sports Injuries",28,4.8,Hyderabad,"Osteoarthritis, Rheumatoid Arthritis, Spinal Stenosis",+91 95432 10987,vikramreddy@boneandjoint.com
+Dr. Neha Kapoor,Pediatrician,"Fever, Cough, Cold, Vaccinations, Growth Issues",7,4.3,Kolkata,"Asthma, Chickenpox, Measles",+91 94321 09876,nehakapoor@kidshealth.org
+Dr. Suresh Kumar,Gastroenterologist,"Abdominal Pain, Indigestion, Constipation, Diarrhea, Ulcers",19,4.6,Pune,"Acid Reflux, Irritable Bowel Syndrome, Crohn's Disease",+91 93210 98765,sureshkumar@digestivehealth.com
+Dr. Deepika Joshi,Endocrinologist,"Diabetes, Thyroid Problems, Hormonal Imbalance, Weight Gain",14,4.4,Ahmedabad,"Hyperthyroidism, Hypothyroidism, PCOS",+91 92109 87654,deepikajoshi@endohealth.in
+Dr. Amit Patel,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems, Incontinence",10,4.1,Jaipur,"Benign Prostatic Hyperplasia, Urinary Tract Infections, Kidney Cancer",+91 91098 76543,amitpatel@urologyclinic.com
+Dr. Ritu Sharma,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections, Dry Eyes",25,4.7,Lucknow,"Diabetic Retinopathy, Macular Degeneration, Conjunctivitis",+91 90987 65432,ritusharma@eyecarecenter.com
+Dr. Rahul Gupta,Cardiologist,"Shortness of Breath, Chest Discomfort, Arrhythmias, High Blood Pressure",9,4.0,Mumbai,"Atrial Fibrillation, Cardiomyopathy, Valvular Heart Disease",+91 98877 66554,rahulgupta@cardio.in
+Dr. Sunita Nair,Dermatologist,"Rash, Itching, Skin Lesions, Rosacea, Sun Damage",16,4.6,Delhi,"Acne Scars, Eczema, Fungal Infections",+91 99766 55443,sunitanair@skindocs.com
+Dr. Manish Kumar,Neurologist,"Dizziness, Numbness, Tremors, Memory Loss, Multiple Sclerosis",32,4.8,Bangalore,"Amyotrophic Lateral Sclerosis (ALS), Myasthenia Gravis, Peripheral Neuropathy",+91 97766 55442,manishkumar@neurocare.net
+Dr. Shweta Desai,Gynecologist,"Pelvic Pain, Irregular Periods, Ovarian Cysts, Hysterectomy, Fertility Treatment",6,4.2,Chennai,"Polycystic Ovary Syndrome (PCOS), Premenstrual Syndrome (PMS), Vaginitis",+91 96655 44331,shwetadesai@womenshealth.org
+Dr. Vivek Iyer,Orthopedist,"Joint Pain, Muscle Sprains, Ligament Tears, Hip Replacement, Shoulder Injuries",18,4.5,Hyderabad,"Carpal Tunnel Syndrome, Rotator Cuff Tears, Spinal Disc Herniation",+91 95544 33220,vivekiyer@orthopedics.com
+Dr. Divya Menon,Pediatrician,"Developmental Delays, Childhood Illnesses, Immunizations, Nutrition, Allergies",11,4.4,Kolkata,"Croup, Fifth Disease, Roseola",+91 94433 22119,divyamenon@pediatrics.in
+Dr. Karan Verma,Gastroenterologist,"Heartburn, Bloating, Nausea, Vomiting, Liver Disease",24,4.9,Pune,"Celiac Disease, Ulcerative Colitis, Hepatitis",+91 93322 11008,karanverma@gastroclinic.com
+Dr. Aishwarya Rao,Endocrinologist,"Metabolic Disorders, Pituitary Problems, Adrenal Gland Issues, Osteoporosis",5,3.9,Ahmedabad,"Gestational Diabetes, Cushing's Syndrome, Addison's Disease",+91 92211 00997,aishwaryarao@endocrinology.net
+Dr. Sachin Joshi,Urologist,"Bladder Problems, Erectile Dysfunction, Male Infertility, Prostate Cancer",17,4.7,Jaipur,"Overactive Bladder, Prostate Cancer, Testicular Cancer",+91 91100 99886,sachinjoshi@urology.org
+Dr. Tanvi Patel,Ophthalmologist,"Refractive Errors, Retinal Detachment, Eye Trauma, Corneal Diseases",3,3.7,Lucknow,"Age-related Macular Degeneration (AMD), Glaucoma, Cataracts",+91 90099 88775,tanvipatel@eyeclinic.com
+Dr. Deepak Mishra,Cardiologist,"Angina, Congestive Heart Failure, High Triglycerides, Pacemaker Implantation",21,4.8,Mumbai,"Atherosclerosis, Cardiac Arrhythmias, Peripheral Artery Disease (PAD)",+91 98987 65433,deepakmishra@heartcare.com
+Dr. Kavita Singh,Dermatologist,"Warts, Moles, Skin Cancer Screening, Chemical Peels, Laser Hair Removal",13,4.5,Delhi,"Melanoma, Basal Cell Carcinoma, Squamous Cell Carcinoma",+91 99677 65422,kavitasingh@dermacare.in
+Dr. Sanjay Reddy,Neurologist,"Epilepsy, Multiple Sclerosis, Neuropathy, Alzheimer's Disease, Stroke Rehabilitation",29,4.9,Bangalore,"Frontotemporal Dementia, Lewy Body Dementia, Vascular Dementia",+91 97988 76511,sanjayreddy@neurospecialists.com
+Dr. Lakshmi Iyer,Gynecologist,"Prenatal Care, Postnatal Care, Family Planning, Hysterectomy, Pap Smears",4,4.1,Chennai,"Cervical Dysplasia, Ectopic Pregnancy, Pelvic Inflammatory Disease (PID)",+91 96877 65400,lakshmiiyer@womenshealthclinic.in
+Dr. Rajesh Verma,Orthopedist,"Joint Replacement, Arthroscopy, Sports Medicine, Bone Tumors, Fracture Management",35,4.7,Hyderabad,"Osteomyelitis, Septic Arthritis, Avascular Necrosis",+91 95766 54399,rajeshverma@orthodoc.com
+Dr. Meena Sharma,Pediatrician,"Childhood Vaccinations, Growth Monitoring, Developmental Assessment, Behavioral Issues",2,3.8,Kolkata,"Attention-Deficit/Hyperactivity Disorder (ADHD), Autism Spectrum Disorder (ASD), Cerebral Palsy",+91 94655 43288,meenasharma@pediatrics.net
+Dr. Arvind Kumar,Gastroenterologist,"Colonoscopy, Endoscopy, Liver Biopsy, Inflammatory Bowel Disease, Pancreatitis",26,4.6,Pune,"Primary Biliary Cholangitis (PBC), Autoimmune Hepatitis, Pancreatic Cancer",+91 93544 32177,arvindkumar@gastrodrs.com
+Dr. Smita Desai,Endocrinologist,"Diabetes Management, Thyroid Nodules, Osteoporosis Treatment, Growth Hormone Deficiency",1,3.6,Ahmedabad,"Acromegaly, Conn's Syndrome, Cushing's Disease",+91 92433 21066,smitadesai@endoexperts.com
+Dr. Vineet Kapoor,Urologist,"Kidney Stone Removal, Prostate Enlargement Treatment, Bladder Cancer, Vasectomy",38,5.0,Jaipur,"Benign Prostatic Hyperplasia (BPH), Interstitial Cystitis, Peyronie's Disease",+91 91322 10955,vineetkapoor@urologyassociates.in
+Dr. Shalini Rao,Ophthalmologist,"LASIK Surgery, Cataract Surgery, Glaucoma Treatment, Diabetic Retinopathy Screening",19,4.3,Lucknow,"Branch Retinal Vein Occlusion (BRVO), Central Retinal Vein Occlusion (CRVO), Optic Neuritis",+91 90211 09844,shalinirao@eyeinstitute.com
+Dr. Rohit Khanna,Cardiologist,"Heart Murmurs, Angioplasty, Stent Placement, Cardiac Rehabilitation, Echocardiography",11,4.4,Mumbai,"Mitral Valve Prolapse, Tricuspid Valve Regurgitation, Aortic Stenosis",+91 98101 12233,rohitkhanna@cardiocare.com
+Dr. Maya Sharma,Dermatologist,"Melasma, Vitiligo, Laser Resurfacing, Botox Injections, Fillers",7,4.0,Delhi,"Pityriasis Rosea, Lichen Planus, Seborrheic Dermatitis",+91 99001 12244,mayasharma@skinclinic.in
+Dr. Prashant Singh,Neurologist,"Peripheral Neuropathy, Carpal Tunnel Syndrome, Bell's Palsy, Trigeminal Neuralgia",23,4.7,Bangalore,"Postherpetic Neuralgia, Sciatica, Thoracic Outlet Syndrome",+91 97001 12255,prashantsingh@neurocenter.com
+Dr. Anika Patel,Gynecologist,"Laparoscopic Surgery, In Vitro Fertilization (IVF), Intrauterine Insemination (IUI)",15,4.6,Chennai,"Recurrent Pregnancy Loss, Asherman's Syndrome, Vulvodynia",+91 96001 12266,anikapatel@womenshealth.com
+Dr. Vikram Singh,Orthopedist,"ACL Reconstruction, Meniscus Repair, Rotator Cuff Surgery, Hip Arthroscopy",31,4.9,Hyderabad,"Bursitis, Tendinitis, Plantar Fasciitis",+91 95001 12277,vikramsingh@orthopedicclinic.in
+Dr. Neha Verma,Pediatrician,"Asthma Management, Allergy Testing, Eczema Treatment, Infant Feeding",9,4.2,Kolkata,"Food Allergies, Milk Protein Allergy, Lactose Intolerance",+91 94001 12288,nehaverma@kidscare.org
+Dr. Suresh Sharma,Gastroenterologist,"Endoscopic Ultrasound (EUS), Capsule Endoscopy, Liver Cirrhosis Management",17,4.5,Pune,"Esophageal Varices, Ascites, Hepatic Encephalopathy",+91 93001 12299,sureshsharma@gastrohealth.com
+Dr. Deepika Gupta,Endocrinologist,"Insulin Pump Therapy, Continuous Glucose Monitoring, Thyroid Cancer",6,3.9,Ahmedabad,"Hashimoto's Thyroiditis, Graves' Disease, Parathyroid Disorders",+91 92001 12300,deepikagupta@endoalliance.com
+Dr. Amit Verma,Urologist,"Prostate Biopsy, Robotic Surgery, Ureteroscopy, Male Sexual Dysfunction",33,4.8,Jaipur,"Epididymitis, Hydrocele, Varicocele",+91 91001 12311,amitverma@urologist.net
+Dr. Ritu Kapoor,Ophthalmologist,"Retinal Laser Treatment, Cataract Surgery, Glaucoma Drainage Devices",27,4.7,Lucknow,"Age-Related Macular Degeneration, Diabetic Macular Edema, Retinal Detachment",+91 90001 12322,ritukapoor@eyedoctor.com
+Dr. Rohan Sharma,Cardiologist,"Heart Failure, Valve Disease, Echocardiography, Stress Test, Angiography",18,4.5,Mumbai,"Cardiomyopathy, Congenital Heart Defects, Pericarditis",+91 98765 43211,rohansharma@cardiocenter.com
+Dr. Anjali Verma,Dermatologist,"Acne Treatment, Eczema Management, Psoriasis Therapy, Skin Cancer Screening, Mole Removal",9,4.1,Delhi,"Warts, Rosacea, Seborrheic Dermatitis",+91 99876 54322,anjaliverma@dermaclinic.com
+Dr. Vikram Patel,Neurologist,"Headache, Migraine, Seizures, Stroke, Parkinson's Disease",24,4.8,Bangalore,"Multiple Sclerosis, Alzheimer's Disease, Neuropathy",+91 97654 32110,vikrampatel@neurocare.in
+Dr. Neha Singh,Gynecologist,"Pregnancy Care, Infertility Treatment, Menopause Management, PCOS, Fibroids",13,4.4,Chennai,"Endometriosis, Ovarian Cysts, Pelvic Inflammatory Disease",+91 96543 21109,nehasingh@womensclinic.com
+Dr. Suresh Reddy,Orthopedist,"Knee Pain, Back Pain, Arthritis, Fractures, Sports Injuries",29,4.7,Hyderabad,"Osteoarthritis, Rheumatoid Arthritis, Spinal Stenosis",+91 95432 11098,sureshreddy@boneandjointcenter.com
+Dr. Deepika Kapoor,Pediatrician,"Fever, Cough, Cold, Vaccinations, Growth and Development",8,4.3,Kolkata,"Asthma, Allergies, Chickenpox",+91 94321 10987,deepikakapoor@kidshealthcenter.com
+Dr. Amit Kumar,Gastroenterologist,"Abdominal Pain, Indigestion, Constipation, Diarrhea, Ulcers",20,4.6,Pune,"Acid Reflux, Irritable Bowel Syndrome, Crohn's Disease",+91 93211 09876,amitkumar@digestivehealthclinic.com
+Dr. Ritu Patel,Endocrinologist,"Diabetes, Thyroid Problems, Hormonal Imbalance, Weight Management",15,4.5,Ahmedabad,"Hyperthyroidism, Hypothyroidism, PCOS",+91 92110 98765,ritupatel@endohealthclinic.in
+Dr. Sachin Sharma,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems, Incontinence",11,4.2,Jaipur,"Benign Prostatic Hyperplasia, Urinary Tract Infections, Kidney Cancer",+91 91098 76544,sachinsharma@urologycenter.com
+Dr. Tanvi Kumar,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections, Dry Eyes",26,4.8,Lucknow,"Diabetic Retinopathy, Macular Degeneration, Conjunctivitis",+91 90987 65433,tanvikumar@eyecareclinic.com
+Dr. Deepak Singh,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Cholesterol, ECG",17,4.6,Mumbai,"Hypertension, Coronary Artery Disease, Heart Failure",+91 98876 54323,deepaksingh@heartcare.com
+Dr. Kavita Sharma,Dermatologist,"Acne, Eczema, Psoriasis, Hair Loss, Skin Allergies",10,4.2,Delhi,"Skin Infections, Dermatitis, Pigmentation Disorders",+91 99765 43234,kavitasharma@skincaredelhi.com
+Dr. Sanjay Verma,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's",23,4.9,Bangalore,"Epilepsy, Multiple Sclerosis, Neuropathy",+91 97765 43245,sanjayverma@brainhealth.com
+Dr. Lakshmi Patel,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",14,4.5,Chennai,"Uterine Fibroids, Endometriosis, Ovarian Cysts",+91 96654 32345,lakshmipatel@womenshealth.in
+Dr. Rajesh Kumar,Orthopedist,"Knee Pain, Back Pain, Arthritis, Fractures, Sports Injuries",30,4.8,Hyderabad,"Osteoarthritis, Rheumatoid Arthritis, Spinal Stenosis",+91 95543 23456,rajeshkumar@boneandjoint.com
+Dr. Meena Singh,Pediatrician,"Fever, Cough, Cold, Vaccinations, Growth Issues",9,4.3,Kolkata,"Asthma, Chickenpox, Measles",+91 94432 34567,meenasingh@kidshealth.org
+Dr. Arvind Sharma,Gastroenterologist,"Abdominal Pain, Indigestion, Constipation, Diarrhea, Ulcers",21,4.7,Pune,"Acid Reflux, Irritable Bowel Syndrome, Crohn's Disease",+91 93323 45678,arvindsharma@digestivehealth.com
+Dr. Smita Patel,Endocrinologist,"Diabetes, Thyroid Problems, Hormonal Imbalance, Weight Gain",16,4.6,Ahmedabad,"Hyperthyroidism, Hypothyroidism, PCOS",+91 92213 45679,smitapatel@endohealth.in
+Dr. Vineet Kumar,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems, Incontinence",12,4.4,Jaipur,"Benign Prostatic Hyperplasia, Urinary Tract Infections, Kidney Cancer",+91 91103 45680,vineetkumar@urologyclinic.com
+Dr. Shalini Sharma,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections, Dry Eyes",27,4.9,Lucknow,"Diabetic Retinopathy, Macular Degeneration, Conjunctivitis",+91 90093 45681,shalinisharma@eyecarecenter.com
+Dr. Rohit Singh,Cardiologist,"Shortness of Breath, Chest Discomfort, Arrhythmias, High Blood Pressure",10,4.1,Mumbai,"Atrial Fibrillation, Cardiomyopathy, Valvular Heart Disease",+91 98987 65434,rohitsingh@cardio.in
+Dr. Maya Verma,Dermatologist,"Rash, Itching, Skin Lesions, Rosacea, Sun Damage",17,4.7,Delhi,"Acne Scars, Eczema, Fungal Infections",+91 99677 65433,mayaverma@skindocs.com
+Dr. Prashant Patel,Neurologist,"Dizziness, Numbness, Tremors, Memory Loss, Multiple Sclerosis",33,4.9,Bangalore,"Amyotrophic Lateral Sclerosis (ALS), Myasthenia Gravis, Peripheral Neuropathy",+91 97988 76522,prashantpatel@neurocare.net
+Dr. Anika Kumar,Gynecologist,"Pelvic Pain, Irregular Periods, Ovarian Cysts, Hysterectomy, Fertility Treatment",7,4.3,Chennai,"Polycystic Ovary Syndrome (PCOS), Premenstrual Syndrome (PMS), Vaginitis",+91 96877 65411,anikakumar@womenshealth.org
+Dr. Vikram Sharma,Orthopedist,"Joint Pain, Muscle Sprains, Ligament Tears, Hip Replacement, Shoulder Injuries",19,4.6,Hyderabad,"Carpal Tunnel Syndrome, Rotator Cuff Tears, Spinal Disc Herniation",+91 95766 54300,vikramsharma@orthopedics.com
+Dr. Neha Patel,Pediatrician,"Developmental Delays, Childhood Illnesses, Immunizations, Nutrition, Allergies",12,4.5,Kolkata,"Croup, Fifth Disease, Roseola",+91 94655 43299,nehapatel@pediatrics.in
+Dr. Suresh Verma,Gastroenterologist,"Heartburn, Bloating, Nausea, Vomiting, Liver Disease",25,5.0,Pune,"Celiac Disease, Ulcerative Colitis, Hepatitis",+91 93544 32188,sureshverma@gastroclinic.com
+Dr. Deepika Singh,Endocrinologist,"Metabolic Disorders, Pituitary Problems, Adrenal Gland Issues, Osteoporosis",6,4.0,Ahmedabad,"Gestational Diabetes, Cushing's Syndrome, Addison's Disease",+91 92433 21077,deepikasingh@endocrinology.net
+Dr. Amit Patel,Urologist,"Bladder Problems, Erectile Dysfunction, Male Infertility, Prostate Cancer",18,4.8,Jaipur,"Overactive Bladder, Prostate Cancer, Testicular Cancer",+91 91322 10966,amitpatel@urology.org
+Dr. Ritu Kumar,Ophthalmologist,"Refractive Errors, Retinal Detachment, Eye Trauma, Corneal Diseases",4,3.8,Lucknow,"Age-related Macular Degeneration (AMD), Glaucoma, Cataracts",+91 90211 09855,ritukumar@eyeclinic.com
+Dr. Rohan Reddy,Cardiologist,"Angina, Congestive Heart Failure, High Triglycerides, Pacemaker Implantation",22,4.9,Mumbai,"Atherosclerosis, Cardiac Arrhythmias, Peripheral Artery Disease (PAD)",+91 98101 12235,rohanreddy@heartcare.com
+Dr. Anjali Joshi,Dermatologist,"Warts, Moles, Skin Cancer Screening, Chemical Peels, Laser Hair Removal",14,4.6,Delhi,"Melanoma, Basal Cell Carcinoma, Squamous Cell Carcinoma",+91 99001 12246,anjalijoshi@dermacare.in
+Dr. Vikram Khanna,Neurologist,"Epilepsy, Multiple Sclerosis, Neuropathy, Alzheimer's Disease, Stroke Rehabilitation",30,5.0,Bangalore,"Frontotemporal Dementia, Lewy Body Dementia, Vascular Dementia",+91 97001 12257,vikramkhanna@neurospecialists.com
+Dr. Neha Singh,Gynecologist,"Prenatal Care, Postnatal Care, Family Planning, Hysterectomy, Pap Smears",5,4.2,Chennai,"Cervical Dysplasia, Ectopic Pregnancy, Pelvic Inflammatory Disease (PID)",+91 96001 12268,nehasingh2@womenshealthclinic.in
+Dr. Suresh Sharma,Orthopedist,"Joint Replacement, Arthroscopy, Sports Medicine, Bone Tumors, Fracture Management",36,4.8,Hyderabad,"Osteomyelitis, Septic Arthritis, Avascular Necrosis",+91 95001 12279,sureshsharma2@orthodoc.com
+Dr. Deepika Verma,Pediatrician,"Childhood Vaccinations, Growth Monitoring, Developmental Assessment, Behavioral Issues",3,3.9,Kolkata,"Attention-Deficit/Hyperactivity Disorder (ADHD), Autism Spectrum Disorder (ASD), Cerebral Palsy",+91 94001 12290,deepikaverma@pediatrics.net
+Dr. Amit Kumar,Gastroenterologist,"Colonoscopy, Endoscopy, Liver Biopsy, Inflammatory Bowel Disease, Pancreatitis",27,4.7,Pune,"Primary Biliary Cholangitis (PBC), Autoimmune Hepatitis, Pancreatic Cancer",+91 93001 12301,amitkumar2@gastrodrs.com
+Dr. Ritu Joshi,Endocrinologist,"Diabetes Management, Thyroid Nodules, Osteoporosis Treatment, Growth Hormone Deficiency",2,3.7,Ahmedabad,"Acromegaly, Conn's Syndrome, Cushing's Disease",+91 92001 12312,ritujoshi@endoexperts.com
+Dr. Sachin Patel,Urologist,"Kidney Stone Removal, Prostate Enlargement Treatment, Bladder Cancer, Vasectomy",39,4.9,Jaipur,"Benign Prostatic Hyperplasia (BPH), Interstitial Cystitis, Peyronie's Disease",+91 91001 12323,sachinpatel@urologyassociates.in
+Dr. Tanvi Sharma,Ophthalmologist,"LASIK Surgery, Cataract Surgery, Glaucoma Treatment, Diabetic Retinopathy Screening",20,4.4,Lucknow,"Branch Retinal Vein Occlusion (BRVO), Central Retinal Vein Occlusion (CRVO), Optic Neuritis",+91 90001 12334,tanvisharma@eyeinstitute.com
+---,---,---,---,---,---,---,,
+Dr. Anjali Sharma,Cardiologist,"Chest Pain, Palpitations, High Blood Pressure, Heart Failure",15,4.8,Mumbai,"Coronary Artery Disease, Arrhythmia, Cardiomyopathy",+91 98765 43210,anjali.sharma@heartcare.com
+Dr. Rajesh Kumar,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Skin Cancer, Allergic Reactions, Fungal Infections",+91 99887 76655,rajesh.kumar@skinsolutions.in
+Dr. Priya Verma,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's Disease",22,4.5,Bangalore,"Multiple Sclerosis, Epilepsy, Neuropathy",+91 97654 32109,priya.verma@brainclinic.com
+Dr. Sanjay Patel,Orthopedist,"Joint Pain, Back Pain, Arthritis, Fractures, Sports Injuries",12,4.9,Chennai,"Osteoporosis, Spinal Stenosis, Ligament Tears",+91 96543 21098,sanjay.patel@orthopediccare.com
+Dr. Meera Nair,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS",18,4.7,Kolkata,"Endometriosis, Uterine Fibroids, Ovarian Cysts",+91 95432 10987,meera.nair@womenshealth.in
+Dr. Vivek Singh,Gastroenterologist,"Abdominal Pain, Bloating, Diarrhea, Constipation, GERD",9,4.3,Hyderabad,"Irritable Bowel Syndrome (IBS), Ulcerative Colitis, Crohn's Disease",+91 94321 09876,vivek.singh@digestivecare.com
+Dr. Deepa Reddy,Endocrinologist,"Diabetes, Thyroid Disorders, Hormone Imbalance",14,4.6,Pune,"Hypothyroidism, Hyperthyroidism, Cushing's Syndrome",+91 93210 98765,deepa.reddy@hormoneclinic.com
+Dr. Arvind Joshi,Pulmonologist,"Cough, Shortness of Breath, Asthma, COPD, Pneumonia",25,4.4,Ahmedabad,"Bronchitis, Sleep Apnea, Lung Cancer",+91 92109 87654,arvind.joshi@lungcare.com
+Dr. Lakshmi Menon,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections",11,4.1,Jaipur,"Diabetic Retinopathy, Macular Degeneration, Dry Eye Syndrome",+91 91098 76543,lakshmi.menon@eyecare.com
+Dr. Rohit Khanna,Urologist,"Urinary Infections, Kidney Stones, Prostate Problems",7,4.0,Lucknow,"Erectile Dysfunction, Incontinence, Bladder Cancer",+91 90987 65432,rohit.khanna@urologyclinic.com
+Dr. Shweta Gupta,Pediatrician,"Childhood Illnesses, Vaccinations, Growth Problems",16,4.7,Mumbai,"Asthma, Allergies, Chickenpox",+91 98765 43201,shweta.gupta@kidshealth.com
+Dr. Karthik Iyer,Cardiologist,"High Cholesterol, Angina, Heart Attack, Valve Disease",10,4.9,Delhi,"Atrial Fibrillation, Peripheral Artery Disease, Congenital Heart Defects",+91 99887 76644,karthik.iyer@heartsolutions.in
+Dr. Ananya Das,Dermatologist,"Skin Rashes, Warts, Moles, Pigmentation",6,4.5,Bangalore,"Rosacea, Cellulite, Vitiligo",+91 97654 32198,ananya.das@skinsolutions.in
+Dr. Vikram Shah,Neurologist,"Tremors, Memory Loss, Dizziness, Nerve Pain",13,4.3,Chennai,"Amyotrophic Lateral Sclerosis (ALS), Bell's Palsy, Spinal Cord Injury",+91 96543 21087,vikram.shah@brainclinic.com
+Dr. Neha Reddy,Orthopedist,"Knee Pain, Hip Pain, Shoulder Pain, Ankle Sprains",20,4.6,Kolkata,"Carpal Tunnel Syndrome, Bursitis, Plantar Fasciitis",+91 95432 10976,neha.reddy@orthopediccare.com
+Dr. Aditya Kumar,Gynecologist,"Prenatal Care, Postnatal Care, Pap Smears, Contraception",19,4.8,Hyderabad,"Pelvic Inflammatory Disease (PID), Cervical Dysplasia, Vaginal Infections",+91 94321 09865,aditya.kumar@womenshealth.in
+Dr. Smita Patel,Gastroenterologist,"Heartburn, Indigestion, Nausea, Vomiting",5,4.2,Pune,"Gallstones, Hepatitis, Cirrhosis",+91 93210 98754,smita.patel@digestivecare.com
+Dr. Rohan Sharma,Endocrinologist,"PCOS, Infertility related to hormones, Growth Hormone Deficiency",17,4.7,Ahmedabad,"Addison's Disease, Pituitary Tumors, Hyperparathyroidism",+91 92109 87643,rohan.sharma@hormoneclinic.com
+Dr. Divya Iyer,Pulmonologist,"Chronic Cough, Wheezing, Bronchiectasis, Pulmonary Fibrosis",21,4.5,Jaipur,"Emphysema, Sarcoidosis, Pleural Effusion",+91 91098 76532,divya.iyer@lungcare.com
+Dr. Tarun Kumar,Ophthalmologist,"Refractive Errors, Lazy Eye, Double Vision",9,4.4,Lucknow,"Age-Related Macular Degeneration (AMD), Retinal Detachment, Styes",+91 90987 65421,tarun.kumar@eyecare.com
+Dr. Priya Joshi,Urologist,"Enlarged Prostate, Bladder Control Problems, Kidney Cancer",11,3.8,Mumbai,"Prostatitis, Overactive Bladder, Male Infertility",+91 98765 43199,priya.joshi@urologyclinic.com
+Dr. Amit Verma,Pediatrician,"Fever, Infections, Developmental Delays",14,4.6,Delhi,"Ear Infections, Strep Throat, Flu",+91 99887 76633,amit.verma@kidshealth.com
+Dr. Sunita Menon,Cardiologist,"Arrhythmias, Congestive Heart Failure, Cardiomyopathy",23,4.7,Bangalore,"Aortic Stenosis, Mitral Valve Prolapse, Pericarditis",+91 97654 32187,sunita.menon@heartsolutions.in
+Dr. Rajeshwari Patel,Dermatologist,"Skin Allergies, Hives, Contact Dermatitis",7,4.3,Chennai,"Melasma, Actinic Keratosis, Seborrheic Dermatitis",+91 96543 21076,rajeshwari.patel@skinsolutions.in
+Dr. Mahesh Sharma,Neurologist,"Multiple Sclerosis, Parkinson's disease, Alzheimer's",28,4.9,Kolkata,"Huntington's Disease, Myasthenia Gravis, Peripheral Neuropathy",+91 95432 10965,mahesh.sharma@brainclinic.com
+Dr. Kavita Singh,Orthopedist,"Fractures, Dislocations, Ligament Injuries",15,4.4,Hyderabad,"Scoliosis, Kyphosis, Lordosis",+91 94321 09854,kavita.singh@orthopediccare.com
+Dr. Suresh Iyer,Gynecologist,"Hysterectomy, Oophorectomy, Tubal Ligation",12,4.5,Pune,"Vulvodynia, Adenomyosis, Bartholin's Cyst",+91 93210 98743,suresh.iyer@womenshealth.in
+Dr. Leela Nair,Gastroenterologist,"Liver Disease, Pancreatitis, Celiac Disease",8,4.1,Ahmedabad,"Gastritis, Esophagitis, Bile Duct Stones",+91 92109 87632,leela.nair@digestivecare.com
+Dr. Rahul Verma,Endocrinologist,"Osteoporosis, Polycystic Ovarian Syndrome (PCOS), Thyroiditis",19,4.8,Jaipur,"Diabetes Insipidus, Graves' Disease, Prolactinoma",+91 91098 76521,rahul.verma@hormoneclinic.com
+Dr. Shruti Joshi,Pulmonologist,"Interstitial Lung Disease, Occupational Lung Disease, Pleurisy",10,4.6,Lucknow,"Asbestosis, Silicosis, Black Lung Disease",+91 90987 65410,shruti.joshi@lungcare.com
+Dr. Arvind Kumar,Ophthalmologist,"Corneal Ulcers, Conjunctivitis, Blepharitis",13,3.9,Mumbai,"Keratoconus, Strabismus, Ptosis",+91 98765 43188,arvind.kumar@eyecare.com
+Dr. Pooja Sharma,Urologist,"Benign Prostatic Hyperplasia (BPH), Urinary Tract Infections (UTIs)",6,4.2,Delhi,"Urethral Stricture, Hydrocele, Varicocele",+91 99887 76622,pooja.sharma@urologyclinic.com
+Dr. Vijay Patel,Pediatrician,"Allergies, Asthma, Autism Spectrum Disorder",21,4.9,Bangalore,"Cystic Fibrosis, Down Syndrome, Cerebral Palsy",+91 97654 32176,vijay.patel@kidshealth.com
+Dr. Anjana Iyer,Cardiologist,"Pericarditis, Myocarditis, Dilated Cardiomyopathy",17,4.5,Chennai,"Cardiac Tamponade, Restrictive Cardiomyopathy, Hypertrophic Cardiomyopathy",+91 96543 21065,anjana.iyer@heartsolutions.in
+Dr. Manoj Verma,Dermatologist,"Pemphigus, Bullous Pemphigoid, Lupus Erythematosus",25,4.7,Kolkata,"Scleroderma, Dermatomyositis, Vasculitis",+91 95432 10954,manoj.verma@skinsolutions.in
+Dr. Deepika Sharma,Neurologist,"Spinal Muscular Atrophy, Charcot-Marie-Tooth Disease",9,4.0,Hyderabad,"Progressive Supranuclear Palsy, Lewy Body Dementia, Frontotemporal Dementia",+91 94321 09843,deepika.sharma@brainclinic.com
+Dr. Saurabh Patel,Orthopedist,"Rotator Cuff Tear, ACL Tear, Meniscus Tear",11,4.3,Pune,"Hammer Toe, Bunion, Gout",+91 93210 98732,saurabh.patel@orthopediccare.com
+Dr. Gayatri Iyer,Gynecologist,"Vaginal Prolapse, Uterine Prolapse, Cystocele",14,4.6,Ahmedabad,"Rectocele, Stress Incontinence, Overactive Bladder (women)",+91 92109 87621,gayatri.iyer@womenshealth.in
+Dr. Sameer Kumar,Gastroenterologist,"Microscopic Colitis, Eosinophilic Esophagitis, Achalasia",20,4.8,Jaipur,"Short Bowel Syndrome, Whipple's Disease, Autoimmune Hepatitis",+91 91098 76510,sameer.kumar@digestivecare.com
+Dr. Neeti Joshi,Endocrinologist,"Hyperaldosteronism, Pheochromocytoma, Conn's Syndrome",7,4.1,Lucknow,"Nelson's Syndrome, Empty Sella Syndrome, McCune-Albright Syndrome",+91 90987 65409,neeti.joshi@hormoneclinic.com
+Dr. Rohit Sharma,Pulmonologist,"Alpha-1 Antitrypsin Deficiency, Cystic Fibrosis (adult), Primary Ciliary Dyskinesia",16,4.4,Mumbai,"Bronchiolitis Obliterans, Pulmonary Hypertension, Chronic Thromboembolic Pulmonary Hypertension (CTEPH)",+91 98765 43177,rohit.sharma@lungcare.com
+Dr. Sneha Patel,Ophthalmologist,"Uveitis, Scleritis, Orbital Cellulitis",22,4.9,Delhi,"Optic Neuritis, Ischemic Optic Neuropathy, Retinoblastoma",+91 99887 76611,sneha.patel@eyecare.com
+Dr. Vikas Kumar,Urologist,"Kidney Failure, Hematuria, Hydronephrosis",12,4.5,Bangalore,"Nephrotic Syndrome, Nephritis, Renovascular Hypertension",+91 97654 32165,vikas.kumar@urologyclinic.com
+Dr. Maya Iyer,Pediatrician,"Prematurity, Neonatal Jaundice, Respiratory Distress Syndrome",8,4.3,Chennai,"Bronchiolitis, Croup, Fifth Disease",+91 96543 21054,maya.iyer@kidshealth.com
+Dr. Divya Khanna,Cardiologist,"Fatigue, Dizziness, Swelling, Angina",5,4.0,Kolkata,"Valve Stenosis, Valve Regurgitation, Endocarditis",+91 95432 10943,divya.khanna@heartcare.com
+Dr. Arun Sharma,Dermatologist,"Skin Cancer Screening, Moles, Sun Damage",30,4.6,Hyderabad,"Radiation Dermatitis, Pressure Ulcers, Lipomas",+91 94321 09832,arun.sharma@skinsolutions.in
+Dr. Shreya Verma,Neurologist,"Epilepsy, Multiple Sclerosis, Head Trauma",18,4.2,Pune,"Spinal Cord Tumors, Encephalitis, Meningitis",+91 93210 98721,shreya.verma@brainclinic.com
+Dr. Ganesh Patel,Orthopedist,"Arthritis, Joint Replacement, Bone Tumors",14,4.7,Ahmedabad,"Osteomyelitis, Osteonecrosis, Chondrosarcoma",+91 92109 87610,ganesh.patel@orthopediccare.com
+Dr. Lakshmi Nair,Gynecologist,"Family Planning, Menstrual Disorders, Fibroids",22,4.9,Jaipur,"Pelvic Pain, Asherman's Syndrome, Müllerian Anomalies",+91 91098 76509,lakshmi.nair@womenshealth.in
+Dr. Rohit Joshi,Gastroenterologist,"Inflammatory Bowel Disease (IBD), Colon Cancer, Liver Cirrhosis",10,4.5,Lucknow,"Diverticulitis, Hemorrhoids, Fecal Incontinence",+91 90987 65398,rohit.joshi@digestivecare.com
+Dr. Anjali Singh,Endocrinologist,"Diabetes Management, Thyroid Nodules, Adrenal Gland Disorders",6,4.1,Mumbai,"Congenital Adrenal Hyperplasia, Growth Disorders, Multiple Endocrine Neoplasia (MEN)",+91 98765 43166,anjali.singh@hormoneclinic.com
+Dr. Vijay Kumar,Pulmonologist,"Sleep Apnea, Pulmonary Hypertension, Lung Infections",12,4.3,Delhi,"Acute Respiratory Distress Syndrome (ARDS), Histoplasmosis, Coccidioidomycosis",+91 99887 76600,vijay.kumar@lungcare.com
+Dr. Priya Reddy,Ophthalmologist,"Diabetic Retinopathy, Glaucoma, Macular Degeneration",19,4.8,Bangalore,"Retinal Vein Occlusion, Central Serous Retinopathy, Epiretinal Membrane",+91 97654 32154,priya.reddy@eyecare.com
+Dr. Sanjay Iyer,Urologist,"Kidney Stones, Prostate Cancer, Bladder Infections",8,4.6,Chennai,"Testicular Torsion, Peyronie's Disease, Interstitial Cystitis",+91 96543 21043,sanjay.iyer@urologyclinic.com
+Dr. Meera Sharma,Pediatrician,"Newborn Care, Childhood Vaccinations, Developmental Assessments",15,4.4,Kolkata,"Failure to Thrive, SIDS (Sudden Infant Death Syndrome), Intussusception",+91 95432 10932,meera.sharma@kidshealth.com
+Dr. Vivek Patel,Cardiologist,"Chest Pain, Shortness of Breath, Palpitations, High Blood Pressure",25,4.7,Hyderabad,"Coronary Angiography, Angioplasty, Stenting",+91 94321 09821,vivek.patel@heartcare.com
+Dr. Deepa Joshi,Dermatologist,"Eczema, Psoriasis, Acne, Rosacea",3,3.9,Pune,"Alopecia Areata, Lichen Planus, Hidradenitis Suppurativa",+91 93210 98710,deepa.joshi@skinsolutions.in
+Dr. Arvind Kumar,Neurologist,"Headaches, Migraines, Stroke, Seizures",11,4.2,Ahmedabad,"Trigeminal Neuralgia, Restless Legs Syndrome, Dystonia",+91 92109 87609,arvind.kumar@brainclinic.com
+Dr. Lakshmi Verma,Orthopedist,"Back Pain, Knee Pain, Shoulder Pain, Hip Pain",27,4.9,Jaipur,"Total Hip Replacement, Total Knee Replacement, Arthroscopic Surgery",+91 91098 76498,lakshmi.verma@orthopediccare.com
+Dr. Rohit Nair,Gynecologist,"Pregnancy Care, Labor and Delivery, Postpartum Care",7,4.0,Lucknow,"Cesarean Section, Ectopic Pregnancy, Molar Pregnancy",+91 90987 65387,rohit.nair@womenshealth.in
+Dr. Anjali Gupta,Gastroenterologist,"Diarrhea, Constipation, Abdominal Pain, Bloating",17,4.5,Mumbai,"Colonoscopy, Endoscopy, ERCP",+91 98765 43155,anjali.gupta@digestivecare.com
+Dr. Vijay Singh,Endocrinologist,"Diabetes, Thyroid Disorders, Hormone Imbalances, PCOS",9,4.3,Delhi,"Gestational Diabetes, Cushing's Disease, Addison's Disease",+91 99887 76599,vijay.singh@hormoneclinic.com
+Dr. Priya Patel,Pulmonologist,"Asthma, COPD, Bronchitis, Pneumonia",13,4.6,Bangalore,"Pulmonary Function Tests, Bronchoscopy, Thoracentesis",+91 97654 32143,priya.patel@lungcare.com
+Dr. Sanjay Khanna,Ophthalmologist,"Cataracts, Glaucoma, Diabetic Retinopathy, Macular Degeneration",20,4.8,Chennai,"LASIK, Corneal Transplants, Vitrectomy",+91 96543 21032,sanjay.khanna@eyecare.com
+Dr. Meera Verma,Urologist,"Urinary Incontinence, Kidney Stones, Prostate Enlargement, UTI",5,4.1,Kolkata,"Cystoscopy, Lithotripsy, TURP",+91 95432 10921,meera.verma@urologyclinic.com
+Dr. Vivek Sharma,Pediatrician,"Childhood Illnesses, Vaccinations, Growth and Development",11,4.4,Hyderabad,"Developmental Milestones, Behavioral Issues, Feeding Problems",+91 94321 09810,vivek.sharma@kidshealth.com
+Dr. Deepa Iyer,Cardiologist,"Heart Failure, Arrhythmias, Valve Disease, Coronary Artery Disease",29,5.0,Pune,"Echocardiography, Electrocardiogram, Holter Monitoring",+91 93210 98709,deepa.iyer@heartcare.com
+Dr. Arvind Patel,Dermatologist,"Warts, Moles, Skin Tags, Cysts",16,4.7,Ahmedabad,"Cryotherapy, Excision, Laser Treatment",+91 92109 87598,arvind.patel@skinsolutions.in
+Dr. Lakshmi Kumar,Neurologist,"Parkinson's Disease, Alzheimer's Disease, Multiple Sclerosis, ALS",4,3.5,Jaipur,"EEG, EMG, Nerve Conduction Studies",+91 91098 76487,lakshmi.kumar@brainclinic.com
+Dr. Rohit Reddy,Orthopedist,"Fractures, Sprains, Strains, Dislocations",10,4.2,Lucknow,"Casting, Splinting, Bracing",+91 90987 65376,rohit.reddy@orthopediccare.com
+Dr. Anjali Nair,Gynecologist,"PCOS, Infertility, Menopause, Endometriosis",12,4.5,Mumbai,"IVF, IUI, Egg Freezing",+91 98765 43144,anjali.nair@womenshealth.in
+Dr. Vijay Joshi,Gastroenterologist,"GERD, IBS, Crohn's Disease, Ulcerative Colitis",23,4.9,Delhi,"Barium Swallow, Capsule Endoscopy, Manometry",+91 99887 76588,vijay.joshi@digestivecare.com
+Dr. Priya Sharma,Endocrinologist,"Osteoporosis, Growth Hormone Deficiency, Thyroid Cancer, Parathyroid Disorders",6,4.0,Bangalore,"Fine Needle Aspiration (FNA), Radioiodine Therapy, Bone Density Scan",+91 97654 32132,priya.sharma@hormoneclinic.com
+Dr. Sanjay Patel,Pulmonologist,"COPD, Asthma, Bronchiectasis, Cystic Fibrosis",35,4.8,Chennai,"Lung Volume Reduction Surgery, Lung Transplant, Interventional Pulmonology",+91 96543 21021,sanjay.patel@lungcare.com
+Dr. Meera Khanna,Ophthalmologist,"Retinal Detachment, Macular Holes, Epiretinal Membranes, Floaters",14,4.6,Kolkata,"Scleral Buckling, Pneumatic Retinopexy, Pars Plana Vitrectomy (PPV)",+91 95432 10910,meera.khanna@eyecare.com
+Dr. Vivek Verma,Urologist,"Bladder Cancer, Kidney Cancer, Testicular Cancer, Prostate Cancer",32,4.7,Hyderabad,"Radical Cystectomy, Nephrectomy, Orchiectomy, Prostatectomy",+91 94321 09809,vivek.verma@urologyclinic.com
+Dr. Deepa Singh,Pediatrician,"Genetic Disorders, Congenital Anomalies, Metabolic Diseases",18,4.3,Pune,"Chromosomal Microarray Analysis, Newborn Screening, Gene Therapy",+91 93210 98698,deepa.singh@kidshealth.com
+Dr. Rohan Iyer,Cardiologist,"Mitral Valve Prolapse, Aortic Stenosis, Tricuspid Regurgitation",7,3.8,Ahmedabad,"Balloon Valvuloplasty, Valve Repair, Valve Replacement",+91 92109 87587,rohan.iyer@heartcare.com
+Dr. Sunita Sharma,Dermatologist,"Allergic Contact Dermatitis, Irritant Contact Dermatitis, Seborrheic Dermatitis",13,4.4,Jaipur,"Patch Testing, Phototherapy, Topical Steroids",+91 91098 76476,sunita.sharma@skinsolutions.in
+Dr. Karthik Kumar,Neurologist,"Essential Tremor, Myoclonus, Tic Disorders",21,4.5,Lucknow,"Botulinum Toxin Injections, Deep Brain Stimulation, Medications",+91 90987 65365,karthik.kumar@brainclinic.com
+Dr. Ananya Patel,Orthopedist,"Spinal Stenosis, Spondylolisthesis, Degenerative Disc Disease",9,4.1,Mumbai,"Laminectomy, Spinal Fusion, Microdiscectomy",+91 98765 43133,ananya.patel@orthopediccare.com
+Dr. Vikram Joshi,Gynecologist,"Premenstrual Syndrome (PMS), Dysmenorrhea, Amenorrhea",26,4.9,Delhi,"Hormonal Therapy, Pain Management, Surgical Interventions",+91 99887 76577,vikram.joshi@womenshealth.in
+Dr. Neha Reddy,Gastroenterologist,"Achalasia, Esophageal Spasm, Barrett's Esophagus",33,4.7,Bangalore,"Heller Myotomy, Pneumatic Dilation, Radiofrequency Ablation",+91 97654 32121,neha.reddy@digestivecare.com
+Dr. Aditiya Singh,Endocrinologist,"Hypoglycemia, Hypercalcemia, Hypoparathyroidism",15,4.6,Chennai,"Continuous Glucose Monitoring, Calcium Infusion, Parathyroidectomy",+91 96543 21010,aditiya.singh@hormoneclinic.com
+Dr. Smita Sharma,Pulmonologist,"Bronchiectasis, Sarcoidosis, Interstitial Lung Disease",6,4.0,Kolkata,"High-Resolution CT Scan, Bronchoalveolar Lavage, Lung Biopsy",+91 95432 10909,smita.sharma@lungcare.com
+Dr. Rohan Patel,Ophthalmologist,"Uveitis, Scleritis, Retinal Vasculitis",12,4.3,Hyderabad,"Immunosuppressive Therapy, Intravitreal Injections, Laser Photocoagulation",+91 94321 09798,rohan.patel@eyecare.com
+Dr. Divya Joshi,Urologist,"Overactive Bladder, Interstitial Cystitis, Pelvic Floor Dysfunction",20,4.8,Pune,"Bladder Training, Electrical Stimulation, Botox Injections",+91 93210 98687,divya.joshi@urologyclinic.com
+Dr. Tarun Kumar,Pediatrician,"Eczema, Food Allergies, Anaphylaxis",1,3.7,Ahmedabad,"Allergy Testing, Epinephrine Auto-Injector Training, Dietary Management",+91 92109 87576,tarun.kumar@kidshealth.com
+Dr. Priya Sharma,Cardiologist,"Chest Pain, Palpitations, High Blood Pressure, Arrhythmia",15,4.8,Mumbai,"Coronary Artery Disease, Heart Failure, Hypertension",+91 98765 43210,priya.sharma@heartcare.com
+Dr. Rajesh Patel,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",22,4.5,Delhi,"Skin Cancer, Allergies, Vitiligo",+91 99887 76655,rajesh.patel@skincareclinic.com
+Dr. Anjali Singh,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's Disease",10,4.2,Bangalore,"Epilepsy, Multiple Sclerosis",+91 97654 32109,anjali.singh@brainhealth.com
+Dr. Sanjay Kumar,Orthopedic Surgeon,"Knee Pain, Back Pain, Fractures, Arthritis",28,4.9,Chennai,"Osteoarthritis, Joint Replacements",+91 96543 21098,sanjay.kumar@orthopedicsolutions.com
+Dr. Deepika Verma,Gynecologist,"Pregnancy, Infertility, PCOS, Menopause",18,4.7,Kolkata,"Endometriosis, Uterine Fibroids",+91 95432 10987,deepika.verma@womenshealth.com
+Dr. Rohan Gupta,Pediatrician,"Fever, Cough, Cold, Vaccination, Childhood Diseases",8,4.6,Hyderabad,"Asthma, Chickenpox",+91 94321 09876,rohan.gupta@kidsclinic.com
+Dr. Meera Iyer,Gastroenterologist,"Abdominal Pain, Bloating, Constipation, Diarrhea, Ulcers",12,4.3,Pune,"Irritable Bowel Syndrome, Crohn's Disease",+91 93210 98765,meera.iyer@digestivehealth.com
+Dr. Amit Joshi,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat, Hearing Loss",14,4.4,Ahmedabad,"Tonsillitis, Vertigo",+91 92109 87654,amit.joshi@earsnosethroat.com
+Dr. Shweta Reddy,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts, Glaucoma",20,4.8,Jaipur,Diabetic Retinopathy,+91 91098 76543,shweta.reddy@eyecarecenter.com
+Dr. Vikram Singh,Urologist,"Kidney Stones, Urinary Tract Infections, Prostate Problems",16,4.5,Lucknow,"Erectile Dysfunction, Incontinence",+91 90987 65432,vikram.singh@urologyspecialists.com
+Dr. Neha Khanna,Cardiologist,"Shortness of Breath, Chest Discomfort, High Cholesterol",7,4.1,Mumbai,"Heart Valve Disease, Cardiomyopathy",+91 98876 54321,neha.khanna@heartclinic.com
+Dr. Suresh Menon,Dermatologist,"Rashes, Skin Allergies, Pigmentation",25,4.7,Delhi,"Melasma, Rosacea",+91 99765 43210,suresh.menon@dermacare.com
+Dr. Divya Nair,Neurologist,"Tremors, Memory Loss, Dizziness",9,4.0,Bangalore,"Alzheimer's Disease, Peripheral Neuropathy",+91 97765 43210,divya.nair@neurocare.com
+Dr. Arun Sharma,Orthopedic Surgeon,"Hip Pain, Shoulder Pain, Sports Injuries",30,4.6,Chennai,"Ligament Tears, Joint Dislocation",+91 96654 32109,arun.sharma@bonesandjoints.com
+Dr. Preeti Jain,Gynecologist,"Menstrual Problems, Fibroids, Pelvic Pain",11,4.3,Kolkata,"Ovarian Cysts, Cervical Cancer Screening",+91 95543 21098,preeti.jain@gynewomenshealth.com
+Dr. Karthik Rao,Pediatrician,"Growth Problems, Development Delays",6,4.8,Hyderabad,"Down Syndrome, Cerebral Palsy",+91 94432 10987,karthik.rao@childhealthcare.com
+Dr. Sunita Das,Gastroenterologist,"Acid Reflux, Indigestion, Gallstones",19,4.2,Pune,"Hepatitis, Cirrhosis",+91 93321 09876,sunita.das@liverdigestive.com
+Dr. Rohan Patel,ENT Specialist,"Tinnitus, Nasal Congestion, Voice Problems",13,4.9,Ahmedabad,"Deviated Septum, Sleep Apnea",+91 92210 98765,rohan.patel@headnecksurgery.com
+Dr. Shilpa Verma,Ophthalmologist,"Dry Eyes, Conjunctivitis, Macular Degeneration",27,4.4,Jaipur,Retinal Detachment,+91 91109 87654,shilpa.verma@visioncenter.com
+Dr. Vijay Kumar,Urologist,"Bladder Infections, Kidney Failure, Prostate Cancer",21,4.5,Lucknow,Benign Prostatic Hyperplasia,+91 90098 76543,vijay.kumar@urologyclinic.com
+Dr. Smita Sharma,Cardiologist,"Irregular Heartbeat, Fatigue, Dizziness",5,3.8,Mumbai,"Angina, Aortic Stenosis",+91 98987 65432,smita.sharma@heartbest.com
+Dr. Naveen Gupta,Dermatologist,"Warts, Moles, Skin Tags",35,4.9,Delhi,"Skin Biopsy, Laser Treatments",+91 99076 54321,naveen.gupta@skinsolutions.com
+Dr. Lakshmi Iyer,Neurologist,"Numbness, Tingling, Muscle Weakness",17,4.1,Bangalore,"Myasthenia Gravis, Bell's Palsy",+91 97876 54321,lakshmi.iyer@neurologyspecialist.com
+Dr. Praveen Kumar,Orthopedic Surgeon,"Ankle Pain, Foot Pain, Hand Pain",23,4.7,Chennai,"Carpal Tunnel Syndrome, Tendonitis",+91 96765 43210,praveen.kumar@orthodoc.com
+Dr. Ritu Singh,Gynecologist,"Pre-eclampsia, Ectopic Pregnancy",14,4.4,Kolkata,"Hysterectomy, Laparoscopy",+91 95654 32109,ritu.singh@gynecare.com
+Dr. Manish Verma,Pediatrician,"Allergies, Asthma, Immunization",3,4.5,Hyderabad,"Common Cold, Flu",+91 94543 21098,manish.verma@pediatriccare.com
+Dr. Pooja Desai,Gastroenterologist,"Gastritis, Colon Cancer, Liver Disease",12,4.0,Pune,"Peptic Ulcer, Diverticulitis",+91 93432 10987,pooja.desai@gastroclinic.com
+Dr. Amit Rana,ENT Specialist,"Swallowing Difficulty, Ear Discharge, Voice Hoarseness",26,4.6,Ahmedabad,"Laryngitis, Otitis Media",+91 92321 09876,amit.rana@entcenter.com
+Dr. Sonia Patel,Ophthalmologist,"Double Vision, Eye Floaters, Retinal Problems",15,4.2,Jaipur,Age-Related Macular Degeneration,+91 91210 98765,sonia.patel@eyedoctor.com
+Dr. Vivek Khanna,Urologist,"Prostate Enlargement, Bladder Control Problems",2,4.8,Lucknow,Male Infertility,+91 90109 87654,vivek.khanna@urocare.com
+Dr. Anika Verma,Cardiologist,"High Blood Pressure, Atrial Fibrillation, Angina",11,4.3,Mumbai,"Heart Murmurs, Congestive Heart Failure",+91 98098 76543,anika.verma@heart.com
+Dr. Siddharth Iyer,Dermatologist,"Skin Infections, Pigmentation, Wrinkles",18,4.6,Delhi,"Acne Scars, Melasma Treatment",+91 99987 65432,siddharth.iyer@dermatology.com
+Dr. Priyanka Sharma,Neurologist,"Migraine, Stroke, Seizures",24,4.0,Bangalore,"Parkinson's Treatment, Epilepsy Management",+91 97987 65432,priyanka.sharma@neurology.com
+Dr. Deepak Patel,Orthopedic Surgeon,"Fractures, Joint Pain, Arthritis",9,4.8,Chennai,"Hip Replacement, Knee Arthroscopy",+91 96876 54321,deepak.patel@orthopedics.com
+Dr. Kavita Singh,Gynecologist,"Pregnancy, Fertility Issues, Menopause",32,4.5,Kolkata,"Fibroid Removal, Hysterectomy",+91 95765 43210,kavita.singh@gynecology.com
+Dr. Rohit Verma,Pediatrician,"Fever, Cough, Cold, Infections",7,4.2,Hyderabad,"Vaccination, Childhood Diseases",+91 94654 32109,rohit.verma@pediatrics.com
+Dr. Maya Joshi,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation",15,4.9,Pune,"IBS Treatment, Colonoscopy",+91 93543 21098,maya.joshi@gastroenterology.com
+Dr. Sanjay Gupta,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat",29,4.4,Ahmedabad,"Tonsillectomy, Adenoidectomy",+91 92432 10987,sanjay.gupta@ent.com
+Dr. Aishwarya Reddy,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts",16,4.7,Jaipur,"Lasik Surgery, Cataract Surgery",+91 91321 09876,aishwarya.reddy@ophthalmology.com
+Dr. Vikram Iyer,Urologist,"Kidney Stones, Urinary Infections, Prostate Issues",4,4.1,Lucknow,"Bladder Problems, Prostate Biopsy",+91 90210 98765,vikram.iyer@urology.com
+Dr. Divya Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath",13,4.5,Mumbai,"Coronary Angiography, Stenting",+91 98123 45678,divya.sharma@heartdoc.com
+Dr. Rahul Patel,Dermatologist,"Acne, Eczema, Psoriasis",27,4.8,Delhi,"Chemical Peels, Skin Grafting",+91 99234 56789,rahul.patel@skindoc.com
+Dr. Sonali Singh,Neurologist,"Headaches, Seizures, Memory Loss",6,3.9,Bangalore,"Multiple Sclerosis Treatment, Stroke Rehabilitation",+91 97345 67890,sonali.singh@braindoc.com
+Dr. Amit Kumar,Orthopedic Surgeon,"Knee Pain, Back Pain, Fractures",36,4.6,Chennai,"Joint Replacement, Arthroscopic Surgery",+91 96456 78901,amit.kumar@bonedoc.com
+Dr. Priya Verma,Gynecologist,"Pregnancy, Infertility, PCOS",20,4.7,Kolkata,"IVF Treatment, Laparoscopic Surgery",+91 95567 89012,priya.verma@gynedoc.com
+Dr. Rohan Gupta,Pediatrician,"Fever, Cough, Cold, Vaccinations",8,4.3,Hyderabad,"Childhood Infections, Asthma Management",+91 94678 90123,rohan.gupta@kidoc.com
+Dr. Meera Iyer,Gastroenterologist,"Abdominal Pain, Bloating, Constipation",12,4.1,Pune,"Endoscopy, Colonoscopy",+91 93789 01234,meera.iyer@gutdoc.com
+Dr. Amit Joshi,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat",14,4.9,Ahmedabad,"Tonsillectomy, Septoplasty",+91 92890 12345,amit.joshi@entdoc.com
+Dr. Shweta Reddy,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts",20,4.4,Jaipur,"Cataract Surgery, Glaucoma Treatment",+91 91901 23456,shweta.reddy@eyecaredoc.com
+Dr. Vikram Singh,Urologist,"Kidney Stones, Urinary Tract Infections, Prostate Problems",16,4.2,Lucknow,"Prostatectomy, Cystoscopy",+91 90012 34567,vikram.singh@urodoc.com
+Dr. Sunita Sharma,Cardiologist,"Palpitations, Chest Pain, High Cholesterol",19,4.5,Mumbai,"Echocardiography, Angioplasty",+91 98234 56789,sunita.sharma@cardiac.com
+Dr. Rajesh Khanna,Dermatologist,"Acne, Eczema, Skin Rashes",31,4.7,Delhi,"Laser Hair Removal, Botox Injections",+91 99345 67890,rajesh.khanna@skincare.com
+Dr. Anjali Menon,Neurologist,"Headaches, Migraines, Dizziness",2,4.1,Bangalore,"EEG, Nerve Conduction Studies",+91 97456 78901,anjali.menon@neuro.com
+Dr. Sanjay Verma,Orthopedic Surgeon,"Fractures, Sprains, Joint Pain",10,4.9,Chennai,"Arthroscopy, Joint Injections",+91 96567 89012,sanjay.verma@ortho.com
+Dr. Deepika Jain,Gynecologist,"Pregnancy, Menopause, Infertility",25,4.6,Kolkata,"Hysterectomy, Ovarian Cyst Removal",+91 95678 90123,deepika.jain@gyn.com
+Dr. Rohan Iyer,Pediatrician,"Fever, Cough, Cold, Vaccinations",3,4.4,Hyderabad,"Well-Child Checkups, Immunizations",+91 94789 01234,rohan.iyer@pediatric.com
+Dr. Meera Das,Gastroenterologist,"Abdominal Pain, Bloating, Acid Reflux",17,4.2,Pune,"Upper Endoscopy, Colonoscopy",+91 93890 12345,meera.das@gastro.com
+Dr. Amit Rana,ENT Specialist,"Ear Pain, Sinus Infections, Sore Throat",33,4.8,Ahmedabad,"Tonsillectomy, Adenoidectomy",+91 92901 23456,amit.rana@ent.com
+Dr. Shweta Verma,Ophthalmologist,"Blurred Vision, Eye Pain, Glaucoma",11,4.0,Jaipur,"Cataract Surgery, LASIK",+91 91012 34567,shweta.verma@eye.com
+Dr. Vikram Patel,Urologist,"Kidney Stones, Urinary Incontinence, Prostate Enlargement",7,4.7,Lucknow,"Cystoscopy, Prostate Biopsy",+91 90123 45678,vikram.patel@uro.com
+Dr. Pooja Singh,Cardiologist,"Shortness of Breath, Chest Pain, Palpitations",21,4.3,Mumbai,"Stress Test, ECG",+91 98345 67890,pooja.singh@heartmd.com
+Dr. Naveen Kumar,Dermatologist,"Acne, Eczema, Hair Loss",5,3.7,Delhi,"Chemical Peels, Microdermabrasion",+91 99456 78901,naveen.kumar@skinmd.com
+Dr. Lakshmi Sharma,Neurologist,"Headaches, Migraines, Seizures",37,4.9,Bangalore,"EEG, EMG",+91 97567 89012,lakshmi.sharma@neuromd.com
+Dr. Praveen Patel,Orthopedic Surgeon,"Knee Pain, Back Pain, Shoulder Pain",13,4.6,Chennai,"Arthroscopic Surgery, Joint Replacement",+91 96678 90123,praveen.patel@orthomd.com
+Dr. Ritu Khanna,Gynecologist,"Pregnancy, Infertility, Menopause",28,4.5,Kolkata,"Hysterectomy, Ovarian Cystectomy",+91 95789 01234,ritu.khanna@gynmd.com
+Dr. Manish Singh,Pediatrician,"Fever, Cough, Cold, Vaccination",9,4.2,Hyderabad,"Well-Child Exams, Immunizations",+91 94890 12345,manish.singh@pedimd.com
+Dr. Pooja Iyer,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation",18,4.8,Pune,"Colonoscopy, Endoscopy",+91 93901 23456,pooja.iyer@gastromd.com
+Dr. Amit Desai,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat",15,4.4,Ahmedabad,"Tonsillectomy, Adenoidectomy",+91 92012 34567,amit.desai@entmd.com
+Dr. Sonia Gupta,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts",34,4.7,Jaipur,"Cataract Surgery, LASIK",+91 91123 45678,sonia.gupta@eyemd.com
+Dr. Vivek Reddy,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems",6,4.1,Lucknow,"Cystoscopy, Prostate Biopsy",+91 90234 56789,vivek.reddy@uromd.com
+Dr. Smita Patel,Cardiologist,"Chest Pain, Palpitations, Dizziness",14,4.6,Mumbai,"ECG, Echocardiogram",+91 98456 78901,smita.patel@cardiodoc.com
+Dr. Naveen Sharma,Dermatologist,"Acne, Eczema, Psoriasis",22,4.8,Delhi,"Chemical Peels, Laser Treatments",+91 99567 89012,naveen.sharma@dermdoc.com
+Dr. Lakshmi Kumar,Neurologist,"Headaches, Migraines, Seizures",7,3.9,Bangalore,"EEG, MRI Brain",+91 97678 90123,lakshmi.kumar@neurodoc.com
+Dr. Praveen Singh,Orthopedic Surgeon,"Knee Pain, Back Pain, Fractures",3,4.3,Chennai,"Casting, Splinting",+91 96789 01234,praveen.singh@orthodoc.com
+Dr. Ritu Iyer,Gynecologist,"Pregnancy, Infertility, PCOS",26,4.5,Kolkata,"Laparoscopy, Hysterectomy",+91 95890 12345,ritu.iyer@gynedoc.com
+Dr. Manish Verma,Pediatrician,"Fever, Cough, Cold, Vaccinations",19,4.7,Hyderabad,"Well Child Checks, Immunizations",+91 94901 23456,manish.verma@peddoc.com
+Dr. Pooja Das,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation",10,4.2,Pune,"Endoscopy, Colonoscopy",+91 93012 34567,pooja.das@gastricdoc.com
+Dr. Amit Gupta,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat",5,4.9,Ahmedabad,"Tonsillectomy, Myringotomy",+91 92123 45678,amit.gupta@entdoc.com
+Dr. Sonia Verma,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts",23,4.4,Jaipur,"Cataract Surgery, Glaucoma Treatment",+91 91234 56789,sonia.verma@eyedoc.com
+Dr. Vikram Khanna,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems",16,4.8,Lucknow,"Cystoscopy, TURP",+91 90345 67890,vikram.khanna@urodoc.com
+Dr. Neha Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath",9,4.1,Mumbai,"ECG, Echocardiography",+91 98567 89012,neha.sharma@heartspecialist.com
+Dr. Suresh Patel,Dermatologist,"Acne, Eczema, Psoriasis, Rashes",24,4.6,Delhi,"Laser Hair Removal, Chemical Peels",+91 99678 90123,suresh.patel@skinclinic.com
+Dr. Divya Nair,Neurologist,"Headaches, Migraines, Memory Loss, Seizures",12,4.3,Bangalore,"Epilepsy Management, Stroke Treatment",+91 97789 01234,divya.nair@braindoctor.com
+Dr. Arun Kumar,Orthopedic Surgeon,"Knee Pain, Back Pain, Shoulder Pain, Fractures",38,4.9,Chennai,"Joint Replacement, Arthroscopic Surgery",+91 96890 12345,arun.kumar@bonesurgeon.com
+Dr. Preeti Jain,Gynecologist,"Pregnancy, Infertility, PCOS, Menopause",21,4.7,Kolkata,"Hysterectomy, IVF",+91 95901 23456,preeti.jain@womenshealthdoc.com
+Dr. Karthik Reddy,Pediatrician,"Fever, Cough, Cold, Vaccinations, Growth Issues",40,4.4,Hyderabad,"Well-Child Visits, Immunizations",+91 94012 34567,karthik.reddy@childrendoc.com
+Dr. Sunita Das,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation, Bloating",17,4.2,Pune,"Colonoscopy, Endoscopy",+91 93123 45678,sunita.das@digestivedoc.com
+Dr. Rohan Patel,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat, Hearing Loss",6,4.5,Ahmedabad,"Tonsillectomy, Septoplasty",+91 92234 56789,rohan.patel@eardoctor.com
+Dr. Shilpa Verma,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts, Glaucoma",15,4.8,Jaipur,"Cataract Surgery, LASIK",+91 91345 67890,shilpa.verma@eyesurgeon.com
+Dr. Vijay Iyer,Urologist,"Kidney Stones, Urinary Infections, Prostate Problems, Incontinence",39,4.0,Lucknow,"Cystoscopy, Prostate Biopsy",+91 90456 78901,vijay.iyer@urologyexpert.com
+Dr. Rakesh Sharma,Physician,"Fever,Cough,Headache",11,3.5,Delhi,"Viral Fever,Common Cold,Flu",+91 95243 51789,rakesh.sharma@mediclinic.com
+Dr. Sunita Reddy,Physician,"Weakness,Fatigue,Weight Loss",7,4.0,Bangalore,"Anemia,Vitamin Deficiency",+91 98519 64238,sunita.reddy@bestdoc.com
+Dr. Mahesh Joshi,Physician,"Diarrhea,Vomiting,Abdominal Pain",23,4.5,Mumbai,"Gastroenteritis,Food Poisoning",+91 99235 48917,mahesh.joshi@healwell.com
+Dr. Priya Patel,Endocrinologist,"Diabetes,Thyroid,Hormone Imbalance",15,4.7,Chennai,"Diabetes Management,Thyroid Disorders",+91 96325 87419,priya.patel@endoexpert.com
+Dr. Vikram Khanna,Oncologist,"Cancer,Tumor,Chemotherapy",10,4.3,Kolkata,"Cancer Treatment,Tumor Removal",+91 94157 89623,vikram.khanna@cancercare.com
+Dr. Priya Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Blood Pressure",15,4.8,Mumbai,"Hypertension, Coronary Artery Disease, Heart Failure",+91 98765 43210,priya.sharma@heartcare.com
+Dr. Rajesh Kumar,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Acne Vulgaris, Atopic Dermatitis, Psoriasis",+91 99887 76655,rajesh.kumar@skinsolutions.com
+Dr. Anjali Patel,Neurologist,"Headaches, Migraines, Seizures, Stroke, Numbness",22,4.9,Bangalore,"Epilepsy, Migraine, Stroke Rehabilitation",+91 97654 32109,anjali.patel@brainhealth.com
+Dr. Sanjay Verma,General Physician,"Fever, Cold, Cough, Flu, Body Aches, Infections",12,4.5,Chennai,"Common Cold, Influenza, Typhoid Fever",+91 96543 21098,sanjay.verma@healthfirst.com
+Dr. Deepika Reddy,Gynecologist,"Pregnancy, Infertility, Menstrual Problems, PCOS, UTI",10,4.7,Hyderabad,"PCOS, Uterine Fibroids, Endometriosis",+91 95432 10987,deepika.reddy@womenswellness.com
+Dr. Amit Singh,Orthopedist,"Joint Pain, Back Pain, Fractures, Arthritis, Sports Injuries",18,4.6,Kolkata,"Osteoarthritis, Rheumatoid Arthritis, Fractures",+91 94321 09876,amit.singh@bonesupport.com
+Dr. Meera Nair,Pediatrician,"Childhood Illnesses, Vaccinations, Growth Monitoring, Fever, Cough",7,4.4,Pune,"Chickenpox, Measles, Mumps",+91 93210 98765,meera.nair@childcare.com
+Dr. Rohan Gupta,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections, Dry Eyes",14,4.8,Ahmedabad,"Cataracts, Glaucoma, Diabetic Retinopathy",+91 92109 87654,rohan.gupta@eyesight.com
+Dr. Shweta Mishra,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat, Hearing Loss, Tinnitus",9,4.3,Jaipur,"Tonsillitis, Sinusitis, Otitis Media",+91 91098 76543,shweta.mishra@earnosethroat.com
+Dr. Vikram Joshi,Urologist,"Kidney Stones, UTI, Prostate Problems, Incontinence, Bladder Infections",20,4.9,Lucknow,"Kidney Stones, Benign Prostatic Hyperplasia (BPH)",+91 90987 65432,vikram.joshi@urologycare.com
+Dr. Aarti Das,Cardiologist,"Arrhythmia, Angina, High Cholesterol, Heart Valve Problems",11,4.7,Mumbai,"Arrhythmias, Valvular Heart Disease",+91 98765 01234,aarti.das@heartclinic.com
+Dr. Manish Sharma,Dermatologist,"Warts, Moles, Skin Cancer Screening, Rosacea, Dandruff",5,4.0,Delhi,"Skin Cancer, Warts, Rosacea",+91 99887 05678,manish.sharma@skindocs.com
+Dr. Sunita Iyer,Neurologist,"Parkinson's Disease, Multiple Sclerosis, Epilepsy, Tremors",25,4.9,Bangalore,"Parkinson's Disease, Multiple Sclerosis",+91 97654 09876,sunita.iyer@neurocare.com
+Dr. Ravi Patel,General Physician,"Diabetes, Hypertension, Thyroid Problems, Anemia, Allergies",16,4.6,Chennai,"Diabetes Mellitus, Hyperthyroidism",+91 96543 03210,ravi.patel@familydocs.com
+Dr. Neha Reddy,Gynecologist,"Prenatal Care, Labor and Delivery, Postpartum Care, Menopause",13,4.8,Hyderabad,"Pregnancy complications, Menopause",+91 95432 01234,neha.reddy@womenshealth.com
+Dr. Suresh Kumar,Orthopedist,"Spinal Injuries, Knee Replacement, Hip Replacement, Bursitis",28,4.7,Kolkata,"Spinal Stenosis, Knee Osteoarthritis",+91 94321 05678,suresh.kumar@bonedocs.com
+Dr. Divya Nair,Pediatrician,"Asthma, Allergies, Pneumonia, Ear Infections, Diarrhea",6,4.3,Pune,"Asthma, Pneumonia",+91 93210 09876,divya.nair@childdoctors.com
+Dr. Ajay Gupta,Ophthalmologist,"Refractive Errors, Macular Degeneration, Diabetic Retinopathy",19,4.9,Ahmedabad,"Myopia, Hyperopia, Astigmatism",+91 92109 03210,ajay.gupta@eyedocs.com
+Dr. Pooja Mishra,ENT Specialist,"Tonsillectomy, Adenoidectomy, Sleep Apnea, Vertigo",10,4.4,Jaipur,"Adenoiditis, Vertigo",+91 91098 01234,pooja.mishra@entcare.com
+Dr. Vivek Joshi,Urologist,"Erectile Dysfunction, Prostate Cancer, Vasectomy, Urinary Tract Infections",23,4.8,Lucknow,"Prostate Cancer, Erectile Dysfunction",+91 90987 05678,vivek.joshi@urologists.com
+Dr. Shruti Verma,Cardiologist,"Heart Murmurs, Congenital Heart Defects, Peripheral Artery Disease",17,4.7,Mumbai,"Congenital Heart Disease, Peripheral Artery Disease",+91 97876 54321,shruti.verma@heartspecialists.com
+Dr. Rohan Kapoor,Dermatologist,"Fungal Infections, Vitiligo, Hives, Alopecia Areata",6,4.1,Delhi,"Vitiligo, Fungal Skin Infections",+91 98987 65432,rohan.kapoor@dermaclinic.com
+Dr. Lakshmi Menon,Neurologist,"Dementia, Alzheimer's Disease, Bell's Palsy, Carpal Tunnel Syndrome",26,4.8,Bangalore,"Alzheimer's Disease, Carpal Tunnel Syndrome",+91 96765 43210,lakshmi.menon@neurospecialists.com
+Dr. Ashok Kumar,General Physician,"Respiratory Infections, Gastrointestinal Issues, Skin Rashes, Vaccinations",13,4.5,Chennai,"Gastroenteritis, Bronchitis",+91 95654 32109,ashok.kumar@familydoctors.com
+Dr. Priyanka Rao,Gynecologist,"Hysterectomy, Ovarian Cysts, Pelvic Inflammatory Disease",11,4.6,Hyderabad,"Ovarian Cysts, Pelvic Inflammatory Disease",+91 94543 21098,priyanka.rao@womensclinics.com
+Dr. Vijay Singh,Orthopedist,"Arthroscopic Surgery, Ligament Tears, Tendonitis, Frozen Shoulder",29,4.8,Kolkata,"Ligament Tears, Rotator Cuff Injuries",+91 93432 10987,vijay.singh@orthocare.com
+Dr. Sneha Verma,Pediatrician,"Developmental Delays, Autism Spectrum Disorder, ADHD",8,4.4,Pune,"Autism Spectrum Disorder, ADHD",+91 92321 09876,sneha.verma@pediatriccenters.com
+Dr. Aditya Jain,Ophthalmologist,"LASIK, Cataract Surgery, Corneal Diseases, Uveitis",20,4.9,Ahmedabad,"Corneal Ulcers, Uveitis",+91 91210 98765,aditya.jain@eyespecialists.com
+Dr. Kiran Patel,ENT Specialist,"Deviated Septum, Nasal Polyps, Laryngitis, Swallowing Disorders",12,4.5,Jaipur,"Nasal Polyps, Laryngitis",+91 90109 87654,kiran.patel@entspecialists.com
+Dr. Meena Sharma,Urologist,"Bladder Cancer, Testicular Cancer, Urinary Incontinence, Vesicoureteral Reflux",24,4.7,Lucknow,"Bladder Cancer, Urinary Incontinence",+91 99098 76543,meena.sharma@urologycenters.com
+Dr. Sachin Gupta,Cardiologist,"Atrial Fibrillation, Cardiomyopathy, Pericarditis",19,4.8,Mumbai,"Cardiomyopathy, Atrial Fibrillation",+91 98765 67890,sachin.gupta@cardiohealth.com
+Dr. Divya Iyer,Dermatologist,"Melasma, Skin Allergies, Actinic Keratosis",7,4.2,Delhi,"Skin Allergies, Actinic Keratosis",+91 99887 54321,divya.iyer@skinclinic.com
+Dr. Karthik Reddy,Neurologist,"Trigeminal Neuralgia, Myasthenia Gravis, Cerebral Palsy",27,4.9,Bangalore,"Myasthenia Gravis, Trigeminal Neuralgia",+91 97654 67890,karthik.reddy@brainclinic.com
+Dr. Anika Verma,General Physician,"Preventive Care, Health Checkups, Lifestyle Counseling",14,4.6,Chennai,Preventative Healthcare,+91 96543 45678,anika.verma@generalhealth.com
+Dr. Siddharth Patel,Gynecologist,"Family Planning, Contraception, Vaginal Infections",12,4.7,Hyderabad,"Vaginitis, Family Planning",+91 95432 67890,siddharth.patel@womenscare.com
+Dr. Ritu Sharma,Orthopedist,"Scoliosis, Kyphosis, Bone Tumors",30,4.9,Kolkata,"Scoliosis, Kyphosis",+91 94321 45678,ritu.sharma@boneandjoint.com
+Dr. Vivek Nair,Pediatrician,"Newborn Care, Breastfeeding Support, Colic",9,4.5,Pune,"Newborn Jaundice, Colic",+91 93210 78901,vivek.nair@pediatrics.com
+Dr. Aishwarya Gupta,Ophthalmologist,"Retinal Detachment, Age-related Macular Degeneration, Double Vision",21,5.0,Ahmedabad,"Retinal Detachment, Macular Degeneration",+91 92109 56789,aishwarya.gupta@eyecare.com
+Dr. Pranav Mishra,ENT Specialist,"Chronic Cough, Hoarseness, Balance Disorders",13,4.6,Jaipur,"Balance Disorders, Chronic Cough",+91 91098 78901,pranav.mishra@entclinic.com
+Dr. Shalini Joshi,Urologist,"Male Infertility, Testicular Torsion, Hydrocele",25,4.8,Lucknow,"Male Infertility, Hydrocele",+91 90987 89012,shalini.joshi@urology.com
+Dr. Sameer Khan,Cardiologist,"Atherosclerosis, Cardiac Arrest, Angiography",16,4.7,Mumbai,"Atherosclerosis, Cardiac Arrest",+91 97987 65432,sameer.khan@heartsolutions.com
+Dr. Tanya Patel,Dermatologist,"Pityriasis Alba, Seborrheic Dermatitis, Photodermatitis",5,3.9,Delhi,"Seborrheic Dermatitis, Photodermatitis",+91 98897 65432,tanya.patel@skinspecialists.com
+Dr. Raghav Iyer,Neurologist,"Amyotrophic Lateral Sclerosis (ALS), Huntington's Disease, Multiple System Atrophy",23,4.7,Bangalore,"ALS, Huntington's Disease",+91 96876 54321,raghav.iyer@neurology.com
+Dr. Shilpa Verma,General Physician,"Preventive Medicine, Vaccinations, Travel Medicine",11,4.4,Chennai,"Traveler's Diarrhea, Immunizations",+91 95765 43210,shilpa.verma@generalpractice.com
+Dr. Arjun Reddy,Gynecologist,"Vaginal Prolapse, Cervical Dysplasia, Uterine Prolapse",9,4.5,Hyderabad,"Cervical Dysplasia, Uterine Prolapse",+91 94654 32109,arjun.reddy@womenshealthclinic.com
+Dr. Nandini Singh,Orthopedist,"Ganglion Cyst, Plantar Fasciitis, Stress Fractures",27,4.8,Kolkata,"Plantar Fasciitis, Ganglion Cysts",+91 93543 21098,nandini.singh@orthopedics.com
+Dr. Varun Nair,Pediatrician,"Failure to Thrive, Prematurity, Congenital Anomalies",7,4.3,Pune,"Prematurity, Failure to Thrive",+91 92432 10987,varun.nair@childhealth.com
+Dr. Kavita Gupta,Ophthalmologist,"Stye, Chalazion, Blepharitis, Corneal Abrasion",18,4.9,Ahmedabad,"Blepharitis, Corneal Abrasion",+91 91321 09876,kavita.gupta@eyeclinic.com
+Dr. Deepak Mishra,ENT Specialist,"Nasal Congestion, Epistaxis, Voice Disorders, Vocal Nodules",10,4.4,Jaipur,"Voice Disorders, Epistaxis",+91 90210 98765,deepak.mishra@entdoctors.com
+Dr. Sneha Joshi,Urologist,"Overactive Bladder, Interstitial Cystitis, Pelvic Pain Syndrome",22,4.6,Lucknow,"Overactive Bladder, Interstitial Cystitis",+91 99109 87654,sneha.joshi@urologyassociates.com
+Dr. Arvind Kumar,Cardiologist,"Pulmonary Hypertension, Myocarditis, Aortic Stenosis",14,4.6,Mumbai,"Pulmonary Hypertension, Myocarditis",+91 96000 00001,arvind.kumar@cardiaccenter.com
+Dr. Maya Desai,Dermatologist,"Bullous Pemphigoid, Lichen Planus, Ichthyosis",11,4.3,Delhi,"Lichen Planus, Bullous Pemphigoid",+91 96000 00002,maya.desai@skinhealth.com
+Dr. Rajiv Menon,Neurologist,"Restless Legs Syndrome, Peripheral Neuropathy, Muscle Weakness",31,4.6,Bangalore,"Peripheral Neuropathy, Restless Legs Syndrome",+91 96000 00003,rajiv.menon@neuroinstitute.com
+Dr. Deepa Sharma,General Physician,"Autoimmune Diseases, Chronic Fatigue, Medication Management",19,4.2,Chennai,"Chronic Fatigue Syndrome, Autoimmune Disorders",+91 96000 00004,deepa.sharma@wellnessclinic.com
+Dr. Karthik Reddy,Gynecologist,"Recurrent Miscarriage, Ectopic Pregnancy, Premature Rupture of Membranes",14,4.5,Hyderabad,"Ectopic Pregnancy, Recurrent Miscarriage",+91 96000 00005,karthik.reddy@womensinstitute.com
+Dr. Anjali Singh,Orthopedist,"Achilles Tendon Rupture, Carpal Tunnel Release, Trigger Finger",32,4.7,Kolkata,"Achilles Tendon Rupture, Carpal Tunnel Syndrome",+91 96000 00006,anjali.singh@orthopedicsurgery.com
+Dr. Sunil Nair,Pediatrician,"Febrile Seizures, Meningitis, Encephalitis, Sepsis",10,4.4,Pune,"Meningitis, Sepsis",+91 96000 00007,sunil.nair@pediatrichealthcare.com
+Dr. Priyanka Gupta,Ophthalmologist,"Diabetic Eye Disease, Retinal Vein Occlusion, Optic Neuritis",22,5.0,Ahmedabad,"Diabetic Retinopathy, Retinal Vein Occlusion",+91 96000 00008,priyanka.gupta@eyespecialists.com
+Dr. Rajesh Mishra,ENT Specialist,"Vocal Cord Paralysis, Laryngeal Cancer, Chronic Rhinitis",16,4.5,Jaipur,"Chronic Rhinitis, Vocal Cord Paralysis",+91 96000 00009,rajesh.mishra@entsurgery.com
+Dr. Meena Joshi,Urologist,"Stress Incontinence, Urinary Retention, Prostatitis",26,4.9,Lucknow,"Prostatitis, Stress Incontinence",+91 96000 00010,meena.joshi@urologyassociates.com
+Dr. Aditya Verma,Cardiologist,"Hypertrophic Cardiomyopathy, Congestive Heart Failure",20,4.9,Mumbai,"Congestive Heart Failure, Hypertrophic Cardiomyopathy",+91 96000 00011,aditya.verma@cardiacare.com
+Dr. Shruti Kapoor,Dermatologist,"Granuloma Annulare, Scleroderma, Cutaneous Lupus Erythematosus",12,4.4,Delhi,"Cutaneous Lupus Erythematosus, Scleroderma",+91 96000 00012,shruti.kapoor@skinsolutions.com
+Dr. Rohan Iyer,Neurologist,"Guillain-Barré Syndrome, Transverse Myelitis, Spinal Muscular Atrophy",33,4.8,Bangalore,"Guillain-Barre Syndrome, Transverse Myelitis",+91 96000 00013,rohan.iyer@neurocenter.com
+Dr. Lakshmi Patel,General Physician,"Geriatric Medicine, Palliative Care, Hospice Care",21,4.6,Chennai,"Palliative care, Geriatric care",+91 96000 00014,lakshmi.patel@generalhealth.com
+Dr. Vijay Reddy,Gynecologist,"Female Infertility, Endometrial Hyperplasia, Cervical Cancer Screening",15,4.7,Hyderabad,"Endometrial Hyperplasia, Female Infertility",+91 96000 00015,vijay.reddy@womenswellness.com
+Dr. Anika Singh,Orthopedist,"Osteomyelitis, Septic Arthritis, Avascular Necrosis",34,4.9,Kolkata,"Osteomyelitis, Septic Arthritis",+91 96000 00016,anika.singh@orthopedicclinic.com
+Dr. Vivek Nair,Pediatrician,"Cystic Fibrosis, Muscular Dystrophy, Genetic Disorders",11,4.5,Pune,"Cystic Fibrosis, Muscular Dystrophy",+91 96000 00017,vivek.nair@childdoctors.com
+Dr. Aishwarya Gupta,Ophthalmologist,"Glaucoma Surgery, Retinal Laser Surgery, Strabismus Surgery",23,5.0,Ahmedabad,"Strabismus (Crossed Eyes), Glaucoma",+91 96000 00018,aishwarya.gupta@eyeinstitute.com
+Dr. Pranav Mishra,ENT Specialist,"Chronic Sinusitis, Nasal Fractures, Snoring, Adenoiditis",17,4.6,Jaipur,"Chronic Sinusitis, Adenoiditis",+91 96000 00019,pranav.mishra@entcare.com
+Dr. Shalini Joshi,Urologist,"Urinary Tract Obstruction, Bladder Dysfunction, Erectile Dysfunction",27,4.9,Lucknow,"Urinary Tract Obstruction, Bladder Dysfunction",+91 96000 00020,shalini.joshi@urology.com
+Dr. Amit Sharma,Cardiologist,"Valve Replacement, Aortic Aneurysm, Coronary Angiogram",13,4.5,Mumbai,"Aortic Aneurysm, Valve replacement",+91 98765 78901,amit.sharma@cardioexpert.com
+Dr. Priya Verma,Dermatologist,"Lipoma, Epidermoid Cyst, Angioma",9,4.1,Delhi,"Epidermoid Cysts, Lipomas",+91 99887 89012,priya.verma@skincarepro.com
+Dr. Suresh Kumar,Neurologist,"Normal Pressure Hydrocephalus, Progressive Supranuclear Palsy",34,4.7,Bangalore,"Normal Pressure Hydrocephalus, Progressive Supranuclear Palsy",+91 97654 90123,suresh.kumar@brainmd.com
+Dr. Neha Patel,General Physician,"Weight Management, Smoking Cessation, Stress Management",18,4.3,Chennai,"Obesity, Smoking Addiction",+91 96543 01234,neha.patel@healthyliving.com
+Dr. Rajesh Reddy,Gynecologist,"Vulvodynia, Lichen Sclerosus, Vaginismus",16,4.4,Hyderabad,"Vulvodynia, Lichen Sclerosus",+91 95432 23456,rajesh.reddy@womenspecialist.com
+Dr. Divya Singh,Orthopedist,"Spondylolisthesis, Spinal Cord Compression, Sciatica",35,4.8,Kolkata,"Spondylolisthesis, Sciatica",+91 94321 34567,divya.singh@boneandspine.com
+Dr. Kiran Nair,Pediatrician,"Croup, Bronchiolitis, Whooping Cough",12,4.6,Pune,"Croup, Bronchiolitis",+91 93210 45678,kiran.nair@childwell.com
+Dr. Sanjay Gupta,Ophthalmologist,"Retinitis Pigmentosa, Optic Atrophy, Ocular Trauma",24,4.9,Ahmedabad,"Retinitis Pigmentosa, Optic Atrophy",+91 92109 56790,sanjay.gupta@visionplus.com
+Dr. Pooja Mishra,ENT Specialist,"Perforated Eardrum, Cholesteatoma, Mastoiditis",18,4.5,Jaipur,"Perforated Eardrum, Cholesteatoma",+91 91098 67890,pooja.mishra@entmaster.com
+Dr. Vikram Joshi,Urologist,"Penile Cancer, Testicular Cancer, Urethral Stricture",28,4.7,Lucknow,"Penile Cancer, Urethral Stricture",+91 90987 78901,vikram.joshi@urologyexpert.com
+Dr. Sunita Sharma,Cardiologist,"Ebstein's Anomaly, Tetralogy of Fallot",19,4.9,Mumbai,"Ebstein's Anomaly, Tetralogy of Fallot",+91 98765 89012,sunita.sharma@cardioelite.com
+Dr. Manish Kapoor,Dermatologist,"Dermatomyositis, Morphea, Sweet's Syndrome",13,4.6,Delhi,"Dermatomyositis, Morphea",+91 99887 90123,manish.kapoor@skinhub.com
+Dr. Radha Iyer,Neurologist,"Posterior Cortical Atrophy, Lewy Body Dementia",36,4.8,Bangalore,"Lewy Body Dementia, Posterior Cortical Atrophy",+91 97654 01234,radha.iyer@neurovision.com
+Dr. Rahul Patel,General Physician,"Travel Vaccinations, Altitude Sickness, Jet Lag",20,4.4,Chennai,"Altitude Sickness, Jet Lag",+91 96543 12345,rahul.patel@travelhealth.com
+Dr. Priyanka Reddy,Gynecologist,"Gestational Diabetes, Postpartum Depression, Placenta Previa",17,4.5,Hyderabad,"Gestational Diabetes, Placenta Previa",+91 95432 34567,priyanka.reddy@womenschoice.com
+Dr. Vijay Singh,Orthopedist,"Spondylosis, Degenerative Disc Disease, Spinal Fusion",37,4.9,Kolkata,"Spondylosis, Spinal Fusion",+91 94321 45689,vijay.singh@orthospine.com
+Dr. Sneha Verma,Pediatrician,"Cerebral Palsy, Down Syndrome, Spina Bifida",13,4.7,Pune,"Cerebral Palsy, Down Syndrome",+91 93210 56789,sneha.verma@childhope.com
+Dr. Aditya Jain,Ophthalmologist,"Uveitis, Scleritis, Orbital Cellulitis",25,5.0,Ahmedabad,"Uveitis, Scleritis",+91 92109 67890,aditya.jain@eyewellness.com
+Dr. Kiran Patel,ENT Specialist,"Globus Pharyngis, Dysphonia, Zenker's Diverticulum",19,4.8,Jaipur,"Globus Pharyngis, Zenker's Diverticulum",+91 91098 78912,kiran.patel@entease.com
+Dr. Meena Sharma,Urologist,"Bladder Pain Syndrome, Testicular Hydrocele, Vasectomy Reversal",29,4.6,Lucknow,"Bladder Pain Syndrome, Vasectomy Reversal",+91 99109 89012,meena.sharma@urologyadvance.com
+---,---,---,---,---,---,---,,
+Dr. Arjun Sharma,Cardiologist,"Chest Pain, Palpitations, High Blood Pressure, Arrhythmia",15,4.7,Mumbai,"Heart Failure, Angina, Hypertension",+91 98765 43210,arjunsharma@heartclinic.com
+Dr. Priya Patel,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Skin Cancer, Alopecia, Urticaria",+91 99112 23344,priyapatel@skinhealth.com
+Dr. Rohan Verma,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's Disease",22,4.9,Bangalore,"Epilepsy, Multiple Sclerosis, Neuropathy",+91 97654 32109,rohanverma@braindoctor.in
+Dr. Anjali Reddy,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",12,4.5,Chennai,"Endometriosis, Ovarian Cysts, Uterine Prolapse",+91 98877 66554,anjalireddy@womenshealth.com
+Dr. Vikram Singh,Orthopedic Surgeon,"Fractures, Arthritis, Joint Pain, Back Pain, Sports Injuries",28,4.6,Kolkata,"Osteoarthritis, Rheumatoid Arthritis, Spinal Stenosis",+91 96543 21098,vikramsingh@bonesandjoints.com
+Dr. Deepika Nair,Pediatrician,"Fever, Cough, Cold, Vaccinations, Childhood Infections, Asthma",9,4.8,Hyderabad,"Chickenpox, Measles, Mumps",+91 95432 10987,deepikanair@childcare.com
+Dr. Suresh Kumar,General Physician,"Diabetes, Hypertension, Thyroid Disorders, Infections, Flu",18,4.3,Pune,"Common Cold, Influenza, Bronchitis",+91 94321 09876,sureshkumar@healthfirst.in
+Dr. Meera Joshi,Ophthalmologist,"Cataracts, Glaucoma, Dry Eyes, Vision Problems, Eye Infections",10,4.4,Ahmedabad,"Macular Degeneration, Diabetic Retinopathy",+91 93210 98765,meerajoshi@eyesight.com
+Dr. Amit Gupta,ENT Specialist,"Sinusitis, Tonsillitis, Hearing Loss, Ear Infections, Sore Throat",14,4.7,Jaipur,"Adenoiditis, Vertigo",+91 92109 87654,amitgupta@earsandthroat.in
+Dr. Sneha Khanna,Gastroenterologist,"Abdominal Pain, Indigestion, Heartburn, Constipation, Diarrhea",7,4.1,Lucknow,"Ulcerative Colitis, Crohn's Disease, GERD",+91 91098 76543,snehakhanna@digestivedoctor.com
+Dr. Rajeev Menon,Cardiologist,"Arrhythmia, Heart Murmurs, Chest Discomfort, High Cholesterol",25,4.8,Mumbai,"Cardiomyopathy, Pericarditis, Congenital Heart Defects",+91 98123 45678,rajeevmenon@heartspecialist.com
+Dr. Sunita Reddy,Dermatologist,"Rashes, Allergies, Skin Cancer Screening, Scar Treatment",11,4.3,Delhi,"Melanoma, Basal Cell Carcinoma, Squamous Cell Carcinoma",+91 99876 54321,sunitareddy@skinandbeauty.com
+Dr. Mahesh Kumar,Neurologist,"Memory Loss, Tremors, Balance Problems, Nerve Pain",19,4.6,Bangalore,"Alzheimer's Disease, Parkinson's Disease, Multiple Sclerosis",+91 97777 66665,maheshkumar@neurocare.in
+Dr. Divya Sharma,Gynecologist,"Prenatal Care, Postnatal Care, Pap Smears, STD Testing",6,4.9,Chennai,"Vaginitis, Pelvic Inflammatory Disease, Endometriosis",+91 98665 54433,divyasharma@womenscenter.com
+Dr. Praveen Iyer,Orthopedic Surgeon,"Hip Replacement, Knee Replacement, Shoulder Surgery, Carpal Tunnel",32,4.5,Kolkata,"Rotator Cuff Tear, ACL Tear, Meniscus Tear",+91 96443 32211,praveeniyer@orthopedicsurgeon.com
+Dr. Anika Desai,Pediatrician,"Well-Child Visits, Immunizations, Developmental Delays, Allergies",13,4.7,Hyderabad,"Asthma, Eczema, Food Allergies",+91 95221 10099,anikadesai@pediatriccare.com
+Dr. Rohan Kapoor,General Physician,"Preventive Care, Vaccinations, Health Checkups, Chronic Disease Management",21,4.2,Pune,"Arthritis, Osteoporosis, Anemia",+91 94009 98877,rohankapoor@familydoctor.in
+Dr. Neha Verma,Ophthalmologist,"Refractive Surgery, LASIK, Cataract Surgery, Diabetic Eye Exams",5,4.8,Ahmedabad,"Retinal Detachment, Glaucoma",+91 93887 76655,nehaverma@visioncare.com
+Dr. Vijay Sharma,ENT Specialist,"Nasal Congestion, Sleep Apnea, Swallowing Problems, Dizziness",16,4.4,Jaipur,"Deviated Septum, Tinnitus, Laryngitis",+91 92665 54433,vijaysharma@entclinic.in
+Dr. Lakshmi Nair,Gastroenterologist,"Liver Disease, Pancreatitis, Colonoscopy, Upper Endoscopy",27,4.6,Lucknow,"Hepatitis, Cirrhosis, Irritable Bowel Syndrome",+91 91443 32211,lakshminair@liverdoctor.com
+Dr. Sachin Patel,Cardiologist,"Valve Disease, Congestive Heart Failure, Angioplasty",17,4.9,Mumbai,"Coronary Artery Disease, Myocardial Infarction",+91 98223 34455,sachinpatel@heartcare.com
+Dr. Kavita Sharma,Dermatologist,"Warts, Moles, Skin Tags, Botox, Fillers",9,4.1,Delhi,"Rosacea, Cellulitis",+91 99778 89900,kavitasharma@skindoc.com
+Dr. Arun Singh,Neurologist,"Multiple Sclerosis, Amyotrophic Lateral Sclerosis (ALS), Myasthenia Gravis",24,4.7,Bangalore,"Dementia, Bell's Palsy",+91 97556 67788,arunsingh@neuroclinic.in
+Dr. Priyanka Reddy,Gynecologist,"High-Risk Pregnancy, C-Sections, Hysterectomy, Family Planning",14,4.4,Chennai,"Preeclampsia, Ectopic Pregnancy",+91 98334 45566,priyankareddy@womensclinic.com
+Dr. Rajesh Iyer,Orthopedic Surgeon,"Arthroscopic Surgery, Ligament Reconstruction, Spine Surgery",30,4.6,Kolkata,"Scoliosis, Kyphosis",+91 96112 23344,rajeshiyer@orthocenter.com
+Dr. Smita Desai,Pediatrician,"Neonatal Care, Premature Babies, Infant Feeding, Growth Monitoring",11,4.8,Hyderabad,"Colic, Reflux",+91 95990 01122,smitadesai@childhealth.com
+Dr. Manoj Kapoor,General Physician,"Travel Medicine, Allergy Testing, Smoking Cessation, Weight Management",20,4.3,Pune,"Obesity, Allergies",+91 94778 89900,manojkapoor@healthplus.in
+Dr. Anita Verma,Ophthalmologist,"Retinal Diseases, Macular Degeneration, Laser Surgery",7,4.5,Ahmedabad,"Uveitis, Blepharitis",+91 93556 67788,anitaverma@eyecare.com
+Dr. Sanjay Sharma,ENT Specialist,"Snoring, Voice Disorders, Balance Disorders",15,4.2,Jaipur,"Meniere's Disease, Rhinitis",+91 92334 45566,sanjaysharma@entdoctor.in
+Dr. Deepa Nair,Gastroenterologist,"Inflammatory Bowel Disease (IBD), Colon Cancer Screening, Liver Biopsy",26,4.7,Lucknow,"Hepatitis B, Hepatitis C",+91 91112 23344,deepanair@digestivehealth.com
+Dr. Ajay Singh,Cardiologist,"Aortic Stenosis, Mitral Valve Regurgitation, Heart Palpitations, Shortness of Breath",13,4.6,Chandigarh,"Atrial Fibrillation, Cardiac Arrest",+91 98798 76543,ajaysingh@heartcare.com
+Dr. Meena Patel,Dermatologist,"Rosacea, Contact Dermatitis, Age Spots, Wrinkles, Skin Rejuvenation",10,4.4,Bhopal,"Actinic Keratosis, Seborrheic Dermatitis",+91 99665 54432,meenapatel@skinsolutions.com
+Dr. Vijay Kumar,Neurologist,"Epilepsy, Tremors, Nerve Damage, Muscle Weakness, Dizziness, Vertigo",20,4.8,Indore,"Stroke Rehabilitation, Multiple Sclerosis Relapses",+91 97543 21098,vijaykumar@neurocenter.in
+Dr. Shweta Sharma,Gynecologist,"Infertility Treatment, IVF, Laparoscopic Surgery, Hysterectomy",16,4.5,Varanasi,"Polycystic Ovary Syndrome (PCOS), Uterine Fibroids",+91 98432 10987,shwetasharma@gynecology.com
+Dr. Ravi Iyer,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Joint Replacement, Arthroscopy",29,4.7,Nagpur,"Osteoporosis, Spinal Stenosis",+91 96321 09876,raviiyer@orthopedicspecialist.com
+Dr. Deepika Verma,Pediatrician,"Childhood Vaccinations, Fever Management, Cough and Cold, Diarrhea",8,4.9,Visakhapatnam,"Respiratory Syncytial Virus (RSV), Bronchiolitis",+91 95210 98765,deepikaverma@pediatriccare.com
+Dr. Sanjay Gupta,General Physician,"Preventive Medicine, Health Check-ups, Diabetes Management, Hypertension",19,4.2,Coimbatore,"Hyperlipidemia, Chronic Kidney Disease",+91 94109 87654,sanjaygupta@healthfirstclinic.com
+Dr. Anjali Menon,Ophthalmologist,"Cataract Surgery, Glaucoma Treatment, Diabetic Retinopathy, LASIK",12,4.3,Madurai,"Age-Related Macular Degeneration, Dry Eye Syndrome",+91 93098 76543,anjalimenon@eyedoctor.com
+Dr. Rajesh Khanna,ENT Specialist,"Sinus Infections, Allergies, Hearing Loss, Tinnitus, Vertigo",14,4.6,Guwahati,"Deviated Septum, Tonsillitis",+91 92987 65432,rajeshkhanna@entcare.com
+Dr. Priya Joshi,Gastroenterologist,"Irritable Bowel Syndrome (IBS), Acid Reflux, Ulcerative Colitis",25,4.8,Thiruvananthapuram,"Crohn's Disease, Celiac Disease",+91 91876 54321,priyajoshi@digestivehealthclinic.com
+Dr. Suresh Sharma,Cardiologist,"Angina, Heart Failure, High Blood Pressure, Cholesterol Management",11,4.5,Chandigarh,"Peripheral Artery Disease, Valvular Heart Disease",+91 98112 23344,sureshsharma@cardiocare.com
+Dr. Ritu Patel,Dermatologist,"Eczema, Psoriasis, Acne Scar Treatment, Skin Allergies, Warts",7,4.2,Bhopal,"Fungal Infections, Melasma",+91 99998 87766,ritupatel@skincareclinic.com
+Dr. Naveen Kumar,Neurologist,"Headaches, Migraines, Stroke, Seizures, Parkinson's Disease",23,4.9,Indore,"Multiple Sclerosis, Amyotrophic Lateral Sclerosis",+91 97776 65544,naveenkumar@neuroclinic.com
+Dr. Lakshmi Reddy,Gynecologist,"Prenatal Care, Labor and Delivery, Postpartum Care, Family Planning",15,4.7,Varanasi,"Endometriosis, Polycystic Ovary Syndrome (PCOS)",+91 98887 76655,lakshmireddy@womenshealthcenter.com
+Dr. Vikram Iyer,Orthopedic Surgeon,"Fractures, Sprains, Joint Pain, Arthritis, Sports Injuries",35,4.4,Nagpur,"Knee Replacement, Hip Replacement",+91 96665 54433,vikramiyer@orthodoc.com
+Dr. Anjali Verma,Pediatrician,"Child Vaccinations, Well-Child Exams, Childhood Illnesses, Nutrition",9,4.6,Visakhapatnam,"Asthma, Allergies",+91 95554 43322,anjaliverma@pediatrician.com
+Dr. Rajeev Gupta,General Physician,"Preventive Care, Diabetes Management, Hypertension, Flu Shots",21,4.3,Coimbatore,"Thyroid Disorders, Anemia",+91 94443 32211,rajeevgupta@familyphysician.com
+Dr. Sneha Menon,Ophthalmologist,"Cataracts, Glaucoma, Macular Degeneration, Diabetic Retinopathy",13,4.8,Madurai,"Dry Eye Syndrome, Uveitis",+91 93332 21100,snehamenon@eyeclinic.com
+Dr. Amit Khanna,ENT Specialist,"Sinusitis, Tonsillitis, Hearing Loss, Tinnitus, Vertigo",17,4.1,Guwahati,"Allergies, Sleep Apnea",+91 92221 10099,amitkhanna@entdoctor.com
+Dr. Divya Joshi,Gastroenterologist,"Irritable Bowel Syndrome (IBS), Acid Reflux, Crohn's Disease",28,4.7,Thiruvananthapuram,"Ulcerative Colitis, Liver Diseases",+91 91110 09988,divyajoshi@gastroclinic.com
+Dr. Rohan Malhotra,Cardiologist,"Arrhythmia, Chest Pain, High Cholesterol, Heart Valve Problems",14,4.8,Chandigarh,"Atrial Fibrillation, Coronary Artery Disease",+91 98765 43321,rohanmalhotra@heartspecialist.com
+Dr. Shreya Singh,Dermatologist,"Acne, Eczema, Psoriasis, Hair Loss, Skin Cancer Screening",12,4.5,Bhopal,"Contact Dermatitis, Rosacea",+91 99876 54432,shreyasingh@dermatologyclinic.com
+Dr. Vikas Sharma,Neurologist,"Headaches, Migraines, Epilepsy, Stroke, Parkinson's Disease",26,4.9,Indore,"Multiple Sclerosis, Dementia",+91 97654 32210,vikassharma@neurologycenter.com
+Dr. Pooja Reddy,Gynecologist,"Pregnancy, Childbirth, Infertility, Women's Health, Menopause",18,4.6,Varanasi,"Polycystic Ovary Syndrome, Endometriosis",+91 98654 32321,poojareddy@gynecologyclinic.com
+Dr. Sunil Iyer,Orthopedic Surgeon,"Fractures, Joint Pain, Arthritis, Sports Injuries, Back Pain",33,4.7,Nagpur,"Knee Replacement, Hip Replacement",+91 96543 21123,suniliyer@orthopedicspecialists.com
+Dr. Neha Verma,Pediatrician,"Child Vaccinations, Well-Child Exams, Childhood Illnesses, Nutrition",10,4.4,Visakhapatnam,"Asthma, Allergies",+91 95432 10012,nehaverma@pediatrics.com
+Dr. Anil Gupta,General Physician,"Preventive Care, Diabetes Management, Hypertension, Thyroid Problems",22,4.2,Coimbatore,"Respiratory Infections, Anemia",+91 94321 00001,anilgupta@generalmedicine.com
+Dr. Meera Menon,Ophthalmologist,"Cataract Surgery, Glaucoma Treatment, Diabetic Retinopathy, LASIK",14,4.8,Madurai,"Dry Eye Syndrome, Macular Degeneration",+91 93210 00009,meeramenon@ophthalmologycenter.com
+Dr. Vinay Khanna,ENT Specialist,"Sinusitis, Tonsillitis, Hearing Loss, Tinnitus, Voice Problems",19,4.5,Guwahati,"Allergies, Sleep Apnea",+91 92100 00098,vinaykhanna@entclinic.com
+Dr. Shalini Joshi,Gastroenterologist,"Irritable Bowel Syndrome (IBS), Acid Reflux, Crohn's Disease",29,4.6,Thiruvananthapuram,"Ulcerative Colitis, Liver Diseases",+91 91000 00087,shalinijoshi@gastroenterology.com
+Dr. Karthik Reddy,Cardiologist,"Heart Failure, Chest Pain, Arrhythmias, Valve Disease, ECG",16,4.7,Chandigarh,"Cardiomyopathy, Pericarditis",+91 98888 87777,karthikreddy@cardiocare.com
+Dr. Aishwarya Patel,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Allergies",6,4.3,Bhopal,"Rosacea, Contact Dermatitis",+91 99777 76666,aishwaryapatel@skinhealth.com
+Dr. Vikram Singh,Neurologist,"Stroke, Epilepsy, Parkinson's, Dementia, Headaches",24,4.9,Indore,"Multiple Sclerosis, Amyotrophic Lateral Sclerosis",+91 97666 65555,vikramsingh@braindoctor.in
+Dr. Priya Sharma,Gynecologist,"Pregnancy, Infertility, PCOS, Menopause, Fibroids",11,4.5,Varanasi,"Endometriosis, Ovarian Cysts",+91 98555 54444,priyasharma@womenshealth.com
+Dr. Rohit Iyer,Orthopedic Surgeon,"Fractures, Arthritis, Joint Replacement, Sports Injuries, Back Pain",31,4.6,Nagpur,"Osteoarthritis, Rheumatoid Arthritis",+91 96444 43333,rohithyer@bonesandjoints.com
+Dr. Neha Desai,Pediatrician,"Vaccinations, Fever, Cough, Cold, Infections, Asthma",12,4.8,Visakhapatnam,"Chickenpox, Measles, Mumps",+91 95333 32222,nehadesai@childcare.com
+Dr. Amit Kapoor,General Physician,"Diabetes, Hypertension, Thyroid, Infections, Flu",19,4.2,Coimbatore,"Common Cold, Influenza, Bronchitis",+91 94222 21111,amitkapoor@healthfirst.in
+Dr. Sunita Verma,Ophthalmologist,"Cataracts, Glaucoma, Dry Eyes, Vision Problems, Eye Infections",10,4.4,Madurai,"Macular Degeneration, Diabetic Retinopathy",+91 93111 10000,sunitaverma@eyesight.com
+Dr. Sanjay Gupta,ENT Specialist,"Sinusitis, Tonsillitis, Hearing Loss, Ear Infections, Sore Throat",15,4.7,Guwahati,"Adenoiditis, Vertigo",+91 92000 09999,sanjaygupta@earsandthroat.in
+Dr. Deepika Nair,Gastroenterologist,"Abdominal Pain, Indigestion, Heartburn, Constipation, Diarrhea",8,4.1,Thiruvananthapuram,"Ulcerative Colitis, Crohn's Disease, GERD",+91 91999 98888,deepikanair@digestivedoctor.com
+Dr. Priya Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Blood Pressure",15,4.8,Mumbai,"Hypertension, Coronary Artery Disease, Arrhythmias",+91 98765 43210,priyasharma@heartcare.com
+Dr. Rajesh Kumar,Dermatologist,"Acne, Eczema, Psoriasis, Hair Loss, Skin Infections",8,4.2,Delhi,"Acne, Eczema, Psoriasis, Fungal Infections",+91 99887 76655,rajeshkumar@skinsolutions.in
+Dr. Anita Patel,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's Disease",22,4.9,Bangalore,"Stroke, Epilepsy, Parkinson's Disease, Migraines",+91 97654 32109,anitapatel@brainhealth.com
+Dr. Sanjay Verma,General Physician,"Fever, Cold, Cough, Body Aches, Infections",5,3.8,Chennai,"Common Cold, Flu, Viral Infections",+91 98877 66554,sanjayverma@familyclinic.in
+Dr. Deepika Reddy,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS",12,4.5,Hyderabad,"PCOS, Infertility, Menstrual Disorders",+91 96543 21098,deepikareddy@womenshealth.com
+Dr. Rohan Singh,Orthopedic Surgeon,"Fractures, Joint Pain, Arthritis, Back Pain",18,4.7,Kolkata,"Osteoarthritis, Fractures, Ligament Injuries",+91 95432 10987,rohansingh@bonesurgeon.com
+Dr. Meera Joshi,Pediatrician,"Childhood Illnesses, Vaccinations, Growth Monitoring",10,4.6,Pune,"Chickenpox, Measles, Mumps",+91 94321 09876,meerajoshi@kidsclinic.in
+Dr. Vikram Iyer,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat, Hearing Loss",7,4.1,Ahmedabad,"Sinusitis, Tonsillitis, Hearing Loss",+91 93210 98765,vikramiyer@entcare.com
+Dr. Neha Gupta,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections",14,4.4,Jaipur,"Cataracts, Glaucoma, Diabetic Retinopathy",+91 92109 87654,nehagupta@eyecare.com
+Dr. Amit Sharma,Psychiatrist,"Depression, Anxiety, Insomnia, Schizophrenia",25,5.0,Lucknow,"Depression, Anxiety, Bipolar Disorder",+91 91098 76543,amitsharma@mentalhealth.com
+Dr. Divya Nair,Cardiologist,"High Cholesterol, Arrhythmias, Heart Failure, Angina",9,4.3,Mumbai,"Heart Failure, Angina, High Cholesterol",+91 90987 65432,divyanair@heartcare.com
+Dr. Suresh Patel,Dermatologist,"Rashes, Allergies, Skin Cancer Screening",3,3.7,Delhi,"Skin Allergies, Rosacea, Warts",+91 98098 76543,sureshpatel@skinsolutions.in
+Dr. Kavita Verma,Neurologist,"Multiple Sclerosis, Neuropathy, Epilepsy",28,4.8,Bangalore,"Multiple Sclerosis, Peripheral Neuropathy, Dementia",+91 97087 65432,kavitaverma@brainhealth.com
+Dr. Arvind Kumar,General Physician,"Diabetes, Hypertension, Thyroid Problems",16,4.0,Chennai,"Diabetes, Hypertension, Hypothyroidism",+91 96076 54321,arvindkumar@familyclinic.in
+Dr. Pooja Singh,Gynecologist,"Prenatal Care, Pap Smears, Hysterectomy",6,4.9,Hyderabad,"Fibroids, Endometriosis, Ovarian Cysts",+91 95065 43210,poojasingh@womenshealth.com
+Dr. Vijay Sharma,Orthopedic Surgeon,"Sports Injuries, Knee Replacement, Hip Replacement",32,4.6,Kolkata,"Knee Pain, Hip Pain, Shoulder Pain",+91 94054 32109,vijaysharma@bonesurgeon.com
+Dr. Sunita Iyer,Pediatrician,"Asthma, Allergies, Developmental Delays",11,4.7,Pune,"Asthma, Food Allergies, ADHD",+91 93043 21098,sunitaiyer@kidsclinic.in
+Dr. Mahesh Gupta,ENT Specialist,"Tinnitus, Vertigo, Hearing Aids",19,4.2,Ahmedabad,"Vertigo, Tinnitus, Deviated Septum",+91 92032 10987,maheshgupta@entcare.com
+Dr. Ritu Sharma,Ophthalmologist,"Refractive Surgery, Macular Degeneration",4,3.9,Jaipur,"Conjunctivitis, Dry Eye Syndrome, Myopia",+91 91021 09876,ritusharma@eyecare.com
+Dr. Ashok Kumar,Psychiatrist,"OCD, PTSD, Eating Disorders",21,4.5,Lucknow,"OCD, PTSD, Panic Disorder",+91 90010 98765,ashokkumar@mentalhealth.com
+Dr. Shalini Nair,Cardiologist,"Valve Disorders, Congenital Heart Disease",13,4.7,Mumbai,"Aortic Stenosis, Mitral Regurgitation",+91 99999 99999,shalinair@heartcare.com
+Dr. Rahul Patel,Dermatologist,"Vitiligo, Scar Treatment, Chemical Peels",2,3.5,Delhi,"Melasma, Acne Scars, Sun Damage",+91 98888 88888,rahulpatel@skinsolutions.in
+Dr. Preeti Verma,Neurologist,"ALS, Huntington's Disease, Head Trauma",35,4.9,Bangalore,"Amyotrophic Lateral Sclerosis (ALS), Traumatic Brain Injury",+91 97777 77777,preetiverma@brainhealth.com
+Dr. Deepak Kumar,General Physician,"Preventative Care, Health Screenings",17,4.1,Chennai,"Routine Check-ups, Vaccinations",+91 96666 66666,deepakkumar@familyclinic.in
+Dr. Anjali Singh,Gynecologist,"Fertility Treatments, IVF",7,4.6,Hyderabad,"IVF, IUI, Egg Freezing",+91 95555 55555,anjalisingh@womenshealth.com
+Dr. Vivek Sharma,Orthopedic Surgeon,"Spinal Stenosis, Scoliosis",20,4.8,Kolkata,"Lower Back Pain, Sciatica, Herniated Disc",+91 94444 44444,viveksharma@bonesurgeon.com
+Dr. Smita Iyer,Pediatrician,"Newborn Care, Feeding Problems",1,4.0,Pune,"Colic, Reflux, Diarrhea",+91 93333 33333,smitaiyer@kidsclinic.in
+Dr. Sachin Gupta,ENT Specialist,"Sleep Apnea, Snoring",15,4.3,Ahmedabad,"Deviated Septum, Nasal Polyps, Rhinitis",+91 92222 22222,sachingupta@entcare.com
+Dr. Reena Sharma,Ophthalmologist,"Retinal Detachment, Diabetic Eye Disease",10,4.4,Jaipur,"Retinal Detachment, Macular Holes",+91 91111 11111,reenasharma@eyecare.com
+Dr. Manish Kumar,Psychiatrist,"Addiction, Bipolar Disorder, Eating Disorders",27,4.7,Lucknow,"Alcohol Use Disorder, Opioid Use Disorder",+91 90000 00000,manishkumar@mentalhealth.com
+Dr. Sushma Reddy,Cardiologist,"Heart Murmurs, Congestive Heart Failure, High Cholesterol",6,3.9,Mumbai,"Cardiomyopathy, Pericarditis",+91 98712 34567,sushmareddy@heartcare.com
+Dr. Rohan Kapoor,Dermatologist,"Rosacea, Skin Tags, Warts, Moles",14,4.5,Delhi,"Hyperhidrosis, Keloids",+91 99823 45678,rohankapoor@skinsolutions.in
+Dr. Neha Sharma,Neurologist,"Tremors, Dizziness, Vertigo, Memory Loss",23,4.8,Bangalore,"Ataxia, Myasthenia Gravis",+91 97634 56789,nehasharma@brainhealth.com
+Dr. Vikas Gupta,General Physician,"Urinary Tract Infections, Respiratory Infections, Allergies",9,4.1,Chennai,"Bronchitis, Sinus Infection, Ear Infection",+91 98845 67890,vikasgupta@familyclinic.in
+Dr. Divya Iyer,Gynecologist,"Pelvic Pain, Vaginal Infections, Abnormal Bleeding",11,4.6,Hyderabad,"Yeast Infections, Bacterial Vaginosis",+91 96556 78901,divyaiyer@womenshealth.com
+Dr. Sanjay Mehta,Orthopedic Surgeon,"Carpal Tunnel Syndrome, Rotator Cuff Tears",29,4.7,Kolkata,"Tennis Elbow, Golfer's Elbow",+91 95467 89012,sanjaymehta@bonesurgeon.com
+Dr. Anika Patel,Pediatrician,"Croup, Bronchiolitis, Diarrhea, Vomiting",4,3.8,Pune,"RSV, Strep Throat",+91 94378 90123,anikapatel@kidsclinic.in
+Dr. Rajesh Nair,ENT Specialist,"Deviated Septum, Nasal Polyps, Allergies",16,4.2,Ahmedabad,"Laryngitis, Pharyngitis",+91 93289 01234,rajeshnair@entcare.com
+Dr. Priya Verma,Ophthalmologist,"Double Vision, Blurred Vision, Eye Pain",7,4.3,Jaipur,"Blepharitis, Chalazion",+91 92190 12345,priyaverma@eyecare.com
+Dr. Amit Singh,Psychiatrist,"Panic Attacks, Social Anxiety, Phobias",20,4.9,Lucknow,"Agoraphobia, Specific Phobia",+91 91001 23456,amitsingh@mentalhealth.com
+Dr. Sunita Kumar,Cardiologist,"Aortic Aneurysm, Peripheral Artery Disease",10,4.4,Mumbai,Deep Vein Thrombosis (DVT),+91 98765 00000,sunitakumar@heartcare.com
+Dr. Vikram Sharma,Dermatologist,"Shingles, Athlete's Foot, Hives",3,3.6,Delhi,"Scabies, Bed Bugs",+91 99887 00000,vikramsharma@skinsolutions.in
+Dr. Kavita Patel,Neurologist,"Bell's Palsy, Carpal Tunnel Syndrome (Neurological)",24,4.7,Bangalore,Trigeminal Neuralgia,+91 97654 00000,kavitapatel@brainhealth.com
+Dr. Arvind Iyer,General Physician,"Anemia, Osteoporosis, Vitamin Deficiencies",15,4.0,Chennai,Iron Deficiency Anemia,+91 98877 00000,arvindiyer@familyclinic.in
+Dr. Pooja Reddy,Gynecologist,"Endometriosis, Uterine Fibroids, Ovarian Cysts",5,4.8,Hyderabad,Pelvic Inflammatory Disease (PID),+91 96543 00000,poojareddy@womenshealth.com
+Dr. Vijay Singh,Orthopedic Surgeon,"Ankle Sprains, Plantar Fasciitis, Bunions",31,4.5,Kolkata,Achilles Tendonitis,+91 95432 00000,vijaysingh@bonesurgeon.com
+Dr. Sunita Joshi,Pediatrician,"Ear Infections, Sore Throats, Runny Nose",12,4.6,Pune,"Otitis Media, Tonsillitis",+91 94321 00000,sunitajoshi@kidsclinic.in
+Dr. Mahesh Verma,ENT Specialist,"Swimmer's Ear, Ruptured Eardrum, Meniere's Disease",17,4.1,Ahmedabad,Cholesteatoma,+91 93210 00000,maheshverma@entcare.com
+Dr. Ritu Gupta,Ophthalmologist,"Styes, Dry Eye Syndrome, Conjunctivitis",8,3.8,Jaipur,Uveitis,+91 92109 00000,ritugupta@eyecare.com
+Dr. Ashok Sharma,Psychiatrist,"Schizophrenia, Borderline Personality Disorder",22,4.4,Lucknow,Dissociative Identity Disorder (DID),+91 91098 00000,ashoksharma@mentalhealth.com
+Dr. Shalini Kapoor,Cardiologist,"Atrial Fibrillation, Mitral Valve Prolapse",11,4.6,Mumbai,Pulmonary Hypertension,+91 98765 44444,shalinikapoor@heartcare.com
+Dr. Rahul Verma,Dermatologist,"Contact Dermatitis, Seborrheic Dermatitis",4,3.7,Delhi,Lichen Planus,+91 99887 44444,rahulverma@skinsolutions.in
+Dr. Preeti Iyer,Neurologist,"Restless Legs Syndrome, Trigeminal Neuralgia",36,4.8,Bangalore,Cerebral Palsy,+91 97654 44444,preetiiyer@brainhealth.com
+Dr. Deepak Patel,General Physician,"Bronchitis, Pneumonia, Strep Throat",18,4.2,Chennai,Sepsis,+91 96543 44444,deepakpatel@familyclinic.in
+Dr. Anjali Kumar,Gynecologist,"Hormone Imbalance, Amenorrhea, Dysmenorrhea",8,4.7,Hyderabad,Premenstrual Dysphoric Disorder (PMDD),+91 95432 44444,anjalikumar@womenshealth.com
+Dr. Vivek Reddy,Orthopedic Surgeon,"Osteoporosis, Kyphosis, Lordosis",21,4.9,Kolkata,Spondylolisthesis,+91 94321 44444,vivekreddy@bonesurgeon.com
+Dr. Smita Singh,Pediatrician,"Chickenpox, Measles, Mumps, Rubella, Whooping Cough",2,4.1,Pune,Roseola,+91 93210 44444,smitasingh@kidsclinic.in
+Dr. Sachin Joshi,ENT Specialist,"Chronic Sinusitis, Tonsillectomy, Adenoidectomy",16,4.3,Ahmedabad,Laryngopharyngeal Reflux (LPR),+91 92109 44444,sachinjosh@entcare.com
+Dr. Reena Patel,Ophthalmologist,"Amblyopia (Lazy Eye), Strabismus (Crossed Eyes)",9,4.5,Jaipur,Nystagmus,+91 91098 44444,reenapatel@eyecare.com
+Dr. Manish Iyer,Psychiatrist,"Obsessive-Compulsive Disorder (OCD), Post-Traumatic Stress Disorder (PTSD), Generalized Anxiety Disorder (GAD)",28,5.0,Lucknow,Hoarding Disorder,+91 90001 23123,manishiyer@mentalhealth.com
+Dr. Lakshmi Sharma,Cardiologist,"Palpitations, Angina, High Blood Pressure, Arrhythmias",26,4.6,Mumbai,"Valve Disorders, Heart Failure",+91 91234 56789,lakshmisharma@cardiocare.in
+Dr. Arjun Patel,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Rashes",10,4.2,Delhi,"Rosacea, Warts, Moles",+91 99876 54321,arjunpatel@skinclinic.com
+Dr. Meera Kapoor,Neurologist,"Headaches, Migraines, Seizures, Stroke, Dementia",17,4.8,Bangalore,"Parkinson's Disease, Multiple Sclerosis",+91 97654 88888,meerakapoor@neurocare.com
+Dr. Rohit Verma,General Physician,"Fever, Cold, Cough, Body Aches, Fatigue",5,3.9,Chennai,"Flu, Viral Infections, Bronchitis",+91 98765 99999,rohitverma@familydoc.com
+Dr. Priya Iyer,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",12,4.4,Hyderabad,"Endometriosis, Ovarian Cysts",+91 96543 00001,priyaiyer@womenshealthclinic.com
+Dr. Sanjay Singh,Orthopedic Surgeon,"Fractures, Joint Pain, Arthritis, Back Pain, Sports Injuries",19,4.7,Kolkata,"Knee Replacement, Hip Replacement",+91 95432 11111,sanjaysingh@orthopedics.in
+Dr. Anita Gupta,Pediatrician,"Childhood Illnesses, Vaccinations, Growth Monitoring, Allergies",7,4.5,Pune,"Asthma, Chickenpox, Measles",+91 94321 22222,anitagupta@pediatrics.com
+Dr. Vikram Joshi,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat, Hearing Loss, Tinnitus",14,4.1,Ahmedabad,"Tonsillitis, Adenoiditis",+91 93210 33333,vikramjoshi@entclinic.com
+Dr. Neha Reddy,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections, Dry Eyes",21,4.3,Jaipur,"Diabetic Retinopathy, Macular Degeneration",+91 92109 44444,nehareddy@eyecarecenter.com
+Dr. Amit Patel,Psychiatrist,"Depression, Anxiety, Insomnia, Schizophrenia, Bipolar Disorder",29,4.9,Lucknow,"OCD, PTSD",+91 91098 55555,amitpatel@mindmatters.com
+Dr. Divya Sharma,Cardiologist,"Chest Pain, Shortness of Breath, Palpitations, Dizziness",3,3.7,Mumbai,"Hypertension, Coronary Artery Disease",+91 98765 66666,divyasharma@cardiologyplus.in
+Dr. Suresh Kumar,Dermatologist,"Hair Loss, Skin Cancer Screening, Rashes, Eczema",15,4.6,Delhi,"Psoriasis, Acne",+91 99876 77777,sureshkumar@dermatologycenter.com
+Dr. Kavita Verma,Neurologist,"Memory Loss, Tremors, Seizures, Numbness, Weakness",22,4.7,Bangalore,"Parkinson's Disease, Stroke",+91 97654 88888,kavitaverma@neurologyassociates.in
+Dr. Arvind Singh,General Physician,"Fever, Cough, Cold, Sore Throat, Body Aches",6,4.0,Chennai,"Flu, Viral Infections",+91 98765 99999,arvindsingh@healthfirstclinic.in
+Dr. Pooja Patel,Gynecologist,"Menopause, Infertility, Pregnancy, Painful Periods",9,4.2,Hyderabad,"PCOS, Endometriosis",+91 96543 00001,poojapatel@gynaeclinic.com
+Dr. Vijay Kumar,Orthopedic Surgeon,"Joint Pain, Back Pain, Knee Pain, Hip Pain",33,5.0,Kolkata,"Fractures, Sports Injuries",+91 95432 11111,vijaykumar@orthopedicsurgery.com
+Dr. Sunita Iyer,Pediatrician,"Vaccinations, Fever, Cough, Cold, Diarrhea",12,4.3,Pune,"Chickenpox, Measles",+91 94321 22222,sunitaiyer@kidshealthcenter.in
+Dr. Mahesh Gupta,ENT Specialist,"Hearing Loss, Tinnitus, Sinusitis, Sore Throat",40,4.8,Ahmedabad,"Ear Infections, Deviated Septum",+91 93210 33333,maheshgupta@entcareclinic.com
+Dr. Ritu Sharma,Ophthalmologist,"Blurred Vision, Double Vision, Eye Pain, Redness",7,3.6,Jaipur,"Cataracts, Glaucoma",+91 92109 44444,ritusharma@eyedoctors.in
+Dr. Ashok Verma,Psychiatrist,"Anxiety, Depression, Stress, Panic Attacks",1,3.5,Lucknow,"Insomnia, OCD",+91 91098 55555,ashokverma@mindwellness.com
+---,---,---,---,---,---,---,,
+Dr. Priya Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Cholesterol",15,4.7,Mumbai,"Hypertension, Coronary Artery Disease, Heart Failure",+91 98765 43210,priyasharma@heartcare.com
+Dr. Rahul Verma,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Skin Cancer Screening, Allergic Rashes, Fungal Infections",+91 99876 54321,rahulverma@skinclinic.com
+Dr. Anjali Kapoor,Neurologist,"Headaches, Migraines, Seizures, Stroke, Parkinson's",22,4.9,Bangalore,"Epilepsy, Multiple Sclerosis, Neuropathy",+91 97654 32109,anjalikapoor@brainhealth.com
+Dr. Sanjay Patel,Gastroenterologist,"Abdominal Pain, Bloating, Constipation, Diarrhea, Acid Reflux",12,4.5,Chennai,"Irritable Bowel Syndrome, Ulcerative Colitis, Crohn's Disease",+91 96543 21098,sanjaypatel@digestivehealth.com
+Dr. Deepika Reddy,Endocrinologist,"Diabetes, Thyroid Disorders, Hormonal Imbalance, Weight Gain",10,4.3,Hyderabad,"Polycystic Ovary Syndrome (PCOS), Osteoporosis, Adrenal Disorders",+91 95432 10987,deepikareddy@endocrinecare.com
+Dr. Amit Singh,Orthopedic Surgeon,"Knee Pain, Back Pain, Shoulder Pain, Fractures, Arthritis",18,4.8,Kolkata,"Joint Replacement, Sports Injuries, Spinal Stenosis",+91 94321 09876,amitsingh@orthopedicspecialist.com
+Dr. Meera Nair,Gynecologist,"Pregnancy, Infertility, Menopause, Pelvic Pain",25,4.6,Pune,"Uterine Fibroids, Ovarian Cysts, Endometriosis",+91 93210 98765,meeranair@womenshealth.com
+Dr. Vikram Joshi,Pediatrician,"Fever, Cough, Cold, Vaccination, Growth Monitoring",7,4.1,Ahmedabad,"Asthma, Allergies, Infections",+91 92109 87654,vikramjoshi@childrensclinic.com
+Dr. Sunita Gupta,Ophthalmologist,"Blurred Vision, Eye Pain, Cataracts, Glaucoma",14,4.4,Jaipur,"Diabetic Retinopathy, Macular Degeneration, Dry Eye Syndrome",+91 91098 76543,sunitagupta@eyecarecenter.com
+Dr. Ramesh Kumar,Urologist,"Urinary Incontinence, Kidney Stones, Prostate Problems, Blood in Urine",20,4.7,Lucknow,"Erectile Dysfunction, Urinary Tract Infections (UTIs), Bladder Cancer",+91 90987 65432,kumar@urologyclinic.com
+Dr. Shalini Mishra,Cardiologist,"Angina, Arrhythmia, High Blood Pressure, Chest Discomfort",11,3.8,Mumbai,"Atrial Fibrillation, Valve Disorders, Cardiomyopathy",+91 98761 23450,shalinimishra@heartclinic.com
+Dr. Rajesh Khanna,Dermatologist,"Rashes, Itching, Warts, Moles, Skin Allergies",5,4.5,Delhi,"Contact Dermatitis, Psoriasis, Acne Scars",+91 99870 12345,rajeshkhanna@skindoc.com
+Dr. Neha Verma,Neurologist,"Tremors, Numbness, Weakness, Dizziness",9,4.9,Bangalore,"Bell's Palsy, Carpal Tunnel Syndrome, Vertigo",+91 97659 01234,nehaverma@neurocare.com
+Dr. Suresh Kumar,Gastroenterologist,"Heartburn, Indigestion, Nausea, Vomiting",16,4.2,Chennai,"Gastritis, Peptic Ulcers, Liver Disease",+91 96548 90123,sureshkumar@gastrolife.com
+Dr. Aparna Reddy,Endocrinologist,"Fatigue, Weight Loss, Excessive Thirst, Frequent Urination",13,4.6,Hyderabad,"Hyperthyroidism, Hypothyroidism, Cushing's Syndrome",+91 95437 89012,aparnareddy@endocrinesolutions.com
+Dr. Ajay Singh,Orthopedic Surgeon,"Hip Pain, Ankle Pain, Foot Pain, Muscle Sprains",28,4.0,Kolkata,"Osteoarthritis, Ligament Tears, Bursitis",+91 94326 78901,ajaysingh@orthorehab.com
+Dr. Pooja Nair,Gynecologist,"Irregular Periods, Painful Periods, Vaginal Discharge, Contraception",6,4.7,Pune,"Premenstrual Syndrome (PMS), Vaginitis, Pelvic Inflammatory Disease (PID)",+91 93215 67890,poojanair@womenshealthcenter.com
+Dr. Vivek Joshi,Pediatrician,"Ear Infections, Sore Throat, Runny Nose, Diarrhea",19,4.3,Ahmedabad,"Chickenpox, Measles, Mumps",+91 92104 56789,vivekjosh@kidshealth.com
+Dr. Anita Gupta,Ophthalmologist,"Double Vision, Eye Strain, Red Eyes, Itchy Eyes",3,4.8,Jaipur,"Conjunctivitis, Corneal Ulcers, Uveitis",+91 91093 45678,anitagupta@eyespecialists.com
+Dr. Rohit Kumar,Urologist,"Enlarged Prostate, Testicular Pain, Difficulty Urinating",24,4.1,Lucknow,"Prostatitis, Kidney Infections, Bladder Stones",+91 90982 34567,rohitkumar@urologist.com
+Dr. Divya Patel,Cardiologist,"Fainting, Dizziness, Leg Swelling, Weakness",17,3.9,Mumbai,"Peripheral Artery Disease, Aortic Stenosis, Mitral Valve Prolapse",+91 98760 98765,divyapatel@cardiaccenter.com
+Dr. Arjun Sharma,Dermatologist,"Dry Skin, Age Spots, Rosacea, Sunburn",4,4.4,Delhi,"Melasma, Vitiligo, Actinic Keratosis",+91 99879 87654,arjunsharma@dermacare.com
+Dr. Lakshmi Nair,Neurologist,"Memory Loss, Confusion, Speech Problems",21,4.6,Bangalore,"Alzheimer's Disease, Dementia, Amyotrophic Lateral Sclerosis (ALS)",+91 97658 76543,lakshminair@neurologyclinic.com
+Dr. Mahesh Singh,Gastroenterologist,"Rectal Bleeding, Dark Stools, Abdominal Cramps",1,4.7,Chennai,"Hemorrhoids, Anal Fissures, Diverticulitis",+91 96547 65432,maheshsingh@gihealth.com
+Dr. Swati Verma,Endocrinologist,"Hot Flashes, Night Sweats, Mood Swings",29,4.2,Hyderabad,"Menopause, Hypogonadism, Growth Hormone Deficiency",+91 95436 54321,swativerma@endocrinespecialist.com
+Dr. Karan Kapoor,Orthopedic Surgeon,"Elbow Pain, Wrist Pain, Hand Pain, Finger Pain",12,4.9,Kolkata,"Tennis Elbow, Carpal Tunnel Syndrome, Trigger Finger",+91 94325 43210,karankapoor@orthopedichands.com
+Dr. Ritu Joshi,Gynecologist,"Breast Pain, Breast Lumps, Abnormal Bleeding",10,4.5,Pune,"Fibrocystic Breast Disease, Breast Cancer Screening, Uterine Prolapse",+91 93214 32109,ritujoshi@womenscenter.com
+Dr. Rohan Kumar,Pediatrician,"Skin Rashes, Vomiting, Constipation",35,4.0,Ahmedabad,"Colic, Eczema, Food Allergies",+91 92103 21098,rohankumar@pediatriccare.com
+Dr. Shreya Gupta,Ophthalmologist,"Eye Floaters, Flashes of Light, Sudden Vision Loss",8,4.3,Jaipur,"Retinal Detachment, Age-Related Macular Degeneration (AMD)",+91 91092 10987,shreyagupta@visioncenter.com
+Dr. Vikram Patel,Urologist,"Scrotal Swelling, Painful Ejaculation, Blood in Semen",2,4.8,Lucknow,"Varicocele, Hydrocele, Peyronie's Disease",+91 90981 09876,vikrampatel@urologyassociates.com
+Dr. Aditi Singh,Cardiologist,"Shortness of breath on exertion, Swollen ankles, Fatigue",6,3.7,Mumbai,"Pulmonary Hypertension, Congenital Heart Defects, Valvular Heart Disease",+91 98766 54321,aditisingh@heartinstitute.com
+Dr. Saurabh Verma,Dermatologist,"Nail Infections, Skin Discoloration, Scarring",14,4.6,Delhi,"Keloids, Hyperpigmentation, Pityriasis Alba",+91 99875 43210,saurabhverma@skinmd.com
+Dr. Gayatri Kapoor,Neurologist,"Balance Problems, Coordination Difficulties, Muscle Spasms",27,4.1,Bangalore,"Ataxia, Huntington's Disease, Myasthenia Gravis",+91 97654 32109,gayatrikapoor@neurolife.com
+Dr. Siddharth Patel,Gastroenterologist,"Loss of Appetite, Unintentional Weight Loss, Yellowing of Skin",31,4.9,Chennai,"Cirrhosis, Hepatitis, Pancreatitis",+91 96543 21098,siddharthpatel@digestivelife.com
+Dr. Nandini Reddy,Endocrinologist,"Brittle Bones, Muscle Weakness, Kidney Stones",11,4.4,Hyderabad,"Hyperparathyroidism, Hypoparathyroidism, Rickets",+91 95432 10987,nandinireddy@endocrineclinic.com
+Dr. Arvind Singh,Orthopedic Surgeon,"Neck Pain, Whiplash, Spinal Injuries",37,4.2,Kolkata,"Cervical Spondylosis, Sciatica, Herniated Discs",+91 94321 09876,arvindsingh@spinecare.com
+Dr. Shilpa Nair,Gynecologist,"Sexual Dysfunction, Pain During Intercourse, Vaginal Dryness",9,4.7,Pune,"Vulvodynia, Vaginismus, Lichen Sclerosus",+91 93210 98765,shilpanair@womenspecialists.com
+Dr. Manoj Joshi,Pediatrician,"Behavioral Problems, Learning Disabilities, Autism Spectrum Disorder",17,4.5,Ahmedabad,"Attention-Deficit/Hyperactivity Disorder (ADHD), Cerebral Palsy, Down Syndrome",+91 92109 87654,manojjoshi@childrensspecialty.com
+Dr. Kavita Gupta,Ophthalmologist,"Drooping Eyelids, Squinting, Crossed Eyes",5,4.0,Jaipur,"Ptosis, Strabismus, Amblyopia",+91 91098 76543,kavitagupta@eyeinstitute.com
+Dr. Deepak Kumar,Urologist,"Infertility, Low Sperm Count, Testicular Cancer",15,4.3,Lucknow,"Azoospermia, Oligospermia, Cryptorchidism",+91 90987 65432,deepakkumar@menshealth.com
+Dr. Riya Sharma,Cardiologist,"Fast Heartbeat, Irregular Heartbeat, Heart Murmur",26,4.8,Mumbai,"Supraventricular Tachycardia (SVT), Ventricular Tachycardia (VT), Arrhythmogenic Cardiomyopathy",+91 98765 43310,riyasharma@advancedheartcare.com
+Dr. Varun Verma,Dermatologist,"Blisters, Ulcers, Nodules, Cysts",7,3.9,Delhi,"Bullous Pemphigoid, Dermatitis Herpetiformis, Hidradenitis Suppurativa",+91 99876 54421,varunverma@advancedskinclinic.com
+Dr. Tanvi Kapoor,Neurologist,"Muscle Weakness, Muscle Atrophy, Difficulty Swallowing",3,4.2,Bangalore,"Muscular Dystrophy, Spinal Muscular Atrophy (SMA), Lambert-Eaton Syndrome",+91 97654 32209,tanvikapoor@advbrainhealth.com
+Dr. Rohan Patel,Gastroenterologist,"Liver Failure, Bile Duct Obstruction, Abdominal Fluid Accumulation",13,4.6,Chennai,"Primary Biliary Cholangitis (PBC), Primary Sclerosing Cholangitis (PSC), Ascites",+91 96543 22098,rohanpatel@advdigestivehealth.com
+Dr. Isha Reddy,Endocrinologist,"Growth Disorders, Early Puberty, Late Puberty",19,4.5,Hyderabad,"Precocious Puberty, Delayed Puberty, Short Stature",+91 95432 21987,ishareddy@advendocrinecare.com
+Dr. Nikhil Singh,Orthopedic Surgeon,"Bone Tumors, Joint Infections, Limb Lengthening",20,4.7,Kolkata,"Osteosarcoma, Septic Arthritis, Congenital Limb Deformities",+91 94322 10976,nikhilsingh@advorthopedicspecialist.com
+Dr. Preeti Nair,Gynecologist,"Recurrent Miscarriage, Ectopic Pregnancy, Molar Pregnancy",12,4.4,Pune,"Antiphospholipid Syndrome (APS), Tubal Pregnancy, Gestational Trophoblastic Disease (GTD)",+91 93221 09865,preetinair@advwomenshealth.com
+Dr. Gaurav Joshi,Pediatrician,"Genetic Disorders, Metabolic Disorders, Immune Deficiencies",21,4.1,Ahmedabad,"Cystic Fibrosis, Phenylketonuria (PKU), Severe Combined Immunodeficiency (SCID)",+91 92210 98754,gauravjoshi@advchildrensclinic.com
+Dr. Neha Gupta,Ophthalmologist,"Retinoblastoma, Congenital Cataracts, Nystagmus",14,4.9,Jaipur,"Childhood Eye Cancer, Pediatric Cataracts, Eye Movement Disorders",+91 91210 98743,nehagupta@adveyecarecenter.com
+Dr. Siddharth Kumar,Urologist,"Penile Cancer, Testicular Torsion, Epispadias",10,4.3,Lucknow,"Urethral Stricture, Phimosis, Paraphimosis",+91 90210 98732,siddharthkumar@advurologyclinic.com
+Dr. Anika Singh,Cardiologist,"Sudden Cardiac Arrest, Long QT Syndrome, Hypertrophic Cardiomyopathy",2,4.0,Mumbai,"Inherited Arrhythmia Syndromes, Genetic Heart Conditions, Sudden Unexplained Death in Epilepsy (SUDEP) Prevention",+91 98123 45678,anikasingh@advancedcardio.com
+Dr. Sameer Patel,Dermatologist,"Severe Burns, Skin Grafting, Reconstructive Surgery",16,4.2,Delhi,"Burn Management, Skin Reconstruction, Scar Revision",+91 99234 56789,sameerpatel@advancedderma.com
+Dr. Aisha Khan,Neurologist,"Spinal Cord Injury, Traumatic Brain Injury, Stroke Rehabilitation",24,4.7,Bangalore,"Neurorehabilitation, Physical Therapy, Occupational Therapy",+91 97345 67890,aishakhan@advancedneuro.com
+Dr. Pranav Reddy,Gastroenterologist,"Colonoscopy, Endoscopy, ERCP",33,4.5,Chennai,"Gastrointestinal Procedures, Therapeutic Endoscopy, Biliary Interventions",+91 96456 78901,pranavreddy@advancedgastro.com
+Dr. Sneha Verma,Endocrinologist,"Insulin Pump Therapy, Continuous Glucose Monitoring, Diabetes Education",40,4.9,Hyderabad,"Diabetes Technology, Diabetes Management, Insulin Resistance",+91 95567 89012,snehaverma@advancedendo.com
+Dr. Karthik Iyer,Orthopedic Surgeon,"Arthroscopic Surgery, Minimally Invasive Surgery, Robotic Surgery",18,4.1,Kolkata,"Joint Preservation, Cartilage Repair, Ligament Reconstruction",+91 94678 90123,karthikiyer@advancedortho.com
+Dr. Maya Menon,Gynecologist,"High-Risk Pregnancy, Multiple Pregnancy, Preterm Labor",8,4.3,Pune,"Maternal-Fetal Medicine, Advanced Obstetric Care, Fetal Monitoring",+91 93789 01234,mayamenon@advancedgyn.com
+Dr. Rohan Gupta,Pediatrician,"Neonatal Intensive Care, Premature Infant Care, Congenital Anomalies",14,4.6,Ahmedabad,"Neonatology, Newborn Care, Pediatric Critical Care",+91 92890 12345,rohangupta@advancedpeds.com
+Dr. Shruti Sharma,Ophthalmologist,"LASIK, PRK, Refractive Surgery",5,4.8,Jaipur,"Vision Correction, Cataract Surgery, Corneal Transplantation",+91 91901 23456,shrutisharma@advancedeye.com
+Dr. Aniket Verma,Urologist,"Robotic Prostatectomy, Laparoscopic Nephrectomy, Bladder Reconstruction",29,4.0,Lucknow,"Urologic Oncology, Minimally Invasive Urologic Surgery, Robotic Urologic Surgery",+91 90012 34567,aniketverma@advanceduro.com
+Dr. Sanjana Joshi,Cardiologist,"Echocardiography, Angiography, Stenting",34,4.4,Mumbai,"Diagnostic Cardiology, Interventional Cardiology, Cardiac Catheterization",+91 98234 56789,sanjanajoshi@eliteheart.com
+Dr. Yash Khanna,Dermatologist,"Cosmetic Dermatology, Laser Treatments, Anti-Aging Treatments",22,4.7,Delhi,"Botox, Fillers, Chemical Peels",+91 99345 67890,yashkhanna@elitederma.com
+Dr. Kavya Sharma,Neurologist,"EEG, EMG, Nerve Conduction Studies",6,4.2,Bangalore,"Neurodiagnostics, Electrophysiology, Neuromuscular Disorders",+91 97456 78901,kavyasharma@eliteneuro.com
+Dr. Vivaan Patel,Gastroenterologist,"Esophageal Manometry, pH Monitoring, Capsule Endoscopy",17,4.9,Chennai,"Gastrointestinal Motility Disorders, Acid Reflux Testing, Wireless Capsule Endoscopy",+91 96567 89012,vivaanpatel@elitegastro.com
+Dr. Aarohi Reddy,Endocrinologist,"Thyroid Ultrasound, Fine Needle Aspiration, Radioiodine Therapy",9,4.5,Hyderabad,"Thyroid Imaging, Thyroid Biopsy, Thyroid Cancer Treatment",+91 95678 90123,aarohireddy@eliteendo.com
+Dr. Ishaan Singh,Orthopedic Surgeon,"Sports Medicine, Arthroscopic Reconstruction, Injury Prevention",35,4.1,Kolkata,"Athletic Injuries, Knee Reconstruction, Shoulder Stabilization",+91 94789 01234,ishaansingh@eliteortho.com
+Dr. Aanya Nair,Gynecologist,"Colposcopy, LEEP, Hysterectomy",23,4.3,Pune,"Cervical Cancer Screening, Cervical Dysplasia Treatment, Minimally Invasive Gynecologic Surgery",+91 93890 12345,aanyanair@elitegyn.com
+Dr. Aaryan Joshi,Pediatrician,"Developmental Delay, Behavioral Therapy, Speech Therapy",38,4.6,Ahmedabad,"Pediatric Development, Autism Intervention, Speech Pathology",+91 92901 23456,aaryanjoshi@elitepeds.com
+Dr. Aaradhya Gupta,Ophthalmologist,"Glaucoma Surgery, Retinal Laser, Intravitreal Injections",4,4.8,Jaipur,"Glaucoma Management, Diabetic Retinopathy Treatment, Macular Degeneration Therapy",+91 91012 34567,aaradhyagupta@eliteeye.com
+Dr. Reyansh Kumar,Urologist,"Vasectomy, Circumcision, Prostate Biopsy",11,4.0,Lucknow,"Male Sterilization, Foreskin Problems, Prostate Cancer Screening",+91 90123 45678,reyanshkumar@eliteuro.com
+Dr. Kiara Sharma,Cardiologist,"Cardiac Rehabilitation, Lifestyle Modification, Preventive Cardiology",25,3.8,Mumbai,"Heart Health, Risk Factor Modification, Secondary Prevention",+91 98345 67890,kiarasharma@premiercardio.com
+Dr. Advik Patel,Dermatologist,"Skin Biopsy, Cryotherapy, Excision",39,4.2,Delhi,"Skin Lesion Removal, Freezing Treatment, Surgical Excision",+91 99456 78901,advikpatel@premierderma.com
+Dr. Anaya Khan,Neurologist,"Botulinum Toxin Injections, Deep Brain Stimulation, Vagus Nerve Stimulation",26,4.7,Bangalore,"Movement Disorders, Dystonia, Epilepsy Surgery",+91 97567 89012,anayakhan@premierneuro.com
+Dr. Veer Reddy,Gastroenterologist,"Liver Biopsy, Paracentesis, Sclerotherapy",30,4.5,Chennai,"Liver Disease Management, Ascites Drainage, Variceal Bleeding Treatment",+91 96678 90123,veereddy@premiergastro.com
+Dr. Diya Verma,Endocrinologist,"Adrenal Biopsy, Pituitary Surgery, Bone Densitometry",19,4.9,Hyderabad,"Endocrine Surgery, Pituitary Tumors, Osteoporosis Screening",+91 95789 01234,diyaverma@premierendo.com
+Dr. Neil Singh,Orthopedic Surgeon,"Total Joint Replacement, Revision Surgery, Bone Grafting",27,4.1,Kolkata,"Complex Joint Reconstruction, Implant Revision, Bone Healing",+91 94890 12345,neilsingh@premierortho.com
+Dr. Ira Nair,Gynecologist,"Fertility Treatment, IVF, Egg Freezing",28,4.3,Pune,"Assisted Reproductive Technology, In Vitro Fertilization, Fertility Preservation",+91 93901 23456,iranair@premiergyn.com
+Dr. Kabir Joshi,Pediatrician,"Newborn Screening, Genetic Counseling, Preventive Medicine",32,4.6,Ahmedabad,"Pediatric Genetics, Metabolic Screening, Immunizations",+91 92012 34567,kabirjoshi@premierpeds.com
+Dr. Myra Gupta,Ophthalmologist,"Oculoplastics, Eyelid Surgery, Orbital Surgery",36,4.8,Jaipur,"Eyelid Reconstruction, Ptosis Repair, Orbital Tumors",+91 91123 45678,myragupta@premiereye.com
+Dr. Aryan Kumar,Urologist,"Kidney Transplant, Bladder Augmentation, Urethral Reconstruction",31,4.0,Lucknow,"Genitourinary Reconstruction, Kidney Transplantation, Bladder Problems",+91 90234 56789,aryankumar@premieruro.com
+Dr. Zara Khan,Cardiologist,"Structural Heart Disease, TAVR, MitraClip",23,4.4,Mumbai,"Valve Replacement, Heart Valve Repair, Percutaneous Valve Procedures",+91 98456 78901,zarakhan@excellencerehab.com
+Dr. Reyansh Patel,Dermatologist,"Mohs Surgery, Skin Cancer Treatment, Reconstruction",20,4.7,Delhi,"Basal Cell Carcinoma, Squamous Cell Carcinoma, Melanoma",+91 99567 89012,reyanshpatel@excellencederma.com
+Dr. Aanya Reddy,Neurologist,"Headache Management, Concussion Treatment, Neuroimaging",21,4.2,Bangalore,"Headache Disorders, Traumatic Brain Injury, MRI/CT Scan Interpretation",+91 97678 90123,aanyareddy@excellenceneuro.com
+Dr. Ishaan Verma,Gastroenterologist,"IBD Treatment, Colon Cancer Screening, GERD Management",37,4.9,Chennai,"Crohn's Disease and Ulcerative Colitis Management, Colonoscopy for Cancer Prevention, Acid Reflux Solutions",+91 96789 01234,ishaanverma@excellencegastro.com
+Dr. Kiara Singh,Endocrinologist,"Obesity Management, Metabolic Syndrome, PCOS",22,4.5,Hyderabad,"Weight Loss, Insulin Resistance, Women's Hormone Health",+91 95890 12345,kiarasingh@excellenceendo.com
+Dr. Advik Iyer,Orthopedic Surgeon,"Spine Surgery, Joint Preservation, Minimally Invasive Techniques",24,4.1,Kolkata,"Spinal Fusion, Arthroscopy for Joint Issues, Small Incision Surgeries",+91 94901 23456,advikiyer@excellenceortho.com
+Dr. Anaya Joshi,Gynecologist,"Minimally Invasive Surgery, Hysterectomy, Fertility Preservation",25,4.3,Pune,"Laparoscopic Procedures, Uterine Fibroid Removal, Egg Freezing and IVF",+91 93012 34567,anayajoshi@excellencegyn.com
+Dr. Veer Gupta,Pediatrician,"Allergy Treatment, Asthma, Immunizations",26,4.6,Ahmedabad,"Childhood Allergies, Respiratory Conditions, Pediatric Vaccine Schedules",+91 92123 45678,veergutpa@excellencepeds.com
+Dr. Diya Khan,Ophthalmologist,"Cataract Surgery, Glaucoma Management, Diabetic Eye Exams",27,4.8,Jaipur,"Lens Replacement, Intraocular Pressure Control, Retinopathy Screening",+91 91234 56789,diyakhan@excellenceeye.com
+Dr. Neil Sharma,Urologist,"Kidney Stones, Prostate Issues, Bladder Problems",28,4.0,Lucknow,"Lithotripsy, Enlarged Prostate Treatment, Urinary Incontinence Solutions",+91 90345 67890,neilsharma@excellenceuro.com
+Dr. Rajesh Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Blood Pressure",15,4.6,Mumbai,"Coronary Artery Disease, Heart Failure, Arrhythmias",+91 98765 43210,rajeshsharma@cardiocare.com
+Dr. Priya Patel,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Acne Vulgaris, Atopic Dermatitis, Psoriasis Vulgaris",+91 99887 76655,priyapatel@skindocs.com
+Dr. Arvind Kumar,Neurologist,"Headaches, Seizures, Stroke, Memory Loss, Parkinson's",22,4.8,Bangalore,"Epilepsy, Stroke Rehabilitation, Parkinson's Disease",+91 97654 32109,arvindkumar@neuroclinic.in
+Dr. Sunita Reddy,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS",12,4.5,Chennai,"PCOS, Uterine Fibroids, Endometriosis",+91 96543 21098,sunitareddy@womenshealth.org
+Dr. Rohan Verma,Orthopedic Surgeon,"Fractures, Joint Pain, Arthritis, Back Pain",18,4.7,Kolkata,"Osteoarthritis, Rheumatoid Arthritis, Spinal Stenosis",+91 95432 10987,rohanverma@orthopedics.in
+Dr. Meera Nair,Pediatrician,"Fever, Cough, Cold, Vaccination, Child Development",7,4.3,Hyderabad,"Chickenpox, Measles, Mumps",+91 94321 09876,meeranair@childcare.com
+Dr. Vikram Singh,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation, Acidity",14,4.4,Pune,"Irritable Bowel Syndrome (IBS), Crohn's Disease, Ulcerative Colitis",+91 93210 98765,vikramsingh@gastrolife.net
+Dr. Anjali Gupta,Endocrinologist,"Diabetes, Thyroid Disorders, Hormonal Imbalance",10,4.9,Ahmedabad,"Type 2 Diabetes, Hypothyroidism, Hyperthyroidism",+91 92109 87654,anjaligupta@endocrine.org
+Dr. Sanjay Joshi,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections",25,4.6,Jaipur,"Cataracts, Glaucoma, Diabetic Retinopathy",+91 91098 76543,sanjayjoshi@eyecare.in
+Dr. Deepika Menon,ENT Specialist,"Hearing Loss, Sinusitis, Sore Throat, Tinnitus",9,4.1,Lucknow,"Tonsillitis, Adenoiditis, Deviated Septum",+91 90987 65432,deepikamenon@entclinic.com
+Dr. Rahul Khanna,Cardiologist,"High Cholesterol, Angina, Heart Attack, Arrhythmias",16,4.7,Mumbai,"Coronary Artery Disease, Valvular Heart Disease, Congestive Heart Failure",+91 98123 45678,rahulkhanna@heartcare.com
+Dr. Shweta Iyer,Dermatologist,"Rashes, Allergies, Skin Cancer Screening, Warts",5,4.0,Delhi,"Allergic Contact Dermatitis, Basal Cell Carcinoma, Melanoma",+91 99234 56789,shweta.iyer@skinderm.com
+Dr. Amit Verma,Neurologist,"Migraines, Multiple Sclerosis, Neuropathy, Tremors",28,4.9,Bangalore,"Multiple Sclerosis, Peripheral Neuropathy, Stroke",+91 97345 67890,amitverma@neurospecialists.com
+Dr. Lakshmi Reddy,Gynecologist,"Prenatal Care, Family Planning, Hysterectomy, Ovarian Cysts",13,4.4,Chennai,"Ovarian Cysts, Fibroids, Pelvic Inflammatory Disease (PID)",+91 96456 78901,lakshmireddy@womenshealthcenter.com
+Dr. Suresh Kumar,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Sports Injuries",20,4.8,Kolkata,"ACL Tear, Meniscal Tear, Rotator Cuff Tear",+91 95567 89012,sureshkumar@bonesurgeon.com
+Dr. Pooja Sharma,Pediatrician,"Asthma, Allergies, Eczema, Growth Problems",6,4.2,Hyderabad,"Asthma, Allergies, Eczema in Children",+91 94678 90123,poojasharma@kidscare.net
+Dr. Rajesh Gupta,Gastroenterologist,"Acid Reflux, Bloating, Liver Disease, Pancreatitis",17,4.5,Pune,"Gastroesophageal Reflux Disease (GERD), Hepatitis, Pancreatitis",+91 93789 01234,rajeshgupta@digestivehealth.com
+Dr. Neha Singh,Endocrinologist,"Osteoporosis, Adrenal Disorders, Pituitary Tumors",11,5.0,Ahmedabad,"Osteoporosis, Cushing's Syndrome, Acromegaly",+91 92890 12345,nehasingh@hormoneexperts.com
+Dr. Vijay Joshi,Ophthalmologist,"Refractive Surgery, Diabetic Eye Disease, Macular Degeneration",26,4.7,Jaipur,"Age-Related Macular Degeneration (AMD), Diabetic Retinopathy, Refractive Errors",+91 91901 23456,vijayjoshi@visioncare.in
+Dr. Ananya Menon,ENT Specialist,"Vertigo, Snoring, Nasal Polyps, Ear Infections",10,4.3,Lucknow,"Vertigo, Rhinitis, Otitis Media",+91 90123 45678,ananyamenon@earnosethroat.com
+Dr. Aditya Sharma,Cardiologist,"High Blood Pressure, Valve Disorders, Congenital Heart Defects",19,4.6,Mumbai,"Hypertension, Aortic Stenosis, Atrial Fibrillation",+91 98234 56789,adityasharma@heartclinic.com
+Dr. Kavita Patel,Dermatologist,"Pimples, Dark Circles, Pigmentation, Scar Treatment",7,4.1,Delhi,"Melasma, Hyperpigmentation, Acne Scars",+91 99345 67890,kavitapatel@skinbeauty.com
+Dr. Sanjay Kumar,Neurologist,"Alzheimer's Disease, Bell's Palsy, Spinal Cord Injury",30,4.8,Bangalore,"Alzheimer's Disease, Bell's Palsy, Spinal Cord Injury Management",+91 97456 78901,sanjaykumar@brainexperts.com
+Dr. Priya Reddy,Gynecologist,"High-Risk Pregnancy, Laparoscopic Surgery, Miscarriage",14,4.5,Chennai,"Ectopic Pregnancy, Miscarriage Management, Laparoscopic Hysterectomy",+91 96567 89012,priyareddy@womenshealth.com
+Dr. Rohan Verma,Orthopedic Surgeon,"Arthroscopic Surgery, Joint Replacement, Bone Tumors",21,4.7,Kolkata,"Total Knee Replacement, Hip Replacement, Bone Tumor Resection",+91 95678 90123,rohanverma@orthocenter.com
+Dr. Meera Nair,Pediatrician,"Newborn Care, Childhood Diseases, Immunization Schedule",8,4.3,Hyderabad,"Bronchiolitis, Varicella, Vaccine Preventable Diseases",+91 94789 01234,meeranair@childrenspecialist.com
+Dr. Vikram Singh,Gastroenterologist,"Colonoscopy, Endoscopy, Liver Biopsy, GERD",15,4.4,Pune,"Colon Polyps, Esophageal Varices, Liver Cirrhosis",+91 93890 12345,vikramsingh@digestiveclinic.com
+Dr. Anjali Gupta,Endocrinologist,"Polycystic Ovary Syndrome, Growth Hormone Deficiency",12,4.9,Ahmedabad,"Polycystic Ovary Syndrome, Growth Hormone Deficiency, Parathyroid Disorders",+91 92901 23456,anjaligupta@hormoneinstitute.com
+Dr. Sanjay Joshi,Ophthalmologist,"LASIK, Cataract Surgery, Retinal Detachment",27,4.6,Jaipur,"Retinal Detachment, Cataract Extraction, Laser Refractive Surgery",+91 91012 34567,sanjayjoshi@eyeclinic.com
+Dr. Deepika Menon,ENT Specialist,"Allergic Rhinitis, Adenoidectomy, Tympanoplasty",11,4.1,Lucknow,"Allergic Rhinitis, Adenoid Hypertrophy, Tympanic Membrane Perforation Repair",+91 90234 56789,deepikamenon@earnosethroatspecialist.com
+Dr. Rajesh Sharma,General Physician,"Fever, Cold, Cough, Body Pain, Fatigue",5,3.8,Mumbai,"Common Cold, Influenza, Acute Bronchitis",+91 91234 56780,rajesh.sharma@careclinic.com
+Dr. Priya Patel,Dentist,"Toothache, Gum Bleeding, Cavities, Bad Breath",7,4.2,Delhi,"Dental Caries, Gingivitis, Periodontitis",+91 92345 67891,priya.patel@smileclinic.com
+Dr. Arvind Kumar,Psychiatrist,"Depression, Anxiety, Insomnia, Stress",12,4.5,Bangalore,"Major Depressive Disorder, Generalized Anxiety Disorder, Insomnia Disorder",+91 93456 78902,arvind.kumar@mindcare.com
+Dr. Sunita Reddy,Pulmonologist,"Cough, Wheezing, Shortness of Breath, Asthma",10,4.3,Chennai,"Asthma, Chronic Obstructive Pulmonary Disease (COPD), Pneumonia",+91 94567 89013,sunita.reddy@lungcare.com
+Dr. Rohan Verma,Urologist,"Urinary Tract Infection, Kidney Stones, Prostate Enlargement",15,4.7,Kolkata,"Urinary Tract Infection (UTI), Kidney Stones, Benign Prostatic Hyperplasia (BPH)",+91 95678 90124,rohan.verma@urocare.com
+Dr. Meera Nair,Rheumatologist,"Joint Pain, Swelling, Stiffness, Autoimmune Diseases",9,4.4,Hyderabad,"Rheumatoid Arthritis, Lupus, Gout",+91 96789 01235,meera.nair@jointcare.com
+Dr. Vikram Singh,Oncologist,"Cancer Diagnosis, Chemotherapy, Radiation Therapy",20,4.9,Pune,"Breast Cancer, Lung Cancer, Colon Cancer",+91 97890 12346,vikram.singh@cancercare.com
+Dr. Anjali Gupta,Nephrologist,"Kidney Failure, Dialysis, High Blood Pressure",14,4.6,Ahmedabad,"Chronic Kidney Disease (CKD), End-Stage Renal Disease (ESRD), Hypertension",+91 98901 23457,anjali.gupta@kidneycare.com
+Dr. Sanjay Joshi,Emergency Medicine,"Trauma, Chest Pain, Abdominal Pain, Stroke",8,4.0,Jaipur,"Myocardial Infarction, Stroke, Trauma",+91 99012 34568,sanjay.joshi@emergencycare.com
+Dr. Deepika Menon,Infectious Disease,"Fever, Infection, Antibiotics, Travel Medicine",11,4.2,Lucknow,"Pneumonia, Sepsis, HIV/AIDS",+91 90123 45679,deepika.menon@infectioncare.com
+Dr. Rajesh Khanna,Radiologist,"X-ray, CT Scan, MRI, Ultrasound",16,4.5,Mumbai,"Fractures, Tumors, Infections",+91 91234 56790,rajesh.khanna@radclinic.com
+Dr. Shweta Iyer,Physiotherapist,"Back Pain, Neck Pain, Sports Injury, Rehabilitation",7,4.1,Delhi,"Lower Back Pain, Neck Pain, Ankle Sprain",+91 92345 67901,shweta.iyer@physiocare.com
+Dr. Amit Verma,Nutritionist,"Weight Management, Diabetes Diet, Heart Healthy Diet",10,4.3,Bangalore,"Obesity, Type 2 Diabetes, Cardiovascular Disease",+91 93456 79012,amit.verma@nutritionclinic.com
+Dr. Lakshmi Reddy,Speech Therapist,"Speech Delay, Stuttering, Voice Disorders",9,4.2,Chennai,"Articulation Disorder, Stuttering, Vocal Cord Dysfunction",+91 94567 90123,lakshmi.reddy@speechtherapy.com
+Dr. Suresh Kumar,Occupational Therapist,"Stroke Rehabilitation, Hand Therapy, Sensory Integration",11,4.4,Kolkata,"Stroke, Carpal Tunnel Syndrome, Autism Spectrum Disorder",+91 95679 01234,suresh.kumar@occupationaltherapy.com
+Dr. Pooja Sharma,Geneticist,"Genetic Disorders, Family History, Prenatal Testing",13,4.6,Hyderabad,"Down Syndrome, Cystic Fibrosis, Huntington's Disease",+91 96790 12345,pooja.sharma@geneticclinic.com
+Dr. Rajesh Gupta,Surgeon,"Appendicitis, Hernia, Gallstones",18,4.8,Pune,"Appendicitis, Hernia Repair, Cholecystectomy",+91 97890 12356,rajesh.gupta@surgeryclinic.com
+Dr. Neha Singh,Anesthesiologist,"Pain Management, Epidural, Sedation",12,4.7,Ahmedabad,"Chronic Pain, Labor Pain, Post-operative Pain",+91 98901 23567,neha.singh@painclinic.com
+Dr. Vijay Joshi,Clinical Psychologist,"Cognitive Behavioral Therapy, Grief Counseling, Stress Management",14,4.5,Jaipur,"Anxiety, Depression, Post-Traumatic Stress Disorder (PTSD)",+91 99012 35678,vijay.joshi@psychologyclinic.com
+Dr. Ananya Menon,Palliative Care,"Pain Relief, Symptom Management, End-of-Life Care",15,4.9,Lucknow,"Cancer, Heart Failure, Dementia",+91 90123 56789,ananya.menon@palliativecare.com
+Dr. Aditya Sharma,Diabetologist,"Type 1 Diabetes, Type 2 Diabetes, Gestational Diabetes",17,4.6,Mumbai,"Type 1 Diabetes, Type 2 Diabetes, Gestational Diabetes Mellitus",+91 98234 56790,aditya.sharma.diabetologist@carehospital.com
+Dr. Kavita Patel,Cosmetic Surgeon,"Liposuction, Breast Augmentation, Facelift",9,4.3,Delhi,"Liposuction, Breast Augmentation, Facelift",+91 99345 67901,kavita.patel.cosmetic@enhanceclinic.com
+Dr. Sanjay Kumar,Sleep Specialist,"Insomnia, Sleep Apnea, Narcolepsy",22,4.7,Bangalore,"Insomnia, Obstructive Sleep Apnea, Narcolepsy",+91 97456 79012,sanjay.kumar.sleep@sleepclinic.com
+Dr. Priya Reddy,Reproductive Endocrinologist,"Infertility Treatment, IVF, Egg Freezing",16,4.8,Chennai,"Infertility, In Vitro Fertilization, Egg Freezing",+91 96567 90123,priya.reddy.reproendo@fertilityclinic.com
+Dr. Rohan Verma,Sports Medicine Physician,"Sports Injuries, Concussions, Exercise Physiology",14,4.5,Kolkata,"Ankle Sprain, Concussion, Muscle Strain",+91 95679 01234,rohan.verma.sportsmed@sportsclinic.com
+Dr. Meera Nair,Developmental Pediatrician,"Autism, ADHD, Learning Disabilities",12,4.4,Hyderabad,"Autism Spectrum Disorder, Attention Deficit Hyperactivity Disorder, Learning Disabilities",+91 94789 01235,meera.nair.devpeds@childdevclinic.com
+Dr. Vikram Singh,Geriatrician,"Alzheimer's, Dementia, Falls, Frailty",25,4.9,Pune,"Alzheimer's Disease, Dementia, Falls",+91 93890 12346,vikram.singh.geriatrics@eldercare.com
+Dr. Anjali Gupta,Preventive Medicine Specialist,"Vaccinations, Health Screenings, Lifestyle Counseling",19,4.7,Ahmedabad,"Diabetes Prevention, Heart Disease Prevention, Cancer Prevention",+91 92901 23567,anjali.gupta.preventive@wellbeingclinic.com
+Dr. Sanjay Joshi,Allergist,"Allergies, Asthma, Eczema, Hay Fever",20,4.6,Jaipur,"Allergic Rhinitis, Asthma, Atopic Dermatitis",+91 91012 35678,sanjay.joshi.allergy@allergyclinic.com
+Dr. Deepika Menon,Clinical Immunologist,"Autoimmune Diseases, Immunodeficiencies, Transplant Immunology",17,4.8,Lucknow,"Rheumatoid Arthritis, Lupus, Primary Immunodeficiency",+91 90234 56789,deepika.menon.immunology@immunocare.com
+Dr. Rohan Sharma,Cardiologist,"Chest Pain, Palpitations, Fatigue, Dizziness",11,4.3,Delhi,"Arrhythmias, Heart Failure, Valve Disease",+91 91234 56791,rohansharma@cardiacsolutions.com
+Dr. Anjali Patel,Dermatologist,"Acne, Eczema, Rashes, Itching, Hair Fall",6,4.0,Mumbai,"Psoriasis, Eczema, Fungal Infections",+91 92345 67912,anjalipatel@skinspecialists.com
+Dr. Vikram Kumar,Neurologist,"Headaches, Migraines, Seizures, Numbness",26,4.9,Chennai,"Epilepsy, Stroke, Multiple Sclerosis",+91 93456 79123,vikramkumar@neurocarecenter.com
+Dr. Sunita Singh,Gynecologist,"Pregnancy, Infertility, Menstrual Problems",14,4.5,Bangalore,"PCOS, Fibroids, Endometriosis",+91 94567 91234,sunitasingh@womenswellness.com
+Dr. Rajesh Verma,Orthopedic Surgeon,"Knee Pain, Back Pain, Fractures, Sprains",19,4.7,Hyderabad,"Arthritis, Joint Replacement, Sports Injuries",+91 95679 12345,rajeshverma@orthopedicexperts.com
+Dr. Priya Nair,Pediatrician,"Fever, Cough, Cold, Vaccinations, Growth Issues",7,4.2,Kolkata,"Asthma, Allergies, Infectious Diseases",+91 96791 23456,priyanair@childrenshealth.com
+Dr. Aditya Gupta,Gastroenterologist,"Abdominal Pain, Bloating, Constipation, Diarrhea",12,4.4,Ahmedabad,"IBS, GERD, Ulcerative Colitis",+91 97891 23457,adityagupta@digestivehealth.net
+Dr. Kavita Joshi,Endocrinologist,"Diabetes, Thyroid, Hormonal Imbalances",10,4.8,Pune,"Hypothyroidism, Hyperthyroidism, Diabetes Management",+91 98912 34567,kavitajoshi@endoexcellence.com
+Dr. Sanjay Menon,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Dry Eyes",23,4.6,Jaipur,"Cataract Surgery, Glaucoma Treatment, Laser Vision Correction",+91 99012 34578,sanjaymenon@visioncarecenter.com
+Dr. Deepika Sharma,ENT Specialist,"Ear Infections, Sinusitis, Sore Throat",8,4.1,Lucknow,"Tonsillitis, Hearing Loss, Deviated Septum",+91 90123 45789,deepikasharma@entsolutions.com
+Dr. Arvind Iyer,General Physician,"Fever, Body Ache, Cold, Cough",3,3.7,Mumbai,"Viral Fever, Common Cold, Flu",+91 91234 56781,arvindi@carewellclinic.com
+Dr. Preeti Singh,Dentist,"Tooth Decay, Gum Problems, Toothache",5,4.0,Delhi,"Gingivitis, Periodontitis, Dental Caries",+91 92345 67913,preetis@smiledesign.com
+Dr. Rajesh Kumar,Psychiatrist,"Anxiety, Depression, Stress, Panic Attacks",15,4.6,Bangalore,"Depression, Generalized Anxiety Disorder, Bipolar Disorder",+91 93456 79124,rajeshk@mindmatters.com
+Dr. Meena Reddy,Pulmonologist,"Coughing, Wheezing, Breathing Problems",9,4.3,Chennai,"Asthma, COPD, Bronchitis",+91 94567 91235,meenar@lungsolutions.com
+Dr. Suresh Verma,Urologist,"UTIs, Kidney Stones, Prostate Issues",13,4.5,Kolkata,"Urinary Tract Infections, Kidney Stones, Benign Prostatic Hyperplasia",+91 95679 12346,sureshv@urocareclinic.com
+Dr. Anita Nair,Rheumatologist,"Joint Swelling, Joint Pain, Stiffness",11,4.4,Hyderabad,"Rheumatoid Arthritis, Osteoarthritis, Lupus",+91 96791 23457,anitan@jointsolutions.com
+Dr. Anil Gupta,Oncologist,"Cancer, Tumors, Chemotherapy",29,4.9,Pune,"Breast Cancer, Lung Cancer, Colon Cancer",+91 97891 23458,anilg@cancercarecenter.com
+Dr. Sunita Joshi,Nephrologist,"Kidney Problems, Dialysis, High Blood Pressure",16,4.7,Ahmedabad,"Chronic Kidney Disease, Hypertension, Glomerulonephritis",+91 98912 34568,sunitaj@kidneycareclinic.com
+Dr. Rohan Menon,Emergency Medicine,"Accidents, Injuries, Sudden Illness",4,3.9,Jaipur,"Trauma, Cardiac Arrest, Stroke",+91 99012 34579,rohanm@emergencycarecenter.com
+Dr. Kavita Sharma,Infectious Disease,"Infections, Fever, Antibiotics",18,4.8,Lucknow,"Pneumonia, Tuberculosis, HIV",+91 90123 45790,kavitas@infectioncontrol.com
+Dr. Aditya Verma,Radiologist,"X-Rays, Scans, Imaging",21,4.5,Mumbai,"Fractures, Tumors, Infections",+91 91234 56792,adityav@imagingcare.com
+Dr. Deepika Patel,Physiotherapist,"Muscle Pain, Joint Pain, Rehabilitation",6,4.1,Delhi,"Back Pain, Neck Pain, Sports Injuries",+91 92345 67914,deepikap@physioclinic.com
+Dr. Sanjay Kumar,Nutritionist,"Weight Loss, Healthy Eating, Diabetes Diet",10,4.3,Bangalore,"Obesity, Diabetes, Heart Disease",+91 93456 79125,sanjayk@nutritionwell.com
+Dr. Priya Reddy,Speech Therapist,"Speech Problems, Stuttering, Voice Issues",7,4.2,Chennai,"Articulation Disorders, Fluency Disorders, Voice Disorders",+91 94567 91236,priyar@speechsolutions.com
+Dr. Rajesh Verma,Occupational Therapist,"Daily Living Skills, Hand Therapy",12,4.4,Kolkata,"Stroke Rehabilitation, Hand Injuries, Sensory Processing Disorders",+91 95679 12347,rajeshv@otclinic.com
+Dr. Meena Nair,Geneticist,"Genetic Testing, Family History",14,4.6,Hyderabad,"Cystic Fibrosis, Down Syndrome, Muscular Dystrophy",+91 96791 23458,meenan@geneticwellness.com
+Dr. Suresh Gupta,Surgeon,"Appendicitis, Hernia, Gallstones",27,4.9,Pune,"Appendectomy, Hernia Repair, Cholecystectomy",+91 97891 23459,sureshg@surgicalcarecenter.com
+Dr. Anita Joshi,Anesthesiologist,"Pain Relief, Surgery Support",15,4.7,Ahmedabad,"Epidural Anesthesia, General Anesthesia, Pain Management",+91 98912 34570,anitaj@painreliefclinic.com
+Dr. Anil Menon,Clinical Psychologist,"Therapy, Counseling, Mental Health",11,4.3,Jaipur,"Anxiety, Depression, PTSD",+91 99012 34580,anilm@mindbalanceclinic.com
+Dr. Sunita Sharma,Palliative Care,"Comfort Care, End-of-Life Support",20,4.8,Lucknow,"Cancer Pain, End-Stage COPD, Advanced Heart Failure",+91 90123 45791,sunitas@comfortcarecenter.com
+Dr.Rohan Kumar,Cardiology,"Chest Pain, Breathlessness, Palpitations, Dizziness",18,4.5,Mumbai,"Heart Failure , Coronary Artery Disease, Arrhythmias",+91 98765 43211,rohank@heartdoc.com
+Dr.Anjali Verma,Dermatologist,"Acne, Eczema, Psoriasis, Rashes",7,4.1,Delhi,"Skin Infections, Hair Loss, Allergies",+91 99887 76656,anjaliv@skindoctor.com
+Dr.Vikram Sharma,Neurologist,"Headaches, Migraines, Seizures, Numbness",25,4.7,Bangalore,"Stroke, Epilepsy , Parkinson's Disease",+91 97654 32110,vikrams@braindoctor.com
+Dr.Priya Gupta,Gynecologist,"Pregnancy, Infertility, Menstrual Problems, Pain",12,4.4,Chennai,"PCOS, Fibroids, Endometriosis",+91 96543 21109,priyag@womenshealthclinic.com
+Dr.Rajesh Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Back Pain, Fracture",17,4.6,Kolkata,"Arthritis, Sports Injuries, Joint Replacement",+91 95432 11098,rajeshs@bonecare.com
+Dr.Meera Patel,Pediatrician,"Fever, Cough, Cold, Vaccination, Growth",6,4.2,Hyderabad,"Asthma, Allergies, Infections",+91 94321 10987,meerap@childdoctor.com
+Dr.Vikram Reddy,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation, Bloating",13,4.3,Pune,"IBS, GERD, Ulcers",+91 93211 09876,vikramr@gutdoctor.com
+Dr.Anjali Kumar,Endocrinologist,"Diabetes, Thyroid, Hormonal Imbalance, Weight",11,4.9,Ahmedabad,"Hypothyroidism, Hyperthyroidism, PCOS",+91 92110 98765,anjalik@hormonedoctor.com
+Dr.Sanjay Sharma,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Dry Eyes",24,4.5,Jaipur,"Cataract Surgery, Glaucoma Treatment , LASIK",+91 91098 76544,sanjays@eyedoctor.com
+Dr.Deepika Singh,ENT Specialist,"Hearing Loss, Sinusitis, Sore Throat, Tinnitus",9,4.0,Lucknow,"Tonsillitis, Ear Infections, Nasal Polyps",+91 90987 65433,deepikas@eardoctor.com
+Dr.Rohan Verma,General Physician,"Fever, Cough, Cold, Body Ache, Fatigue",4,3.9,Mumbai,"Viral Infections, Flu, Common Cold",+91 98123 45679,rohanv@generalcare.com
+Dr.Shweta Khanna,Dentist,"Tooth Pain, Gum Bleeding, Cavities, Bad Breath",6,4.1,Delhi,"Gingivitis, Periodontitis, Tooth Decay",+91 99234 56791,shwetak@smilecare.com
+Dr.Amit Sharma,Psychiatrist,"Depression, Anxiety, Stress, Sleep Problems",14,4.5,Bangalore,"Depression, Anxiety Disorders, Insomnia",+91 97345 67902,amits@mindwellclinic.com
+Dr.Lakshmi Patel,Pulmonologist,"Cough, Wheezing, Shortness of Breath, Chest Pain",10,4.3,Chennai,"Asthma, COPD, Pneumonia",+91 96456 79013,lakshmip@lungspecialist.com
+Dr.Suresh Kumar,Urologist,"Urinary Problems, Kidney Stones, Prostate Enlargement",16,4.7,Kolkata,"UTIs, Kidney Stones, BPH",+91 95567 90124,sureshk@urologycare.com
+Dr. Priya Sharma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, High Blood Pressure",15,4.7,Mumbai,"Hypertension, Coronary Artery Disease, Arrhythmia",+91 98765 43210,priya.sharma@heartclinic.com
+Dr. Rajesh Kumar,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Hair Loss",8,4.2,Delhi,"Acne Vulgaris, Atopic Dermatitis, Psoriasis",+91 99876 54321,rajesh.kumar@skincare.com
+Dr. Anjali Singh,Neurologist,"Headache, Migraine, Seizures, Stroke, Tremors",22,4.9,Bangalore,"Epilepsy, Migraine, Parkinson's Disease",+91 97654 32109,anjali.singh@neurocare.com
+Dr. Sanjay Verma,Gastroenterologist,"Abdominal Pain, Indigestion, Constipation, Diarrhea, Vomiting",12,4.5,Chennai,"GERD, IBS, Ulcerative Colitis",+91 96543 21098,sanjay.verma@gastrolife.com
+Dr. Deepa Reddy,Endocrinologist,"Diabetes, Thyroid Disorders, Hormone Imbalance, Obesity",18,4.8,Hyderabad,"Type 2 Diabetes, Hypothyroidism, PCOS",+91 95432 10987,deepa.reddy@endocrineclinic.com
+Dr. Rohan Patel,Orthopedic Surgeon,"Joint Pain, Back Pain, Fractures, Arthritis, Sports Injuries",10,4.3,Ahmedabad,"Osteoarthritis, Fractures, Ligament Injuries",+91 94321 09876,rohan.patel@orthocare.com
+Dr. Kavita Gupta,Gynecologist,"Pregnancy, Menstrual Problems, Infertility, PCOS, Fibroids",25,4.6,Kolkata,"Pregnancy, Fibroids, Endometriosis",+91 93210 98765,kavita.gupta@womenshealth.com
+Dr. Amit Sharma,Pediatrician,"Fever, Cough, Cold, Vaccination, Child Development",7,4.1,Pune,"Common Cold, Asthma, Chickenpox",+91 92109 87654,amit.sharma@kidscare.com
+Dr. Sunita Iyer,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections",14,4.4,Jaipur,"Cataract, Glaucoma, Diabetic Retinopathy",+91 91098 76543,sunita.iyer@eyecare.com
+Dr. Vivek Kapoor,Urologist,"Urinary Problems, Kidney Stones, Prostate Issues, Incontinence",9,4.0,Lucknow,"Kidney Stones, UTI, BPH",+91 90987 65432,vivek.kapoor@urocare.com
+Dr. Meena Joshi,Cardiologist,"High Cholesterol, Angina, Heart Failure, Swelling, Fatigue",20,4.9,Mumbai,"Heart Failure, Angina, High Cholesterol",+91 98876 54322,meena.joshi@cardiohealth.com
+Dr. Dinesh Verma,Dermatologist,"Rashes, Allergies, Skin Cancer, Warts, Moles",5,3.8,Delhi,"Skin Cancer, Eczema, Contact Dermatitis",+91 99765 43223,dinesh.verma@dermacenter.com
+Dr. Shalini Nair,Neurologist,"Memory Loss, Alzheimer's, Parkinson's, Multiple Sclerosis",28,4.7,Bangalore,"Multiple Sclerosis, Alzheimer's Disease, Epilepsy",+91 97765 43224,shalini.nair@neuronclinic.com
+Dr. Suresh Rao,Gastroenterologist,"Bloating, Gas, Heartburn, Nausea, Stomach Ulcers",11,4.3,Chennai,"Stomach Ulcers, Acid Reflux, Pancreatitis",+91 96654 32235,suresh.rao@gastrolife.com
+Dr. Preeti Agarwal,Endocrinologist,"PCOS, Infertility, Osteoporosis, Growth Disorders",16,4.6,Hyderabad,"PCOS, Osteoporosis, Thyroid Nodules",+91 95543 22346,preeti.agarwal@endocrinecenter.com
+Dr. Arvind Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Carpal Tunnel, Sprains",13,4.1,Ahmedabad,"Knee Pain, Hip Replacement, Shoulder Impingement",+91 94432 23457,arvind.singh@orthocare.com
+Dr. Rekha Mehta,Gynecologist,"Family Planning, Pap Smear, Menopause, Ovarian Cysts",30,5.0,Kolkata,"Ovarian Cysts, Menopause Management, Family Planning",+91 93322 34568,rekha.mehta@womenscenter.com
+Dr. Vijay Kumar,Pediatrician,"Allergies, Asthma, Infections, Nutrition, Growth Monitoring",6,3.9,Pune,"Allergies, Asthma, Common Childhood Infections",+91 92210 23459,vijay.kumar@pediatricclinic.com
+Dr. Lakshmi Sharma,Ophthalmologist,"Dry Eyes, Blurred Vision, Retinal Detachment, Macular Degeneration",19,4.8,Jaipur,"Macular Degeneration, Retinal Detachment, Dry Eye Syndrome",+91 91109 23460,lakshmi.sharma@eyespecialists.com
+Dr. Kamal Gupta,Urologist,"Bladder Problems, Erectile Dysfunction, Prostate Cancer, Vasectomy",17,4.5,Lucknow,"BPH, Erectile Dysfunction, Prostate Cancer Screening",+91 90098 23461,kamal.gupta@urohealth.com
+Dr. Neha Verma,Cardiologist,"Chest Pain, Dizziness, Palpitations, High Blood Pressure, Fatigue",14,4.6,Mumbai,"Coronary Artery Disease, Arrhythmia, Hypertension",+91 98997 65433,neha.verma@heartcare.com
+Dr. Vikram Singh,Dermatologist,"Acne, Psoriasis, Eczema, Skin Allergies, Hair Fall",9,4.3,Delhi,"Acne, Psoriasis, Eczema",+91 99685 43234,vikram.singh@skinclinic.com
+Dr. Pooja Sharma,Neurologist,"Headaches, Seizures, Stroke, Tremors, Memory Problems",21,4.8,Bangalore,"Epilepsy, Stroke Rehabilitation, Parkinson's Disease",+91 97874 32135,pooja.sharma@neurocare.com
+Dr. Rahul Khanna,Gastroenterologist,"Abdominal Pain, Bloating, Constipation, Diarrhea, Vomiting",13,4.4,Chennai,"IBS, Crohn's Disease, Ulcerative Colitis",+91 96763 21036,rahul.khanna@gastrolife.com
+Dr. Divya Joshi,Endocrinologist,"Diabetes, Thyroid Disorders, PCOS, Weight Management",19,4.7,Hyderabad,"Type 1 Diabetes, Hypothyroidism, PCOS",+91 95652 10937,divya.joshi@endocrineclinic.com
+Dr. Arjun Patel,Orthopedic Surgeon,"Joint Pain, Back Pain, Fractures, Sports Injuries, Arthritis",11,4.2,Ahmedabad,"Knee Replacement, Back Pain Management, Fracture Care",+91 94541 09838,arjun.patel@orthocare.com
+Dr. Smita Reddy,Gynecologist,"Pregnancy Care, Menstrual Problems, Infertility, Family Planning",26,4.9,Kolkata,"Pregnancy, Infertility Treatment, Menstrual Irregularities",+91 93430 98739,smita.reddy@womenshealth.com
+Dr. Karan Sharma,Pediatrician,"Fever, Cough, Cold, Vaccinations, Child Development",8,4.0,Pune,"Common Childhood Illnesses, Vaccinations, Growth Monitoring",+91 92329 87640,karan.sharma@kidscare.com
+Dr. Anita Iyer,Ophthalmologist,"Vision Correction, Cataracts, Glaucoma, Eye Infections",15,4.5,Jaipur,"Cataract Surgery, Glaucoma Management, Refractive Errors",+91 91218 76541,anita.iyer@eyecare.com
+Dr. Manish Kapoor,Urologist,"Urinary Tract Infections, Kidney Stones, Prostate Issues, Incontinence",10,4.1,Lucknow,"Kidney Stone Removal, UTI Treatment, Prostate Enlargement",+91 90107 65442,manish.kapoor@urocare.com
+Dr. Ritu Desai,Cardiologist,"Shortness of Breath, Angina, High Cholesterol, Arrhythmias",16,4.8,Mumbai,"Coronary Artery Disease, Arrhythmias, Heart Failure",+91 98096 54343,ritu.desai@cardioclinic.com
+Dr. Gaurav Khanna,Dermatologist,"Acne Scars, Wrinkles, Skin Pigmentation, Eczema, Psoriasis",7,3.9,Delhi,"Acne Scar Treatment, Anti-Aging Procedures, Eczema Management",+91 99985 43244,gaurav.khanna@skinsolutions.com
+Dr. Deepika Verma,Neurologist,"Multiple Sclerosis, Parkinson's, Headaches, Migraines",23,4.7,Bangalore,"Multiple Sclerosis Treatment, Parkinson's Disease Management, Migraine Relief",+91 97974 32145,deepika.verma@neurocenter.com
+Dr. Sachin Rao,Gastroenterologist,"Heartburn, Acid Reflux, IBS, Crohn's, Ulcerative Colitis",12,4.3,Chennai,"GERD Management, IBS Treatment, Inflammatory Bowel Disease",+91 96863 21046,sachin.rao@gastrohealth.com
+Dr. Priya Agarwal,Endocrinologist,"Diabetes Management, Thyroid Disorders, PCOS, Osteoporosis",17,4.6,Hyderabad,"Diabetes Education, Thyroid Hormone Balancing, PCOS Treatment",+91 95752 10947,priya.agarwal@endocrinesolutions.com
+Dr. Vikram Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Sports Injuries, Fractures",14,4.1,Ahmedabad,"Knee Arthroscopy, Hip Replacement, Shoulder Reconstruction",+91 94641 09848,vikram.singh@orthosolutions.com
+Dr. Shweta Mehta,Gynecologist,"Pregnancy, Infertility, Menopause, Family Planning",29,5.0,Kolkata,"High-Risk Pregnancy Management, Infertility Solutions, Menopause Support",+91 93530 98749,shweta.mehta@womenswellness.com
+Dr. Rohan Sharma,Pediatrician,"Vaccinations, Common Illnesses, Growth, Nutrition",5,3.8,Pune,"Childhood Vaccinations, Fever Management, Nutrition Counseling",+91 92429 87650,rohan.sharma@kidsclinic.com
+Dr. Anjali Iyer,Ophthalmologist,"Cataract Surgery, Glaucoma, Diabetic Retinopathy, LASIK",20,4.9,Jaipur,"Cataract Removal, Glaucoma Treatment, Retinal Laser Therapy",+91 91318 76551,anjali.iyer@eyesight.com
+Dr. Vivek Kapoor,Urologist,"Kidney Stones, Prostate Enlargement, UTI, Incontinence",18,4.7,Lucknow,"Kidney Stone Removal, BPH Treatment, Urinary Tract Infection Control",+91 90207 65452,vivek.kapoor@urologycare.com
+Dr. Sunita Reddy,Cardiologist,"Chest Pain, Palpitations, High Blood Pressure, Fatigue",13,4.5,Mumbai,"Hypertension, Heart Failure, Angina",+91 98186 54353,sunita.reddy@heartspecialist.com
+Dr. Deepak Kumar,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections",6,4.2,Delhi,"Acne Treatment, Eczema Management, Psoriasis Therapy",+91 99075 43254,deepak.kumar@skindoctor.com
+Dr. Meera Nair,Neurologist,"Headache, Migraine, Stroke, Seizures",25,4.9,Bangalore,"Headache Management, Migraine Prevention, Stroke Rehabilitation",+91 97064 32155,meera.nair@neurologyspecialist.com
+Dr. Rajesh Verma,Gastroenterologist,"Abdominal Pain, Indigestion, Constipation, Diarrhea",11,4.4,Chennai,"IBS Management, Digestive Disorder Treatment, Colonoscopy",+91 96953 21056,rajesh.verma@gastrosolutions.com
+Dr. Lakshmi Patel,Endocrinologist,"Diabetes, Thyroid, PCOS, Hormone Imbalance",15,4.8,Hyderabad,"Diabetes Education, Thyroid Treatment, PCOS Management",+91 95842 10957,lakshmi.patel@endocrinehealth.com
+Dr. Sameer Singh,Orthopedic Surgeon,"Joint Pain, Back Pain, Fractures, Arthritis",9,4.0,Ahmedabad,"Joint Replacement, Back Pain Relief, Fracture Repair",+91 94731 09858,sameer.singh@orthopedicsolutions.com
+Dr. Anjali Gupta,Gynecologist,"Pregnancy, Menstrual Problems, Infertility, Family Planning",27,4.6,Kolkata,"Prenatal Care, Infertility Evaluation, Menopause Support",+91 93620 98759,anjali.gupta@womenswellnessclinic.com
+Dr. Vijay Sharma,Pediatrician,"Fever, Cough, Cold, Vaccination",7,4.1,Pune,"Childhood Illnesses, Vaccination Schedules, Newborn Care",+91 92519 87660,vijay.sharma@childrensclinic.com
+Dr. Neha Iyer,Ophthalmologist,"Vision Problems, Cataracts, Glaucoma, Eye Infections",14,4.3,Jaipur,"Cataract Surgery, Glaucoma Management, Vision Correction",+91 91408 76561,neha.iyer@eyecarespecialists.com
+Dr. Manoj Kapoor,Urologist,"Urinary Problems, Kidney Stones, Prostate Issues",10,3.9,Lucknow,"Kidney Stone Removal, Prostate Treatment, Urinary Incontinence Therapy",+91 90397 65462,manoj.kapoor@urologyclinic.com
+Dr. Priyanka Sharma,Cardiologist,"Chest pain, Arrhythmia, Heart Failure, Hypertension",17,4.7,Mumbai,"Coronary Artery Disease, Atrial Fibrillation, Heart Failure Management",+91 98276 54363,priyanka.sharma@cardiocare.com
+Dr. Ravi Verma,Dermatologist,"Acne, Eczema, Psoriasis, Skin Allergy, Rosacea",8,4.4,Delhi,"Acne Treatment, Atopic Dermatitis, Psoriasis Management",+91 99165 43264,ravi.verma@dermatologyclinic.com
+Dr. Shweta Nair,Neurologist,"Stroke, Epilepsy, Headache, Parkinson's, Tremors",24,4.8,Bangalore,"Stroke Rehabilitation, Epilepsy Management, Parkinson's Disease Treatment",+91 97154 32165,shweta.nair@neurocarecenter.com
+Dr. Suresh Rao,Gastroenterologist,"IBS, GERD, Ulcerative Colitis, Crohn's, Constipation",12,4.5,Chennai,"IBS Treatment, GERD Management, Inflammatory Bowel Disease Management",+91 96043 21066,suresh.rao@gastroclinic.com
+Dr. Anika Patel,Endocrinologist,"Diabetes, Thyroid Disorders, PCOS, Infertility, Osteoporosis",19,4.9,Hyderabad,"Diabetes Management, Thyroid Hormone Balancing, PCOS Treatment",+91 95932 10967,anika.patel@endocrinecenter.com
+Dr. Nikhil Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Fractures, Sports Injuries",10,4.2,Ahmedabad,"Knee Replacement, Hip Replacement, Shoulder Arthroscopy",+91 94821 09868,nikhil.singh@orthopedicclinic.com
+Dr. Divya Mehta,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",31,5.0,Kolkata,"Prenatal Care, Infertility Solutions, Menopause Management",+91 93710 98769,divya.mehta@womenshealthcenter.com
+Dr. Rohan Sharma,Pediatrician,"Fever, Cough, Cold, Vaccination, Development Delay",6,4.0,Pune,"Common Childhood Illnesses, Vaccination Schedules, Developmental Assessment",+91 92609 87670,rohan.sharma@pediatriccare.com
+Dr. Kavita Iyer,Ophthalmologist,"Cataracts, Glaucoma, Macular Degeneration, Diabetic Retinopathy",15,4.6,Jaipur,"Cataract Surgery, Glaucoma Management, Retinal Disease Treatment",+91 91598 76571,kavita.iyer@eyesightclinic.com
+Dr. Kamal Kapoor,Urologist,"Kidney Stones, Prostate Enlargement, Urinary Incontinence, ED",11,4.1,Lucknow,"Kidney Stone Removal, BPH Treatment, Urinary Incontinence Therapy",+91 90487 65472,kamal.kapoor@urologycarecenter.com
+Dr. Sunita Verma,Cardiologist,"Chest Pain, Palpitations, Shortness of Breath, Dizziness",19,4.8,Mumbai,"Coronary Artery Disease, Arrhythmia, Heart Valve Disease",+91 98366 54373,sunita.verma@heartcenter.com
+Dr. Amit Khanna,Dermatologist,"Acne, Eczema, Psoriasis, Rosacea, Skin Cancer",7,4.3,Delhi,"Acne Treatment, Eczema Management, Psoriasis Therapy, Skin Cancer Screening",+91 99255 43274,amit.khanna@skincarecenter.com
+Dr. Priya Singh,Neurologist,"Headache, Migraine, Epilepsy, Multiple Sclerosis",26,4.9,Bangalore,"Headache Management, Migraine Prevention, Epilepsy Management",+91 97244 32175,priya.singh@neuroncenter.com
+Dr. Rahul Rao,Gastroenterologist,"IBS, GERD, Ulcerative Colitis, Crohn's Disease",13,4.6,Chennai,"IBS Treatment, GERD Management, Inflammatory Bowel Disease Management",+91 96133 21076,rahul.rao@gastrohealthcenter.com
+Dr. Divya Patel,Endocrinologist,"Diabetes, Thyroid Disorders, PCOS, Infertility",20,4.9,Hyderabad,"Diabetes Management, Thyroid Hormone Balancing, PCOS Treatment",+91 95022 10977,divya.patel@endocrinecliniccenter.com
+Dr. Arjun Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Back Pain",11,4.3,Ahmedabad,"Knee Replacement, Hip Replacement, Shoulder Arthroscopy, Back Pain Management",+91 94911 09878,arjun.singh@orthopediccenter.com
+Dr. Smita Mehta,Gynecologist,"Pregnancy, Infertility, Menopause, Fibroids",32,5.0,Kolkata,"Prenatal Care, Infertility Solutions, Menopause Management, Fibroid Treatment",+91 93800 98779,smita.mehta@womenshealthinstitute.com
+Dr. Karan Sharma,Pediatrician,"Fever, Cough, Cold, Vaccination, Nutrition",7,4.1,Pune,"Common Childhood Illnesses, Vaccination Schedules, Nutritional Guidance",+91 92799 87680,karan.sharma@pediatricinstitute.com
+Dr. Anita Iyer,Ophthalmologist,"Cataracts, Glaucoma, Macular Degeneration, LASIK",16,4.7,Jaipur,"Cataract Surgery, Glaucoma Management, Retinal Disease Treatment, LASIK Surgery",+91 91688 76581,anita.iyer@eyesightinstitute.com
+Dr. Manish Kapoor,Urologist,"Kidney Stones, Prostate Enlargement, Urinary Incontinence",12,4.2,Lucknow,"Kidney Stone Removal, BPH Treatment, Urinary Incontinence Therapy",+91 90577 65482,manish.kapoor@urologyinstitute.com
+Dr. Ritu Joshi,Cardiologist,"High Blood Pressure, Cholesterol, Angina, Palpitations",14,4.5,Mumbai,"Hypertension Management, Cholesterol Reduction, Angina Treatment",+91 98456 54383,ritu.joshi@heartcarecenter.com
+Dr. Gaurav Sharma,Dermatologist,"Acne, Eczema, Psoriasis, Skin Infections, Warts",9,4.0,Delhi,"Acne Treatment, Eczema Management, Psoriasis Therapy, Wart Removal",+91 99345 43284,gaurav.sharma@skininstitute.com
+Dr. Deepika Verma,Neurologist,"Headaches, Migraines, Epilepsy, Parkinson's Disease, Stroke",21,4.8,Bangalore,"Headache Management, Migraine Prevention, Epilepsy Management, Parkinson's Treatment",+91 97334 32185,deepika.verma@neurosciencecenter.com
+Dr. Sachin Rao,Gastroenterologist,"Abdominal Pain, Diarrhea, Constipation, Bloating, Indigestion",15,4.4,Chennai,"IBS Management, Digestive Disorder Treatment, Colonoscopy, Endoscopy",+91 96223 21086,sachin.rao@gastroenterologyclinic.com
+Dr. Priya Agarwal,Endocrinologist,"Diabetes, Thyroid Disorders, PCOS, Osteoporosis, Hormone Imbalances",18,4.7,Hyderabad,"Diabetes Management, Thyroid Hormone Balancing, PCOS Treatment, Osteoporosis Management",+91 95112 10987,priya.agarwal@endocrinecareclinic.com
+Dr. Vikram Singh,Orthopedic Surgeon,"Knee Pain, Hip Pain, Shoulder Pain, Back Pain, Fractures",12,4.1,Ahmedabad,"Knee Replacement, Hip Replacement, Shoulder Arthroscopy, Back Pain Management, Fracture Repair",+91 94001 09888,vikram.singh@orthopedicspecialists.com
+Dr. Shweta Mehta,Gynecologist,"Pregnancy, Infertility, Menopause, PCOS, Fibroids",33,4.9,Kolkata,"Prenatal Care, Infertility Solutions, Menopause Management, PCOS Treatment, Fibroid Treatment",+91 93990 98789,shweta.mehta@womenshealthspecialists.com
+Dr. Rohan Sharma,Pediatrician,"Fever, Cough, Cold, Vaccination, Growth and Development",8,3.9,Pune,"Common Childhood Illnesses, Vaccination Schedules, Growth Monitoring, Development Assessment",+91 92889 87690,rohan.sharma@pediatricspecialists.com
+Dr. Anjali Iyer,Ophthalmologist,"Cataracts, Glaucoma, Macular Degeneration, Diabetic Retinopathy, Dry Eyes",17,4.8,Jaipur,"Cataract Surgery, Glaucoma Management, Retinal Disease Treatment, Dry Eye Treatment",+91 91778 76591,anjali.iyer@ophthalmologyspecialists.com
+Dr. Vivek Kapoor,Urologist,"Kidney Stones, Prostate Enlargement, Urinary Incontinence, Erectile Dysfunction, UTI",13,4.3,Lucknow,"Kidney Stone Removal, BPH Treatment, Urinary Incontinence Therapy, ED Treatment, UTI Management",+91 90667 65492,vivek.kapoor@urologyspecialists.com
