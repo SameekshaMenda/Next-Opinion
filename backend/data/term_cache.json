@@ -383,5 +383,89 @@
     "abdominal migraine",
     "henoch-sch\u00f6nlein purpura",
     "superior mesenteric artery syndrome"
+  ],
+  "h. pylori infection": [
+    "gastritis",
+    "peptic ulcers",
+    "abdominal pain",
+    "dyspepsia",
+    "helicobacter pylori",
+    "antibiotics",
+    "endoscopy",
+    "gastric cancer",
+    "fecal antigen test",
+    "eradication therapy"
+  ],
+  "gastritis": [
+    "stomach inflammation",
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "helicobacter pylori",
+    "nsaids",
+    "dyspepsia",
+    "endoscopy",
+    "gastric ulcers",
+    "gastritis."
+  ],
+  "peptic ulcer disease (pud)": [
+    "epigastric pain",
+    "heartburn",
+    "gastric ulcer",
+    "duodenal ulcer",
+    "h. pylori",
+    "nsaids",
+    "melena",
+    "hematemesis",
+    "endoscopy",
+    "perforation"
+  ],
+  "peptic ulcer disease": [
+    "abdominal pain",
+    "heartburn",
+    "gastric ulcer",
+    "duodenal ulcer",
+    "helicobacter pylori",
+    "nsaids",
+    "dyspepsia",
+    "bleeding",
+    "perforation",
+    "endoscopy"
+  ],
+  "h. pylori infection (ruled out based on negative stool antigen test)": [
+    "negative stool antigen",
+    "gastritis",
+    "peptic ulcer",
+    "dyspepsia",
+    "abdominal pain",
+    "helicobacter pylori",
+    "urea breath test",
+    "endoscopy",
+    "gerd",
+    "non-ulcer dyspepsia"
+  ],
+  "peptic ulcer disease (less likely, but possible)": [
+    "epigastric pain",
+    "hematemesis",
+    "melena",
+    "gastric ulcer",
+    "duodenal ulcer",
+    "h. pylori",
+    "nsaids",
+    "dyspepsia",
+    "perforation",
+    "gastritis"
+  ],
+  "gastritis (less likely, but possible)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach",
+    "inflammation",
+    "h. pylori",
+    "ulcer",
+    "endoscopy",
+    "hematemesis"
   ]
 }

@@ -2,6 +2,7 @@ import pandas as pd
 from app import app
 from core.database import db
 from core.models import User, Doctor
+from werkzeug.security import generate_password_hash
 
 # Load CSV
 df = pd.read_csv("data/doctor_list.csv")
@@ -25,12 +26,15 @@ with app.app_context():
         if existing_user:
             continue
 
+        # ✅ Hash password securely
+        hashed_password = generate_password_hash("123", method="pbkdf2:sha256")
+
         # Create doctor user
         user = User(
             name=name,
             email=email,
             role="doctor",
-            password="123"
+            password=hashed_password
         )
         db.session.add(user)
         db.session.commit()

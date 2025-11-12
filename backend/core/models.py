@@ -3,11 +3,13 @@ from datetime import datetime
 
 class User(db.Model):
     __tablename__ = "users"
+    __tablename__ = "users"
+
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
-    email = db.Column(db.String(120), unique=True)
-    role = db.Column(db.String(50))  # 'patient' or 'doctor'
-    password = db.Column(db.String(200))
+    name = db.Column(db.String(255))
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    role = db.Column(db.String(50), default="user")
 
 class Doctor(db.Model):
     __tablename__ = "doctors"
@@ -19,6 +21,7 @@ class Doctor(db.Model):
     location = db.Column(db.String(100))
     phone = db.Column(db.String(50))
     email = db.Column(db.String(255))
+    
 
 class Appointment(db.Model):
     __tablename__ = "appointments"

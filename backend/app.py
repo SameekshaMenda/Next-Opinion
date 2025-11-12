@@ -7,8 +7,8 @@ from routes.reports import reports_bp
 from routes.chat import chat_bp
 from routes.doctors import doctors_bp
 from routes.appointments import appointments_bp
+from routes.auth import auth_bp
 import os
-
 app = Flask(__name__)
 CORS(app)
 
@@ -20,6 +20,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
 # ✅ Register Blueprints
+app.register_blueprint(auth_bp, url_prefix="/api/auth")
 app.register_blueprint(second_opinion_bp, url_prefix="/api")
 app.register_blueprint(reports_bp, url_prefix="/api")
 app.register_blueprint(chat_bp, url_prefix="/api")
