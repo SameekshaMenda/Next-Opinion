@@ -10,13 +10,14 @@ export default function UserDashboard() {
   return (
     <div className="min-h-screen bg-gray-50">
 
-      <main className="p-6 grid grid-cols-2 md:grid-cols-2 gap-6">
+      {/* <main className="p-6 grid grid-cols-2 md:grid-cols-2 gap-6"> */}
+      <main className="p-6 ">
         <div>
           <UploadReports onReportCreated={setReportId} />
         </div>
-        <div>
+        {/* <div>
           <DoctorList />
-        </div>
+        </div> */}
         <div>
           {/* <Chat reportId={reportId} />
           <FinalReportForm reportId={reportId} /> */}

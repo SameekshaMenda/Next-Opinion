@@ -5,7 +5,8 @@ export default function UploadReports({ onReportCreated }) {
   const [file, setFile] = useState(null);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!file) return alert("Please upload a medical document");
@@ -54,6 +55,7 @@ export default function UploadReports({ onReportCreated }) {
         </button>
       </form>
 
+      {/* ================= Results Table ================= */}
       {results.length > 0 && (
         <div className="mt-6 overflow-x-auto">
           <h3 className="text-lg font-semibold mb-2">AI Analysis Results</h3>
@@ -69,16 +71,27 @@ export default function UploadReports({ onReportCreated }) {
             <tbody>
               {results.map((r, i) => (
                 <tr key={i}>
-                  <td className="p-2 border">{r.disease}</td>
-                  <td className="p-2 border">{r.risk}</td>
-                  <td className="p-2 border">{r.explanation}</td>
-                  <td className="p-2 border">
+                  <td className="p-2 border align-top">{r.disease}</td>
+                  <td className="p-2 border align-top">{r.risk}</td>
+                  <td className="p-2 border align-top">{r.explanation}</td>
+                  <td className="p-2 border align-top">
                     {r.recommended_doctors?.map((doc, j) => (
-                      <div key={j} className="border-b py-1">
-                        <b>{doc.name}</b> ({doc.speciality})<br />
-                        <span className="text-xs text-gray-600">
-                          {doc.location} • ⭐ {doc.rating}
-                        </span>
+                      <div
+                        key={j}
+                        className="border-b py-2 flex justify-between items-center"
+                      >
+                        <div>
+                          <b>{doc.name}</b> ({doc.speciality})<br />
+                          <span className="text-xs text-gray-600">
+                            {doc.location} • ⭐ {doc.rating}
+                          </span>
+                        </div>
+                        <button
+                          className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-700"
+                          onClick={() => setSelectedDoctor(doc)}
+                        >
+                          View
+                        </button>
                       </div>
                     )) || "—"}
                   </td>
@@ -86,6 +99,52 @@ export default function UploadReports({ onReportCreated }) {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+      
+      {/* ================= Doctor Details Modal ================= */}
+      {selectedDoctor && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 w-96 relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+              onClick={() => setSelectedDoctor(null)}
+            >
+              ✖
+            </button>
+            <h3 className="text-lg font-semibold mb-4 text-center">
+              Doctor Details
+            </h3>
+            <p>
+              <b>Name:</b> {selectedDoctor.name}
+            </p>
+            <p>
+              <b>Speciality:</b> {selectedDoctor.speciality}
+            </p>
+            <p>
+              <b>Location:</b> {selectedDoctor.location}
+            </p>
+            <p>
+              <b>Experience:</b> {selectedDoctor.experience} years
+            </p>
+            <p>
+              <b>Rating:</b> ⭐ {selectedDoctor.rating}
+            </p>
+            <p>
+              <b>Phone:</b> {selectedDoctor.phone || "N/A"}
+            </p>
+            <p>
+              <b>Email:</b> {selectedDoctor.email || "N/A"}
+            </p>
+            <div className="mt-4 text-center">
+              <button
+                className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-700"
+                onClick={() => alert("Appointment booking coming soon!")}
+              >
+                Book Appointment
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

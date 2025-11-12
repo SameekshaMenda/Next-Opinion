@@ -1,1 +1,2 @@
 pip install flask flask-cors google-generativeai python-dotenv
+pip install psycopg2-binary
