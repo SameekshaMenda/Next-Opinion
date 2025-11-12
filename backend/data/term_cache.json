@@ -467,5 +467,113 @@
     "ulcer",
     "endoscopy",
     "hematemesis"
+  ],
+  "peptic ulcer disease (non-h. pylori related)": [
+    "gastric ulcer",
+    "duodenal ulcer",
+    "nsaids",
+    "stress ulcers",
+    "zollinger-ellison syndrome",
+    "upper gi bleed",
+    "dyspepsia",
+    "epigastric pain",
+    "perforation",
+    "gastritis"
+  ],
+  "gastritis (unlikely, but cannot be ruled out completely)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach inflammation",
+    "epigastric pain",
+    "helicobacter pylori",
+    "gastric ulcers",
+    "upper endoscopy",
+    "gerd"
+  ],
+  "non-ulcer dyspepsia (functional dyspepsia)": [
+    "abdominal pain",
+    "bloating",
+    "nausea",
+    "early satiety",
+    "epigastric pain",
+    "gastroparesis",
+    "impaired gastric motility",
+    "helicobacter pylori",
+    "visceral hypersensitivity",
+    "functional gastrointestinal disorder"
+  ],
+  "h. pylori infection (possible false negative)": [
+    "gastritis",
+    "peptic ulcer",
+    "abdominal pain",
+    "dyspepsia",
+    "false negative",
+    "urea breath test",
+    "stool antigen test",
+    "endoscopy",
+    "antibiotics",
+    "caga"
+  ],
+  "gastritis (possible, if patient has symptoms)": [
+    "gastritis",
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach",
+    "inflammation",
+    "h. pylori",
+    "endoscopy",
+    "ulcers"
+  ],
+  "peptic ulcer disease (possible, if patient has symptoms)": [
+    "abdominal pain",
+    "heartburn",
+    "dyspepsia",
+    "gastric ulcer",
+    "duodenal ulcer",
+    "helicobacter pylori",
+    "nsaids",
+    "melena",
+    "hematemesis",
+    "endoscopy"
+  ],
+  "functional dyspepsia (possible, if patient has symptoms and other causes are ruled out)": [
+    "dyspepsia",
+    "abdominal pain",
+    "bloating",
+    "nausea",
+    "vomiting",
+    "epigastric pain",
+    "gastroparesis",
+    "delayed gastric emptying",
+    "motility disorder",
+    "exclusion diagnosis"
+  ],
+  "gastritis (possible, but less likely given the negative h. pylori test)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach inflammation",
+    "epigastric pain",
+    "nsaids",
+    "alcohol",
+    "acid reflux",
+    "gastritis (non-h. pylori)"
+  ],
+  "false negative h. pylori test": [
+    "abdominal pain",
+    "dyspepsia",
+    "gastritis",
+    "ulcer",
+    "ppi use",
+    "inadequate sampling",
+    "early infection",
+    "test sensitivity",
+    "repeat testing",
+    "diagnostic delay"
   ]
 }

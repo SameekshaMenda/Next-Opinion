@@ -1,19 +1,21 @@
+// src/components/UploadReports.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../api";
 
 export default function UploadReports({ onReportCreated }) {
   const [file, setFile] = useState(null);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
- 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!file) return alert("Please upload a medical document");
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("user_name", "Sameeksha");
+    formData.append("user_name", "Sameeksha"); // Replace with actual logged-in user name
 
     setLoading(true);
     try {
@@ -21,10 +23,10 @@ export default function UploadReports({ onReportCreated }) {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
+      // Extract AI results and doctor recommendations
       setResults(res.data.ai_result || []);
       onReportCreated(res.data.report_id);
 
-      // ✅ Flatten and store recommended doctors
       const allDoctors = res.data.ai_result.flatMap(
         (disease) => disease.recommended_doctors || []
       );
@@ -32,118 +34,111 @@ export default function UploadReports({ onReportCreated }) {
     } catch (err) {
       console.error(err);
       alert("Error analyzing document");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
+  // 🩺 Render UI
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-      <h2 className="text-xl font-semibold mb-4">Upload Medical Document</h2>
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <input
-          type="file"
-          accept=".pdf,.jpg,.jpeg,.png,.txt"
-          onChange={(e) => setFile(e.target.files[0])}
-          className="w-full border p-2 rounded"
-        />
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-700"
-        >
-          {loading ? "Analyzing..." : "Upload & Analyze"}
-        </button>
+    <div className="bg-white p-6 rounded-2xl shadow-lg mb-6 max-w-6xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+        Upload Medical Document
+      </h2>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex items-center gap-3">
+          <input
+            type="file"
+            accept=".pdf,.jpg,.jpeg,.png,.txt"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="flex-1 border rounded-md p-2"
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 disabled:opacity-60"
+          >
+            {loading ? "Analyzing..." : "Upload & Analyze"}
+          </button>
+        </div>
       </form>
 
-      {/* ================= Results Table ================= */}
       {results.length > 0 && (
-        <div className="mt-6 overflow-x-auto">
-          <h3 className="text-lg font-semibold mb-2">AI Analysis Results</h3>
-          <table className="w-full border text-sm">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="p-2 border">Disease</th>
-                <th className="p-2 border">Risk</th>
-                <th className="p-2 border">Explanation</th>
-                <th className="p-2 border">Recommended Doctors</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((r, i) => (
-                <tr key={i}>
-                  <td className="p-2 border align-top">{r.disease}</td>
-                  <td className="p-2 border align-top">{r.risk}</td>
-                  <td className="p-2 border align-top">{r.explanation}</td>
-                  <td className="p-2 border align-top">
-                    {r.recommended_doctors?.map((doc, j) => (
-                      <div
-                        key={j}
-                        className="border-b py-2 flex justify-between items-center"
-                      >
-                        <div>
-                          <b>{doc.name}</b> ({doc.speciality})<br />
-                          <span className="text-xs text-gray-600">
-                            {doc.location} • ⭐ {doc.rating}
-                          </span>
-                        </div>
-                        <button
-                          className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-700"
-                          onClick={() => setSelectedDoctor(doc)}
-                        >
-                          View
-                        </button>
-                      </div>
-                    )) || "—"}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-      
-      {/* ================= Doctor Details Modal ================= */}
-      {selectedDoctor && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-96 relative">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-              onClick={() => setSelectedDoctor(null)}
-            >
-              ✖
-            </button>
-            <h3 className="text-lg font-semibold mb-4 text-center">
-              Doctor Details
-            </h3>
-            <p>
-              <b>Name:</b> {selectedDoctor.name}
-            </p>
-            <p>
-              <b>Speciality:</b> {selectedDoctor.speciality}
-            </p>
-            <p>
-              <b>Location:</b> {selectedDoctor.location}
-            </p>
-            <p>
-              <b>Experience:</b> {selectedDoctor.experience} years
-            </p>
-            <p>
-              <b>Rating:</b> ⭐ {selectedDoctor.rating}
-            </p>
-            <p>
-              <b>Phone:</b> {selectedDoctor.phone || "N/A"}
-            </p>
-            <p>
-              <b>Email:</b> {selectedDoctor.email || "N/A"}
-            </p>
-            <div className="mt-4 text-center">
-              <button
-                className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-700"
-                onClick={() => alert("Appointment booking coming soon!")}
-              >
-                Book Appointment
-              </button>
-            </div>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold mb-3 text-gray-800">
+            AI Analysis Results
+          </h3>
+
+          <div className="space-y-4">
+            {results.map((r, i) => (
+              <div key={i} className="border rounded-lg p-4 bg-gray-50">
+                <div className="flex justify-between items-start gap-4">
+                  <div>
+                    <div className="text-base font-semibold">{r.disease}</div>
+                    <div className="text-sm text-gray-600">{r.explanation}</div>
+                    <div className="mt-2 text-xs text-gray-500">
+                      Risk: {r.risk}
+                    </div>
+                  </div>
+
+                  <div className="w-1/3">
+                    <div className="text-sm font-medium text-gray-700 mb-2">
+                      Recommended Doctors
+                    </div>
+
+                    <div className="space-y-2 max-h-40 overflow-auto pr-2">
+                      {r.recommended_doctors?.length > 0 ? (
+                        r.recommended_doctors.map((doc, j) => {
+                          // ✅ Safely pick the correct doctor ID
+                          const docId =
+                            doc.id || doc.doctor_id || doc.user_id || null;
+
+                          return (
+                            <div
+                              key={j}
+                              className="flex items-center justify-between bg-white p-2 rounded-md shadow-sm"
+                            >
+                              <div>
+                                <div className="font-semibold text-sm">
+                                  {doc.name}
+                                </div>
+                                <div className="text-xs text-gray-500">
+                                  {doc.speciality} • {doc.location}
+                                </div>
+                              </div>
+
+                              <div className="flex flex-col items-end gap-2">
+                                <div className="text-sm font-semibold">
+                                  ⭐ {doc.rating}
+                                </div>
+
+                                <button
+                                  className="bg-gray-900 text-white px-3 py-1 rounded hover:bg-gray-700"
+                                  onClick={() => {
+                                    if (docId && !isNaN(docId)) {
+                                      navigate(`/doctor/${docId}`);
+                                    } else {
+                                      alert(
+                                        "Doctor ID not found — please verify database linkage."
+                                      );
+                                    }
+                                  }}
+                                >
+                                  View
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })
+                      ) : (
+                        <div className="text-gray-400">No doctors found</div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}

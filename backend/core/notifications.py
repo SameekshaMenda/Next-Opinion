@@ -6,3 +6,4 @@ def send_notification(user_id, message):
     db.session.add(notif)
     db.session.commit()
     print(f"📨 Notification → User {user_id}: {message}")
+     

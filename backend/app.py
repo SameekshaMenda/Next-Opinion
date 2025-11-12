@@ -8,9 +8,14 @@ from routes.chat import chat_bp
 from routes.doctors import doctors_bp
 from routes.appointments import appointments_bp
 from routes.auth import auth_bp
+from routes.doctor_dashboard import doctor_dashboard_bp
+from routes.slot_booking import slot_bp
+from routes.agora_routes import agora_bp
+
+
 import os
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
 # ✅ Database Configuration
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
@@ -20,6 +25,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
 # ✅ Register Blueprints
+app.register_blueprint(agora_bp, url_prefix="/api")
+app.register_blueprint(doctor_dashboard_bp, url_prefix="/api")
+app.register_blueprint(slot_bp, url_prefix="/api")
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
 app.register_blueprint(second_opinion_bp, url_prefix="/api")
 app.register_blueprint(reports_bp, url_prefix="/api")

@@ -14,15 +14,20 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await API.post("/auth/login", form);
-      const { token, role, name } = res.data;
+      const { token, role, name, user_id, doctor_id } = res.data;
 
+      // ✅ Store everything properly
       localStorage.setItem("token", token);
       localStorage.setItem("role", role);
       localStorage.setItem("userName", name);
+      localStorage.setItem("userId", user_id);
+      if (doctor_id) localStorage.setItem("doctorId", doctor_id);
 
+      // ✅ Navigate correctly
       if (role === "doctor") navigate("/doctor");
       else navigate("/user");
     } catch (err) {
+      console.error("Login error:", err);
       alert(err.response?.data?.error || "Login failed");
     }
   };
@@ -57,12 +62,6 @@ export default function Login() {
             Login
           </button>
         </form>
-        <p className="text-center text-sm text-gray-600 mt-3">
-          Don’t have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline">
-            Register
-          </a>
-        </p>
       </div>
     </div>
   );
