@@ -9,78 +9,85 @@ export default function DoctorDetails() {
   const [loading, setLoading] = useState(true);
   const [booking, setBooking] = useState(false);
 
-  // ✅ Get logged-in user correctly
-  const user = JSON.parse(localStorage.getItem("user"));
-  const userId = user?.id; // must be the real patient ID
+  // Get Logged-in User
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const userId = user?.id;
+  const userRole = user?.role;
 
-  // Redirect or warn if not logged in
-  if (!userId) {
-    alert("Please login to book an appointment");
-  }
-
-  // ===================== Fetch doctor info =====================
+  // Warn if not logged in
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const resDoctor = await API.get(`/doctors/${id}`);
-        setDoctor(resDoctor.data);
+    if (!userId) {
+      alert("Please login to book an appointment.");
+    }
+  }, [userId]);
 
-        const resSlots = await API.get(`/doctor/${id}/slots`);
-        setSlots(resSlots.data.slots || []);
+  // Fetch doctor & available slots
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const docRes = await API.get(`/doctors/${id}`);
+        setDoctor(docRes.data);
+
+        const slotRes = await API.get(`/doctor/${id}/slots`);
+        setSlots(slotRes.data.slots || []);
       } catch (err) {
-        console.error("Error fetching doctor:", err);
-        alert("Error loading doctor info");
+        console.error(err);
+        alert("Error loading doctor information.");
       } finally {
         setLoading(false);
       }
     };
-    fetchData();
+    load();
   }, [id]);
 
-  // ===================== Book Appointment =====================
+  // Book appointment
   const handleBookSlot = async (slotId, start, end) => {
+    if (userRole === "doctor") {
+      alert("Doctors cannot book appointments. Please login as a patient.");
+      return;
+    }
+
+    if (!userId) {
+      alert("Please login to book an appointment.");
+      return;
+    }
+
     if (!window.confirm(`Confirm appointment at ${start} - ${end}?`)) return;
 
     try {
       setBooking(true);
 
-      const shareDocs = window.confirm(
-        "Do you want to share your uploaded medical documents with this doctor?"
+      const res = await API.post("/appointment/request", {
+        doctor_id: Number(id),
+        patient_id: Number(userId),
+        disease: "General Checkup",
+        slot_id: slotId
+      });
+
+      alert("Appointment booked successfully!");
+
+      // Update the UI instantly
+      setSlots(prev =>
+        prev.map(s => (s.id === slotId ? { ...s, is_booked: true } : s))
       );
 
-      const appointmentPayload = {
-        doctor_id: Number(id),   // correct doctor ID
-        patient_id: Number(userId), // correct patient ID
-        disease: "General Checkup",
-        slot_id: slotId,
-        share_docs: shareDocs,
-      };
-
-      const res = await API.post("/appointment/request", appointmentPayload);
-
-      alert("✅ Appointment successfully requested!");
-      console.log("Appointment Response:", res.data);
     } catch (err) {
       console.error(err);
-      alert("Error booking appointment");
+      alert(err.response?.data?.error || "Could not book appointment.");
     } finally {
       setBooking(false);
     }
   };
 
-  if (loading)
-    return <p className="text-center text-gray-600 mt-10">Loading...</p>;
-  if (!doctor)
-    return <p className="text-center text-red-500">Doctor not found.</p>;
+  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (!doctor) return <p className="text-center text-red-500">Doctor not found.</p>;
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center items-start p-6">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full space-y-6">
 
         {/* Doctor Info */}
-        <h2 className="text-3xl font-bold text-gray-800 text-center">
-          {doctor.name}
-        </h2>
+        <h2 className="text-3xl font-bold text-center">{doctor.name}</h2>
 
         <div className="text-gray-700 space-y-2 text-center">
           <p><b>Speciality:</b> {doctor.speciality}</p>
@@ -92,25 +99,30 @@ export default function DoctorDetails() {
         </div>
 
         {/* Slots */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
+        <div>
+          <h3 className="text-xl font-semibold text-center mt-4 mb-4">
             Available Appointment Slots
           </h3>
 
           {slots.length === 0 ? (
-            <p className="text-center text-gray-500">
-              No available slots right now.
-            </p>
+            <p className="text-center text-gray-500">No slots available right now.</p>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {slots.map((slot) => (
+              {slots.map(slot => (
                 <button
                   key={slot.id}
-                  disabled={booking}
+                  disabled={slot.is_booked || booking}
                   onClick={() => handleBookSlot(slot.id, slot.start, slot.end)}
-                  className="p-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+                  className={`p-3 rounded-lg font-medium transition
+                    ${
+                      slot.is_booked
+                        ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                        : "bg-gray-900 text-white hover:bg-gray-700"
+                    }
+                  `}
                 >
                   {slot.start} – {slot.end}
+                  {slot.is_booked && " (Booked)"}
                 </button>
               ))}
             </div>
