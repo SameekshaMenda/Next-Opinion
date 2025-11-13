@@ -575,5 +575,65 @@
     "test sensitivity",
     "repeat testing",
     "diagnostic delay"
+  ],
+  "gastritis (non-h. pylori related)": [
+    "epigastric pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "autoimmune",
+    "reactive gastritis",
+    "nsaids",
+    "alcohol",
+    "bile reflux",
+    "atrophic gastritis"
+  ],
+  "gastritis (possible, requires clinical correlation)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "epigastric pain",
+    "stomach inflammation",
+    "helicobacter pylori",
+    "gastric mucosa",
+    "dyspepsia",
+    "endoscopy",
+    "peptic ulcer"
+  ],
+  "functional dyspepsia (possible if other causes are ruled out)": [
+    "dyspepsia",
+    "epigastric pain",
+    "bloating",
+    "nausea",
+    "vomiting",
+    "gastroparesis",
+    "helicobacter pylori",
+    "gastric motility",
+    "ibs overlap",
+    "functional gastrointestinal disorder"
+  ],
+  "gastritis (possible, even with negative h. pylori)": [
+    "epigastric pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach inflammation",
+    "autoimmune gastritis",
+    "nsaid induced",
+    "alcohol abuse",
+    "bile reflux",
+    "atrophic gastritis"
+  ],
+  "functional dyspepsia (most likely with no other obvious cause)": [
+    "dyspepsia",
+    "epigastric pain",
+    "bloating",
+    "nausea",
+    "early satiety",
+    "gastroparesis",
+    "functional gi disorder",
+    "rome iv criteria",
+    "helicobacter pylori negative",
+    "idiopathic"
   ]
 }

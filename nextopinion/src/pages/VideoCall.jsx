@@ -3,97 +3,176 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import API from "../api";
 
 export default function VideoCall({ channelName = "doctor_patient" }) {
-    const [client] = useState(() => AgoraRTC.createClient({ mode: "rtc", codec: "vp8" }));
+    const appId = import.meta.env.VITE_AGORA_APP_ID;
+
+    const [client] = useState(() =>
+        AgoraRTC.createClient({ mode: "rtc", codec: "vp8" })
+    );
+
     const [localTracks, setLocalTracks] = useState([]);
-    const [remoteUsers, setRemoteUsers] = useState([]);
     const [joined, setJoined] = useState(false);
     const [tokenData, setTokenData] = useState(null);
 
-    // ✅ Fetch Agora token from backend
+    const [micOn, setMicOn] = useState(true);
+    const [camOn, setCamOn] = useState(true);
+
     useEffect(() => {
         const fetchToken = async () => {
-            const res = await API.post("/generate_token", {
-                channel_name: channelName,
-                uid: Math.floor(Math.random() * 10000),
-            });
-            setTokenData(res.data);
-        };
-        fetchToken();
-    }, [channelName]);
-
-    // ✅ Initialize and join call
-    useEffect(() => {
-        if (!tokenData) return;
-
-        const initCall = async () => {
             try {
-                client.on("user-published", async (user, mediaType) => {
-                    await client.subscribe(user, mediaType);
-                    if (mediaType === "video") {
-                        const videoDiv = document.createElement("div");
-                        videoDiv.id = `user-${user.uid}`;
-                        videoDiv.style.width = "300px";
-                        videoDiv.style.height = "200px";
-                        videoDiv.style.backgroundColor = "#000";
-                        document.getElementById("remote-videos").appendChild(videoDiv);
-                        user.videoTrack.play(`user-${user.uid}`);
-                    }
-                    if (mediaType === "audio") user.audioTrack?.play();
+                const uid = Math.floor(Math.random() * 100000);
+
+                const res = await API.post("/generate_token", {
+                    channel_name: channelName,
+                    uid,
                 });
 
-                client.on("user-unpublished", (user) => {
-                    const el = document.getElementById(`user-${user.uid}`);
-                    if (el) el.remove();
-                });
-
-                await client.join(tokenData.appId, tokenData.channelName, tokenData.token, null);
-
-                // 🔥 Ask for permissions properly
-                const tracks = await AgoraRTC.createMicrophoneAndCameraTracks({}, { encoderConfig: "720p" });
-                setLocalTracks(tracks);
-
-                const localVideoDiv = document.getElementById("local-player");
-                tracks[1].play(localVideoDiv); // Camera
-                tracks[0].play();              // Audio
-
-                await client.publish(tracks);
-                setJoined(true);
+                setTokenData({ token: res.data.token, uid });
             } catch (err) {
-                console.error("Agora init error:", err);
-                alert("Camera/Microphone access denied or device not available.");
+                alert("Token generation failed");
             }
         };
 
+        fetchToken();
+    }, [channelName]);
+
+    useEffect(() => {
+        if (!tokenData || joined) return;
+
+        const initCall = async () => {
+            try {
+                await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+
+                const { uid, token } = tokenData;
+
+                await client.join(appId, channelName, token, uid);
+
+                const [micTrack, camTrack] =
+                    await AgoraRTC.createMicrophoneAndCameraTracks();
+
+                setLocalTracks([micTrack, camTrack]);
+
+                camTrack.play("local-player");
+
+                await client.publish([micTrack, camTrack]);
+
+                setJoined(true);
+
+                client.removeAllListeners("user-published");
+                client.removeAllListeners("user-unpublished");
+
+                client.on("user-published", async (user, mediaType) => {
+                    if (user.uid === client.uid) return;
+
+                    await client.subscribe(user, mediaType);
+
+                    if (mediaType === "video") {
+                        const playerId = `remote-${user.uid}`;
+
+                        let container = document.getElementById(playerId);
+                        if (!container) {
+                            container = document.createElement("div");
+                            container.id = playerId;
+                            container.className =
+                                "w-full h-full bg-black rounded-xl overflow-hidden";
+                            document.getElementById("remote-videos").appendChild(container);
+                        }
+
+                        user.videoTrack.play(playerId);
+                    }
+
+                    if (mediaType === "audio") {
+                        user.audioTrack.play();
+                    }
+                });
+
+                client.on("user-unpublished", (user) => {
+                    const el = document.getElementById(`remote-${user.uid}`);
+                    if (el) el.remove();
+                });
+            } catch (err) {
+                alert("Agora Call Failed");
+            }
+        };
 
         initCall();
-
-        return () => {
-            localTracks.forEach((track) => track.stop() && track.close());
-            client.leave();
-        };
-    }, [tokenData]);
+    }, [tokenData, joined]);
 
     const leaveCall = async () => {
-        localTracks.forEach((track) => track.stop() && track.close());
+        localTracks.forEach((track) => {
+            track.stop();
+            track.close();
+        });
+
         await client.leave();
-        setRemoteUsers([]);
         setJoined(false);
+        document.getElementById("remote-videos").innerHTML = "";
+    };
+
+    // ==== UI ====
+
+    const toggleMic = () => {
+        if (localTracks[0]) {
+            if (micOn) localTracks[0].setEnabled(false);
+            else localTracks[0].setEnabled(true);
+            setMicOn(!micOn);
+        }
+    };
+
+    const toggleCam = () => {
+        if (localTracks[1]) {
+            if (camOn) localTracks[1].setEnabled(false);
+            else localTracks[1].setEnabled(true);
+            setCamOn(!camOn);
+        }
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
-            <h1 className="text-2xl font-bold mb-4">Agora Video Call</h1>
-            <div className="flex gap-6">
-                <div id="local-player" className="w-64 h-48 bg-black rounded-lg"></div>
-                <div id="remote-videos" className="flex flex-wrap gap-4"></div>
-            </div>
-            {joined ? (
-                <button onClick={leaveCall} className="mt-6 bg-red-600 text-white px-4 py-2 rounded">
-                    Leave Call
+        <div className="relative h-screen w-screen bg-gray-900 flex items-center justify-center overflow-hidden">
+
+            {/* REMOTE VIDEO (Full Screen Center) */}
+            <div
+                id="remote-videos"
+                className="w-[90%] h-[80%] bg-black rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden"
+            ></div>
+
+            {/* LOCAL VIDEO (Bottom Right Floating) */}
+            <div
+                id="local-player"
+                className="absolute bottom-28 right-10 w-48 h-36 bg-black rounded-xl shadow-lg overflow-hidden border border-white/30"
+            ></div>
+
+            {/* Control Bar */}
+            <div className="absolute bottom-6 flex space-x-6 bg-white/10 backdrop-blur-lg px-8 py-4 rounded-full shadow-xl">
+
+                {/* Mic */}
+                <button
+                    onClick={toggleMic}
+                    className={`p-4 rounded-full text-white ${
+                        micOn ? "bg-gray-700" : "bg-red-600"
+                    }`}
+                >
+                    {micOn ? "🎤" : "🔇"}
                 </button>
-            ) : (
-                <p className="text-gray-600 mt-6">Joining call...</p>
-            )}
+
+                {/* Camera */}
+                <button
+                    onClick={toggleCam}
+                    className={`p-4 rounded-full text-white ${
+                        camOn ? "bg-gray-700" : "bg-red-600"
+                    }`}
+                >
+                    {camOn ? "📷" : "🚫"}
+                </button>
+
+                {/* Leave */}
+                <button
+                    onClick={leaveCall}
+                    className="p-4 rounded-full bg-red-600 text-white font-semibold"
+                >
+                    🚪
+                </button>
+            </div>
+
         </div>
     );
 }

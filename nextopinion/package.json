@@ -13,6 +13,7 @@
     "agora-rtc-sdk-ng": "^4.24.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.9.5"
   },
   "devDependencies": {

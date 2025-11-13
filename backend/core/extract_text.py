@@ -24,7 +24,13 @@ def extract_text_from_file(file):
             text = "Unsupported file format."
     except Exception as e:
         text = f"Error reading file: {str(e)}"
-    finally:
-        os.remove(temp_path)
 
-    return text.strip()
+    # 🚨 DO NOT DELETE FILE
+    # We need this file for doctor email attachment
+    # os.remove(temp_path)
+
+    return {
+        "text": text.strip(),
+        "file_path": temp_path,
+        "filename": filename
+    }

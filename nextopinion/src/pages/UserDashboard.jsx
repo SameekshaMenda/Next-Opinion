@@ -3,6 +3,8 @@ import UploadReports from "../components/UploadReports";
 import DoctorList from "../components/DoctorList";
 import Chat from "../components/Chat";
 import FinalReportForm from "../components/FinalReportForm";
+import AppointmentList from "../components/AppointmentList";
+
 
 export default function UserDashboard() {
   const [reportId, setReportId] = useState(null);
@@ -15,6 +17,11 @@ export default function UserDashboard() {
         <div>
           <UploadReports onReportCreated={setReportId} />
         </div>
+
+        <div>
+          <AppointmentList />
+        </div>
+
         {/* <div>
           <DoctorList />
         </div> */}

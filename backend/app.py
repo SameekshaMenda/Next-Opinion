@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+from flask_mail import Mail, Message
 from core import config
 from core.database import db
 from routes.second_opinion import second_opinion_bp
@@ -11,11 +12,18 @@ from routes.auth import auth_bp
 from routes.doctor_dashboard import doctor_dashboard_bp
 from routes.slot_booking import slot_bp
 from routes.agora_routes import agora_bp
-
-
 import os
+
+
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+mail = Mail(app)
+
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 587
+app.config["MAIL_USE_TLS"] = True
+app.config["MAIL_USERNAME"] = "sameekshamenda19@gmail.com"
+app.config["MAIL_PASSWORD"] = "xjns tijl rcys rwod"
 
 # ✅ Database Configuration
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")

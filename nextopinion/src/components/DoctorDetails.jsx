@@ -9,9 +9,16 @@ export default function DoctorDetails() {
   const [loading, setLoading] = useState(true);
   const [booking, setBooking] = useState(false);
 
-  const userId = localStorage.getItem("userId") || 1; // Replace with actual auth later
+  // ✅ Get logged-in user correctly
+  const user = JSON.parse(localStorage.getItem("user"));
+  const userId = user?.id; // must be the real patient ID
 
-  // Fetch doctor info + slots
+  // Redirect or warn if not logged in
+  if (!userId) {
+    alert("Please login to book an appointment");
+  }
+
+  // ===================== Fetch doctor info =====================
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,24 +37,27 @@ export default function DoctorDetails() {
     fetchData();
   }, [id]);
 
+  // ===================== Book Appointment =====================
   const handleBookSlot = async (slotId, start, end) => {
     if (!window.confirm(`Confirm appointment at ${start} - ${end}?`)) return;
 
     try {
       setBooking(true);
 
-      // Optional document share confirmation
-      const shareDocs = window.confirm("Do you want to share your uploaded medical documents with this doctor?");
+      const shareDocs = window.confirm(
+        "Do you want to share your uploaded medical documents with this doctor?"
+      );
 
       const appointmentPayload = {
-        doctor_id: id,
-        patient_id: userId,
-        disease: "General Checkup", // or AI-predicted disease
+        doctor_id: Number(id),   // correct doctor ID
+        patient_id: Number(userId), // correct patient ID
+        disease: "General Checkup",
         slot_id: slotId,
         share_docs: shareDocs,
       };
 
       const res = await API.post("/appointment/request", appointmentPayload);
+
       alert("✅ Appointment successfully requested!");
       console.log("Appointment Response:", res.data);
     } catch (err) {
@@ -58,16 +68,20 @@ export default function DoctorDetails() {
     }
   };
 
-  if (loading) return <p className="text-center text-gray-600 mt-10">Loading...</p>;
-  if (!doctor) return <p className="text-center text-red-500">Doctor not found.</p>;
+  if (loading)
+    return <p className="text-center text-gray-600 mt-10">Loading...</p>;
+  if (!doctor)
+    return <p className="text-center text-red-500">Doctor not found.</p>;
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center items-start p-6">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full space-y-6">
-        {/* ================= Doctor Info ================= */}
+
+        {/* Doctor Info */}
         <h2 className="text-3xl font-bold text-gray-800 text-center">
           {doctor.name}
         </h2>
+
         <div className="text-gray-700 space-y-2 text-center">
           <p><b>Speciality:</b> {doctor.speciality}</p>
           <p><b>Experience:</b> {doctor.experience} years</p>
@@ -77,13 +91,16 @@ export default function DoctorDetails() {
           <p><b>Phone:</b> {doctor.phone}</p>
         </div>
 
-        {/* ================= Available Slots ================= */}
+        {/* Slots */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
             Available Appointment Slots
           </h3>
+
           {slots.length === 0 ? (
-            <p className="text-center text-gray-500">No available slots right now.</p>
+            <p className="text-center text-gray-500">
+              No available slots right now.
+            </p>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {slots.map((slot) => (
@@ -93,12 +110,13 @@ export default function DoctorDetails() {
                   onClick={() => handleBookSlot(slot.id, slot.start, slot.end)}
                   className="p-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
                 >
-                  {slot.start} - {slot.end}
+                  {slot.start} – {slot.end}
                 </button>
               ))}
             </div>
           )}
         </div>
+
       </div>
     </div>
   );

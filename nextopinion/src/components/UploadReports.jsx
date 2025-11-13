@@ -15,7 +15,7 @@ export default function UploadReports({ onReportCreated }) {
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("user_name", "Sameeksha"); // Replace with actual logged-in user name
+    formData.append("user_name", "Sameeksha"); // Replace with logged-in user name
 
     setLoading(true);
     try {
@@ -23,10 +23,20 @@ export default function UploadReports({ onReportCreated }) {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      // Extract AI results and doctor recommendations
+      // ⬇️ New: store file path + name so appointment/email route can use it
+      const filePath = res.data.file_path;
+      const filename = res.data.filename;
+
+      if (filePath && filename) {
+        localStorage.setItem("reportPath", filePath);
+        localStorage.setItem("reportName", filename);
+      }
+
+      // AI results
       setResults(res.data.ai_result || []);
       onReportCreated(res.data.report_id);
 
+      // Flatten and save recommended doctors
       const allDoctors = res.data.ai_result.flatMap(
         (disease) => disease.recommended_doctors || []
       );
@@ -39,7 +49,6 @@ export default function UploadReports({ onReportCreated }) {
     }
   };
 
-  // 🩺 Render UI
   return (
     <div className="bg-white p-6 rounded-2xl shadow-lg mb-6 max-w-6xl mx-auto">
       <h2 className="text-2xl font-semibold mb-4 text-gray-900">
@@ -76,7 +85,9 @@ export default function UploadReports({ onReportCreated }) {
                 <div className="flex justify-between items-start gap-4">
                   <div>
                     <div className="text-base font-semibold">{r.disease}</div>
-                    <div className="text-sm text-gray-600">{r.explanation}</div>
+                    <div className="text-sm text-gray-600">
+                      {r.explanation}
+                    </div>
                     <div className="mt-2 text-xs text-gray-500">
                       Risk: {r.risk}
                     </div>
@@ -90,7 +101,6 @@ export default function UploadReports({ onReportCreated }) {
                     <div className="space-y-2 max-h-40 overflow-auto pr-2">
                       {r.recommended_doctors?.length > 0 ? (
                         r.recommended_doctors.map((doc, j) => {
-                          // ✅ Safely pick the correct doctor ID
                           const docId =
                             doc.id || doc.doctor_id || doc.user_id || null;
 

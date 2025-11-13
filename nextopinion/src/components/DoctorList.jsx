@@ -10,18 +10,23 @@ export default function DoctorList() {
   }, []);
 
   const bookAppointment = async (doctorId, disease) => {
-    try {
-      const res = await axios.post("http://127.0.0.1:5000/api/appointment/request", {
-        doctor_id: doctorId,
-        patient_id: 1, // TODO: use logged-in user's ID later
-        disease,
-      });
-      alert(`Appointment Requested! ID: ${res.data.appointment_id}`);
-    } catch (err) {
-      alert("Error booking appointment");
-      console.error(err);
-    }
-  };
+  const user = JSON.parse(localStorage.getItem("user"));
+  const patientId = user?.id;
+
+  try {
+    const res = await axios.post("http://127.0.0.1:5000/api/appointment/request", {
+      doctor_id: doctorId,
+      patient_id: patientId,
+      disease,
+    });
+
+    alert(`Appointment Requested! ID: ${res.data.appointment_id}`);
+  } catch (err) {
+    alert("Error booking appointment");
+    console.error(err);
+  }
+};
+
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md mb-6">

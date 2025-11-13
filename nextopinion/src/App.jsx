@@ -6,12 +6,14 @@ import UserDashboard from "./pages/UserDashboard";
 import DoctorDashboard from "./pages/DoctorDashboard";
 import DoctorDetails from "./components/DoctorDetails";
 import VideoCall from "./pages/VideoCall";
+import VideoCallDebug from "./components/VideoCallDebug";
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/debug" element={<VideoCallDebug />} />
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/user" element={<UserDashboard />} />

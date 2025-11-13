@@ -36,8 +36,6 @@ def register_user():
 # ------------------- Login (User or Doctor) -------------------
 @auth_bp.route("/login", methods=["POST"])
 def login_user():
-    from core.models import Doctor  # ✅ ensure Doctor model is imported
-
     data = request.get_json()
     email = data.get("email")
     password = data.get("password")
@@ -56,56 +54,20 @@ def login_user():
         algorithm="HS256",
     )
 
-    # ✅ If role = doctor, find doctor.id from doctors table
     doctor_id = None
     if user.role == "doctor":
         doctor = Doctor.query.filter_by(user_id=user.id).first()
         if doctor:
             doctor_id = doctor.id
 
-    # ✅ Return all IDs
     return jsonify({
-        "message": "Login successful",
-        "token": token,
-        "role": user.role,
-        "name": user.name,
-        "user_id": user.id,
-        "doctor_id": doctor_id
-    }), 200
-
-    data = request.get_json()
-    email = data.get("email")
-    password = data.get("password")
-
-    # ✅ 1. Check if user exists
-    user = User.query.filter_by(email=email).first()
-    if not user or not check_password_hash(user.password, password):
-        return jsonify({"error": "Invalid credentials"}), 401
-
-    # ✅ 2. Create JWT token
-    token = jwt.encode(
-        {
-            "user_id": user.id,
+        "status": "success",
+        "user": {
+            "id": user.id,
+            "name": user.name,
+            "email": user.email,
             "role": user.role,
-            "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=8),
-        },
-        SECRET_KEY,
-        algorithm="HS256",
-    )
-
-    # ✅ 3. If doctor, fetch doctor_id from doctors table
-    doctor_id = None
-    if user.role == "doctor":
-        doctor = Doctor.query.filter_by(user_id=user.id).first()
-        if doctor:
-            doctor_id = doctor.id
-
-    # ✅ 4. Return all info needed by frontend
-    return jsonify({
-        "message": "Login successful",
-        "token": token,
-        "role": user.role,
-        "name": user.name,
-        "user_id": user.id,
-        "doctor_id": doctor_id  # Will be None for regular users
+            "doctor_id": doctor_id,
+            "token": token
+        }
     }), 200
