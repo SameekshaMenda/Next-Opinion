@@ -115,12 +115,7 @@ def book_appointment():
 # ✅ Fetch all appointments for a specific doctor
 @doctor_dashboard_bp.route("/doctor/<int:doctor_id>/appointments", methods=["GET"])
 def get_doctor_appointments(doctor_id):
-    from core.models import Appointment
-
     appointments = Appointment.query.filter_by(doctor_id=doctor_id).all()
-
-    if not appointments:
-        return jsonify({"appointments": []}), 200
 
     result = []
     for a in appointments:
@@ -131,9 +126,11 @@ def get_doctor_appointments(doctor_id):
             "slot_start": a.slot.start if a.slot else None,
             "slot_end": a.slot.end if a.slot else None,
             "status": a.status,
+            "video_channel": a.video_channel  # ✅ NEW
         })
 
     return jsonify({"appointments": result}), 200
+
 
 @doctor_dashboard_bp.route("/doctor/<int:doctor_id>/slots", methods=["GET"])
 def get_doctor_slots(doctor_id):

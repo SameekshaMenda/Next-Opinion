@@ -62,17 +62,13 @@ class Appointment(db.Model):
 
     doctor_id = db.Column(db.Integer, db.ForeignKey("doctors.id"), nullable=False)
     patient_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-
     disease = db.Column(db.String(255), nullable=False)
-
     slot_id = db.Column(db.Integer, db.ForeignKey("slots.id"))
     slot_time = db.Column(db.String(50))
-
     status = db.Column(db.String(50), default="requested")
     final_report = db.Column(db.Text)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-
-    # 🔥 Link to Slot
+    video_channel = db.Column(db.String(255), nullable=True)
     slot = db.relationship("Slot", backref="appointments", lazy=True)
 
 

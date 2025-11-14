@@ -12,113 +12,229 @@ appointments_bp = Blueprint("appointments", __name__)
 # 1️⃣ USER REQUESTS APPOINTMENT (AUTO-ACCEPT)
 #    Accepts optional report_path & report_name to attach to doctor email
 # ------------------------------------------------
+# @appointments_bp.route("/appointment/request", methods=["POST"])
+# def request_appointment():
+#     data = request.get_json()
+#     doctor_id = data["doctor_id"]
+#     patient_id = data["patient_id"]
+#     disease = data["disease"]
+#     slot_id = data.get("slot_id")
+#     report_path = data.get("report_path")      # optional: full file path on server
+#     report_name = data.get("report_name")      # optional: original filename
+
+#     # 🔥 STEP 1: Validate slot
+#     slot = None
+#     if slot_id:
+#         slot = Slot.query.get(slot_id)
+
+#         if not slot:
+#             return jsonify({"error": "Slot not found"}), 404
+
+#         if slot.is_booked:
+#             return jsonify({"error": "This slot is already booked"}), 400
+
+#     # 🔥 STEP 2: Create appointment (auto-accepted)
+#     new_appt = Appointment(
+#         doctor_id=doctor_id,
+#         patient_id=patient_id,
+#         disease=disease,
+#         slot_id=slot_id,
+#         status="accepted"
+#     )
+
+#     db.session.add(new_appt)
+
+#     # 🔥 STEP 3: Mark slot as booked and set readable slot_time
+#     if slot:
+#         slot.is_booked = True
+#         new_appt.slot_time = f"{slot.start} - {slot.end}"
+
+#     db.session.commit()
+
+#     # ------------------------------------------------
+#     # EMAIL SENDING (Patient + Doctor)
+#     # Attach report to doctor's email if provided and exists
+#     # ------------------------------------------------
+#     patient = User.query.get(patient_id)
+#     doctor = Doctor.query.get(doctor_id)
+
+#     # Prepare doctor's attachments list (if any)
+#     attachments = None
+#     if report_path and report_name:
+#         try:
+#             if os.path.exists(report_path) and os.path.isfile(report_path):
+#                 with open(report_path, "rb") as fh:
+#                     file_bytes = fh.read()
+#                 attachments = [(report_name, file_bytes)]
+#             else:
+#                 # file not found — log and continue without attachment
+#                 print(f"⚠️ Report file not found: {report_path}")
+#         except Exception as e:
+#             print(f"⚠️ Error reading report file for attachment: {e}")
+
+#     # Send emails if patient/doctor exist (fail silently otherwise)
+#     if patient:
+#         try:
+#             send_email(
+#                 to=patient.email,
+#                 subject="Appointment Confirmed",
+#                 body=f"""Hello {patient.name},
+
+# Your appointment with Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'} is confirmed.
+
+# Disease: {disease}
+# Slot: {new_appt.slot_time or 'Not assigned'}
+
+# Thank you for using NextOpinion.
+# """
+#             )
+#         except Exception as e:
+#             print(f"⚠️ Failed to send patient email: {e}")
+
+#     if doctor:
+#         try:
+#             send_email(
+#                 to=doctor.email,
+#                 subject="New Appointment Booked",
+#                 body=f"""Hello Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'},
+
+# A new appointment has been booked.
+
+# Patient: {patient.name if patient else 'Unknown'}
+# Disease: {disease}
+# Slot: {new_appt.slot_time or 'Not assigned'}
+
+# Regards,
+# NextOpinion System
+# """,
+#                 attachments=attachments
+#             )
+#         except Exception as e:
+#             print(f"⚠️ Failed to send doctor email: {e}")
+
+#     # 🔥 STEP 4: Internal notification
+#     try:
+#         send_notification(doctor_id, f"New appointment booked for {disease}")
+#     except Exception as e:
+#         print(f"⚠️ Failed to create notification: {e}")
+
+#     return jsonify({"status": "success", "appointment_id": new_appt.id})
+
+
+
 @appointments_bp.route("/appointment/request", methods=["POST"])
 def request_appointment():
     data = request.get_json()
+    
     doctor_id = data["doctor_id"]
     patient_id = data["patient_id"]
     disease = data["disease"]
     slot_id = data.get("slot_id")
-    report_path = data.get("report_path")      # optional: full file path on server
-    report_name = data.get("report_name")      # optional: original filename
+    report_path = data.get("report_path")
+    report_name = data.get("report_name")
 
-    # 🔥 STEP 1: Validate slot
+    # 🔥 1. VALIDATE SLOT
     slot = None
     if slot_id:
         slot = Slot.query.get(slot_id)
-
         if not slot:
             return jsonify({"error": "Slot not found"}), 404
-
         if slot.is_booked:
             return jsonify({"error": "This slot is already booked"}), 400
 
-    # 🔥 STEP 2: Create appointment (auto-accepted)
+    # 🔥 2. GENERATE UNIQUE VIDEO CHANNEL
+    import uuid
+    video_channel = f"appt_{uuid.uuid4().hex[:10]}"
+
+    # 🔥 3. CREATE APPOINTMENT
     new_appt = Appointment(
         doctor_id=doctor_id,
         patient_id=patient_id,
         disease=disease,
         slot_id=slot_id,
-        status="accepted"
+        status="accepted",
+        video_channel=video_channel
     )
-
     db.session.add(new_appt)
 
-    # 🔥 STEP 3: Mark slot as booked and set readable slot_time
+    # Mark slot booked
     if slot:
         slot.is_booked = True
         new_appt.slot_time = f"{slot.start} - {slot.end}"
 
     db.session.commit()
 
-    # ------------------------------------------------
-    # EMAIL SENDING (Patient + Doctor)
-    # Attach report to doctor's email if provided and exists
-    # ------------------------------------------------
+    # 🔥 4. EMAIL NOTIFICATION
     patient = User.query.get(patient_id)
     doctor = Doctor.query.get(doctor_id)
 
-    # Prepare doctor's attachments list (if any)
-    attachments = None
-    if report_path and report_name:
-        try:
-            if os.path.exists(report_path) and os.path.isfile(report_path):
-                with open(report_path, "rb") as fh:
-                    file_bytes = fh.read()
-                attachments = [(report_name, file_bytes)]
-            else:
-                # file not found — log and continue without attachment
-                print(f"⚠️ Report file not found: {report_path}")
-        except Exception as e:
-            print(f"⚠️ Error reading report file for attachment: {e}")
+    call_link = f"http://localhost:5173/call/{video_channel}"
 
-    # Send emails if patient/doctor exist (fail silently otherwise)
-    if patient:
-        try:
+    # Attachments (optional)
+    attachments = None
+    if report_path and report_name and os.path.exists(report_path):
+        with open(report_path, "rb") as fh:
+            attachments = [(report_name, fh.read())]
+
+    # EMAIL TO PATIENT
+    try:
+        if patient:
             send_email(
                 to=patient.email,
                 subject="Appointment Confirmed",
-                body=f"""Hello {patient.name},
+                body=f"""
+Hello {patient.name},
 
-Your appointment with Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'} is confirmed.
+Your appointment with Dr. {doctor.user.name} is confirmed.
 
-Disease: {disease}
-Slot: {new_appt.slot_time or 'Not assigned'}
+🩺 Disease: {disease}
+⏳ Slot: {new_appt.slot_time}
+🎥 Video Consultation Link: {call_link}
 
-Thank you for using NextOpinion.
+Regards,
+NextOpinion
 """
             )
-        except Exception as e:
-            print(f"⚠️ Failed to send patient email: {e}")
+    except Exception as e:
+        print("❌ Email to patient failed:", e)
 
-    if doctor:
-        try:
+    # EMAIL TO DOCTOR
+    try:
+        if doctor:
             send_email(
                 to=doctor.email,
                 subject="New Appointment Booked",
-                body=f"""Hello Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'},
+                body=f"""
+Hello Dr. {doctor.user.name},
 
-A new appointment has been booked.
+A patient booked an appointment:
 
-Patient: {patient.name if patient else 'Unknown'}
+Patient: {patient.name}
 Disease: {disease}
-Slot: {new_appt.slot_time or 'Not assigned'}
+Slot: {new_appt.slot_time}
+
+🎥 Video Call Link: {call_link}
 
 Regards,
-NextOpinion System
+NextOpinion
 """,
                 attachments=attachments
             )
-        except Exception as e:
-            print(f"⚠️ Failed to send doctor email: {e}")
+    except Exception as e:
+        print("❌ Email to doctor failed:", e)
 
-    # 🔥 STEP 4: Internal notification
+    # INTERNAL NOTIFICATION
     try:
         send_notification(doctor_id, f"New appointment booked for {disease}")
-    except Exception as e:
-        print(f"⚠️ Failed to create notification: {e}")
+    except:
+        pass
 
-    return jsonify({"status": "success", "appointment_id": new_appt.id})
+    return jsonify({
+        "status": "success",
+        "appointment_id": new_appt.id,
+        "video_channel": video_channel,
+        "call_link": call_link
+    })
 
 
 # ------------------------------------------------
@@ -137,7 +253,8 @@ def get_patient_appointments(patient_id):
             "slot_start": a.slot.start if a.slot else "-",
             "slot_end": a.slot.end if a.slot else "-",
             "status": a.status,
-            "date": a.created_at.strftime("%Y-%m-%d")
+            "date": a.created_at.strftime("%Y-%m-%d"),
+            "video_channel": a.video_channel
         })
 
     return jsonify({"appointments": result})

@@ -12,14 +12,10 @@ export default function DoctorDashboard() {
   });
   const [loading, setLoading] = useState(false);
 
-  // ✅ Read clean user object
   const user = JSON.parse(localStorage.getItem("user") || "{}");
   const doctorId = user?.doctor_id;
   const doctorName = user?.name || "Doctor";
 
-  // ----------------------------
-  // Validate doctor login
-  // ----------------------------
   useEffect(() => {
     if (!doctorId) {
       alert("Doctor ID missing. Please login again.");
@@ -27,9 +23,6 @@ export default function DoctorDashboard() {
     }
   }, [doctorId]);
 
-  // ----------------------------
-  // Load slots & appointments
-  // ----------------------------
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,15 +39,11 @@ export default function DoctorDashboard() {
     if (doctorId) fetchData();
   }, [doctorId]);
 
-  // Dropdown values
   const hours = Array.from({ length: 24 }, (_, i) =>
     String(i).padStart(2, "0")
   );
   const minutes = ["00", "15", "30", "45"];
 
-  // ----------------------------
-  // Add Slot
-  // ----------------------------
   const addSlot = async (e) => {
     e.preventDefault();
 
@@ -82,9 +71,6 @@ export default function DoctorDashboard() {
     }
   };
 
-  // ----------------------------
-  // Submit Final Report
-  // ----------------------------
   const submitFinalReport = async (appointmentId) => {
     const report = prompt("Enter final report/diagnosis:");
     if (!report) return;
@@ -100,7 +86,7 @@ export default function DoctorDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-6 space-y-12">
-
+      
       {/* Header */}
       <header className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center bg-white shadow p-6 rounded-2xl">
         <h1 className="text-3xl font-semibold text-gray-800">
@@ -121,7 +107,6 @@ export default function DoctorDashboard() {
           onSubmit={addSlot}
           className="flex flex-col sm:flex-row gap-4 mb-6 items-center"
         >
-          {/* Start Time */}
           <div className="flex items-center gap-2 flex-1">
             <label className="text-gray-600 text-sm min-w-[80px]">Start:</label>
             <select
@@ -151,7 +136,6 @@ export default function DoctorDashboard() {
             </select>
           </div>
 
-          {/* End Time */}
           <div className="flex items-center gap-2 flex-1">
             <label className="text-gray-600 text-sm min-w-[80px]">End:</label>
             <select
@@ -190,7 +174,6 @@ export default function DoctorDashboard() {
           </button>
         </form>
 
-        {/* Slot List */}
         {slots.length === 0 ? (
           <p className="text-gray-500 italic">No available slots yet.</p>
         ) : (
@@ -226,9 +209,14 @@ export default function DoctorDashboard() {
                   <th className="p-3 border">CheckUp</th>
                   <th className="p-3 border">Slot</th>
                   <th className="p-3 border">Status</th>
+
+                  {/* ⭐ NEW COLUMN */}
+                  <th className="p-3 border">Call</th>
+
                   <th className="p-3 border">Report</th>
                 </tr>
               </thead>
+
               <tbody>
                 {appointments.map((app) => (
                   <tr key={app.id} className="hover:bg-gray-50">
@@ -238,6 +226,21 @@ export default function DoctorDashboard() {
                       {app.slot_start} - {app.slot_end}
                     </td>
                     <td className="p-3 border">{app.status}</td>
+
+                    {/* ⭐ NEW CALL BUTTON */}
+                    <td className="p-3 border">
+                      {app.video_channel ? (
+                        <a
+                          href={`/call/${app.video_channel}`}
+                          className="bg-green-600 text-white px-3 py-1 rounded"
+                        >
+                          Join Call
+                        </a>
+                      ) : (
+                        <span className="text-gray-400">Not Available</span>
+                      )}
+                    </td>
+
                     <td className="p-3 border">
                       <button
                         className="bg-gray-900 text-white px-3 py-1 rounded"
@@ -249,6 +252,7 @@ export default function DoctorDashboard() {
                   </tr>
                 ))}
               </tbody>
+
             </table>
           </div>
         )}

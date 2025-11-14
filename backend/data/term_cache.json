@@ -635,5 +635,29 @@
     "rome iv criteria",
     "helicobacter pylori negative",
     "idiopathic"
+  ],
+  "gastritis (inflammation of the stomach lining)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach",
+    "helicobacter pylori",
+    "nsaids",
+    "endoscopy",
+    "gastritis",
+    "peptic ulcer"
+  ],
+  "no significant finding (assuming no persistent symptoms)": [
+    "asymptomatic",
+    "unremarkable",
+    "negative",
+    "normal",
+    "resolved",
+    "asymptomatic",
+    "clear",
+    "benign",
+    "physiologic",
+    "stable"
   ]
 }
