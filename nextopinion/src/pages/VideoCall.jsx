@@ -20,7 +20,7 @@ export default function VideoCall({ channelName }) {
   // -------------------------------------------
   // 1️⃣ Generate Unique UID for this browser
   // -------------------------------------------
-  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const user = JSON.parse(sessionStorage.getItem("user") || "{}");
 
   // Use user's DB ID (guaranteed unique)
   // fallback to timestamp-based ID

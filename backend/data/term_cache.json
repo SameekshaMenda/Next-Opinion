@@ -659,5 +659,17 @@
     "benign",
     "physiologic",
     "stable"
+  ],
+  "peptic ulcer disease (pud) - non-h. pylori related": [
+    "gastric ulcer",
+    "duodenal ulcer",
+    "nsaid-induced",
+    "stress ulcer",
+    "zollinger-ellison syndrome",
+    "upper gi bleed",
+    "dyspepsia",
+    "epigastric pain",
+    "gastritis",
+    "autoimmune gastritis"
   ]
 }

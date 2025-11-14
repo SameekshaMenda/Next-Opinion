@@ -24,7 +24,10 @@ export default function Login() {
       }
 
       // Store everything in localStorage
-      localStorage.setItem("user", JSON.stringify(userData));
+      // localStorage.setItem("user", JSON.stringify(userData));
+
+      sessionStorage.setItem("user", JSON.stringify(res.data.user));
+
 
       // Redirect based on role
       if (userData.role === "doctor") {

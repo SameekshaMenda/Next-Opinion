@@ -6,7 +6,7 @@ export default function AppointmentList() {
   const [appointments, setAppointments] = useState([]);
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(sessionStorage.getItem("user"));
   const patientId = user?.id;
 
   useEffect(() => {

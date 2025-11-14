@@ -28,8 +28,8 @@ export default function UploadReports({ onReportCreated }) {
       const filename = res.data.filename;
 
       if (filePath && filename) {
-        localStorage.setItem("reportPath", filePath);
-        localStorage.setItem("reportName", filename);
+        sessionStorage.setItem("reportPath", filePath);
+        sessionStorage.setItem("reportName", filename);
       }
 
       // AI results
@@ -40,7 +40,7 @@ export default function UploadReports({ onReportCreated }) {
       const allDoctors = res.data.ai_result.flatMap(
         (disease) => disease.recommended_doctors || []
       );
-      localStorage.setItem("recommendedDoctors", JSON.stringify(allDoctors));
+      sessionStorage.setItem("recommendedDoctors", JSON.stringify(allDoctors));
     } catch (err) {
       console.error(err);
       alert("Error analyzing document");

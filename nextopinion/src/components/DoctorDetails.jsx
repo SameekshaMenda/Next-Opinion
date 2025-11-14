@@ -10,7 +10,7 @@ export default function DoctorDetails() {
   const [booking, setBooking] = useState(false);
 
   // Get Logged-in User
-  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const user = JSON.parse(sessionStorage.getItem("user") || "{}");
   const userId = user?.id;
   const userRole = user?.role;
 

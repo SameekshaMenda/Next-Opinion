@@ -187,9 +187,9 @@ Hello {patient.name},
 
 Your appointment with Dr. {doctor.user.name} is confirmed.
 
-🩺 Disease: {disease}
-⏳ Slot: {new_appt.slot_time}
-🎥 Video Consultation Link: {call_link}
+ Disease: {disease}
+ Slot: {new_appt.slot_time}
+ Video Consultation Link: {call_link}
 
 Regards,
 NextOpinion
@@ -213,7 +213,7 @@ Patient: {patient.name}
 Disease: {disease}
 Slot: {new_appt.slot_time}
 
-🎥 Video Call Link: {call_link}
+Video Call Link: {call_link}
 
 Regards,
 NextOpinion

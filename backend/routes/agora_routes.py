@@ -15,14 +15,16 @@ def generate_token():
     uid = data.get("uid")
 
     # ------------------------------
-    # ❗ FIX: Ensure UID is valid
+    # ❗ Required Fix: Validate UID
     # ------------------------------
     if uid is None:
         return jsonify({"error": "UID is required"}), 400
 
-    uid = int(uid)   # safely convert
+    try:
+        uid = int(uid)
+    except:
+        return jsonify({"error": "Invalid UID"}), 400
 
-    # ------------------------------
     role = 1  # Publisher
     expiration_time_in_seconds = 3600
     current_timestamp = int(time.time())
