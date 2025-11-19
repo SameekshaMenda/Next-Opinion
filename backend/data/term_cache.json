@@ -671,5 +671,77 @@
     "epigastric pain",
     "gastritis",
     "autoimmune gastritis"
+  ],
+  "no evidence of active h. pylori infection": [
+    "negative h. pylori",
+    "asymptomatic",
+    "dyspepsia",
+    "gastritis",
+    "peptic ulcer",
+    "duodenitis",
+    "endoscopy",
+    "urea breath test negative",
+    "stool antigen negative",
+    "eradication therapy failure"
+  ],
+  "gastrointestinal symptoms of unknown etiology (if symptoms persist)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "diarrhea",
+    "constipation",
+    "dyspepsia",
+    "malabsorption",
+    "bloating",
+    "gastroparesis",
+    "irritable bowel syndrome"
+  ],
+  "false negative h. pylori antigen test (if symptoms persist)": [
+    "h. pylori infection",
+    "gastritis",
+    "peptic ulcer disease",
+    "abdominal pain",
+    "dyspepsia",
+    "endoscopy",
+    "biopsy",
+    "antibiotic resistance",
+    "urea breath test",
+    "repeat testing"
+  ],
+  "medication-induced gastritis or ulcers": [
+    "gastritis",
+    "peptic ulcers",
+    "nsaids",
+    "corticosteroids",
+    "abdominal pain",
+    "dyspepsia",
+    "bleeding",
+    "perforation",
+    "upper gi tract",
+    "helicobacter pylori"
+  ],
+  "gastritis (possible, further investigation needed)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "dyspepsia",
+    "stomach inflammation",
+    "gastric mucosa",
+    "h. pylori",
+    "endoscopy",
+    "peptic ulcer",
+    "gerd"
+  ],
+  "peptic ulcer disease (unlikely, but cannot be completely ruled out)": [
+    "epigastric pain",
+    "dyspepsia",
+    "hematemesis",
+    "melena",
+    "gastroscopy",
+    "helicobacter pylori",
+    "nsaids",
+    "gastric ulcer",
+    "duodenal ulcer",
+    "perforation"
   ]
 }

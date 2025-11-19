@@ -1,7 +1,9 @@
 from flask import Blueprint, request, jsonify
 from core.database import db
-from core.models import Slot, Appointment, Doctor
+from core.models import Slot, Appointment, Doctor, User, UserReport, AIAnalysis
 from core.notifications import send_notification
+from core.email_service import send_email 
+import json 
 
 slot_bp = Blueprint("slot_bp", __name__)
 
@@ -12,7 +14,7 @@ def get_doctor_slots(doctor_id):
     return jsonify({"slots": [{"id": s.id, "start": s.start, "end": s.end} for s in slots]})
 
 
-# ✅ Book a slot (user chooses slot)
+# ✅ Book a slot (user chooses slot) - UPDATED TO INCLUDE REPORT & EMAIL
 @slot_bp.route("/appointment/book", methods=["POST"])
 def book_appointment():
     data = request.json
@@ -20,27 +22,102 @@ def book_appointment():
     patient_id = data["patient_id"]
     slot_id = data["slot_id"]
     disease = data.get("disease", "Consultation")
+    user_report_id = data.get("user_report_id") # Expecting the ID of the analyzed report
 
     slot = Slot.query.get(slot_id)
     if not slot or slot.is_booked:
         return jsonify({"error": "Slot unavailable"}), 400
+    
+    # 1. Fetch relevant records
+    # Assumes Doctor model has a relationship to User (doctor.user)
+    doctor = Doctor.query.options(db.joinedload(Doctor.user)).get(doctor_id)
+    patient = User.query.get(patient_id)
+    
+    report = None
+    ai_analysis = None
+    if user_report_id:
+        report = UserReport.query.get(user_report_id)
+        # Fetch AI analysis linked to this report
+        ai_analysis = AIAnalysis.query.filter_by(report_id=user_report_id).first() 
+    
+    if not doctor or not patient:
+        return jsonify({"error": "Doctor or Patient not found"}), 404
+    if not doctor.email:
+         return jsonify({"error": "Doctor email missing, cannot send notification"}), 500
 
+
+    # 2. Create Appointment
     new_appt = Appointment(
         doctor_id=doctor_id,
         patient_id=patient_id,
+        user_report_id=user_report_id, # Link the report
         disease=disease,
         slot_id=slot_id,
+        slot_time=slot.start, 
         status="requested",
     )
     slot.is_booked = True
     db.session.add(new_appt)
     db.session.commit()
 
-    send_notification(doctor_id, f"New appointment request from patient for {disease}.")
-    return jsonify({"message": "Appointment requested successfully", "appointment_id": new_appt.id})
+    # 3. Prepare and Send Email Notification to Doctor
+    email_subject = f"New Appointment: {patient.name} - {disease} ({slot.start})"
+    
+    email_body = f"""
+    Dear Dr. {doctor.user.name},
+
+    You have a new appointment request from {patient.name}.
+
+    - Patient: {patient.name}
+    - Time: {slot.start} - {slot.end}
+    - Reason: {disease}
+    - Appointment ID: {new_appt.id}
+    
+    """
+    
+    attachment_paths = []
+    if report and ai_analysis:
+        attachment_paths.append(report.file_path)
+        
+        # Load the full JSON analysis for detailed email body
+        analysis_data = json.loads(ai_analysis.full_analysis_json)
+        
+        email_body += f"""
+    
+    --- AI SECOND OPINION ANALYSIS ---
+    
+    - Risk Score: {ai_analysis.risk_score}/100 ({ai_analysis.risk_category})
+    - Suggested Specialty: {ai_analysis.suggested_specialty}
+    - Patient Summary: {analysis_data.get('patient_summary', 'N/A')}
+
+    Differential Diagnosis:
+    """
+        for i, diag in enumerate(analysis_data.get('differential_diagnosis', [])[:3]):
+            email_body += f"    {i+1}. {diag['condition']} (Confidence: {diag['confidence_percent']}%) \n"
+            
+        email_body += f"""
+    
+    Please find the patient's original uploaded report attached to this email. 
+    The full AI analysis is also available on your dashboard.
+    """
+
+    send_email(
+        to=doctor.email, 
+        subject=email_subject, 
+        body=email_body, 
+        attachment_paths=attachment_paths
+    )
+
+    # 4. Send Notification to Doctor
+    send_notification(doctor.user_id, f"New appointment request from {patient.name} for {disease}.")
+    
+    return jsonify({
+        "message": "Appointment requested successfully and doctor notified.", 
+        "appointment_id": new_appt.id
+    })
 
 
-# ✅ Send document notification to doctor
+# (Existing route kept for compatibility)
 @slot_bp.route("/appointment/send_documents", methods=["POST"])
 def send_documents():
     data = request.json
@@ -49,31 +126,3 @@ def send_documents():
 
     send_notification(doctor_id, f"Documents shared for appointment ID: {appointment_id}")
     return jsonify({"status": "documents_sent"})
-
-
-
-# from flask import Blueprint, jsonify, request
-# from core.data_loader import doctor_data
-
-# doctors_bp = Blueprint("doctors", __name__)
-
-# @doctors_bp.route("/doctors", methods=["GET"])
-# def get_all_doctors():
-#     speciality = request.args.get("speciality", "").lower()
-#     keyword = request.args.get("keyword", "").lower()
-#     location = request.args.get("location", "").lower()
-
-#     filtered = doctor_data.copy()
-#     if speciality:
-#         filtered = filtered[filtered["speciality"].str.lower().str.contains(speciality, na=False)]
-#     if keyword:
-#         filtered = filtered[filtered["keywords"].str.lower().str.contains(keyword, na=False)]
-#     if location:
-#         filtered = filtered[filtered["location"].str.lower().str.contains(location, na=False)]
-
-#     doctors = filtered.to_dict(orient="records")
-#     return jsonify({
-#         "status": "success",
-#         "count": len(doctors),
-#         "doctors": doctors
-#     })

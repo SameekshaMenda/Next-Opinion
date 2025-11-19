@@ -13,26 +13,35 @@ SMTP_PORT = 587
 EMAIL_ADDRESS = os.getenv("MAIL_USERNAME")
 EMAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
 
-def send_email(to, subject, body, attachments=None):
+# Modified to accept attachment_paths (list of file paths)
+def send_email(to, subject, body, attachment_paths=None):
     try:
-        # Force UTF-8 everywhere
         msg = MIMEMultipart()
         msg["From"] = str(Header(EMAIL_ADDRESS, "utf-8"))
         msg["To"] = str(Header(to, "utf-8"))
         msg["Subject"] = Header(subject, "utf-8")
 
-        # Email body WITH UTF-8
+        # Email body
         msg.attach(MIMEText(body, "plain", "utf-8"))
 
-        # Attachments (safe)
-        if attachments:
-            for filename, file_bytes in attachments:
-                part = MIMEApplication(file_bytes, Name=filename)
-                part.add_header(
-                    "Content-Disposition",
-                    f'attachment; filename="{filename}"'
-                )
-                msg.attach(part)
+        # Attachments (Read from paths)
+        if attachment_paths:
+            for file_path in attachment_paths:
+                try:
+                    # Read the file content
+                    with open(file_path, "rb") as f:
+                        file_bytes = f.read()
+                    
+                    filename = os.path.basename(file_path)
+                    part = MIMEApplication(file_bytes, Name=filename)
+                    part.add_header(
+                        "Content-Disposition",
+                        f'attachment; filename="{filename}"'
+                    )
+                    msg.attach(part)
+                    print(f"📎 Attached file: {filename}")
+                except Exception as file_err:
+                    print(f"❌ Error reading or attaching file {file_path}: {file_err}")
 
         # SMTP Send
         server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)

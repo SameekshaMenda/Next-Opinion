@@ -6,13 +6,13 @@ import google.generativeai as genai
 load_dotenv()
 
 # ✅ Gemini Configuration
-genai.configure(api_key=os.getenv("GENIE_API_KEY"))
+genai.configure(api_key=os.getenv("Model"))
 
 # ✅ Database Configuration
 DB_URI = os.getenv("DATABASE_URL")
 
 print("✅ Database URI Loaded:", DB_URI is not None)
-print("🔑 Gemini API Key Loaded:", bool(os.getenv("GENIE_API_KEY")))
+print("🔑 NextOpinion model is loaded:", bool(os.getenv("Model")))
 
 conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cur = conn.cursor()
