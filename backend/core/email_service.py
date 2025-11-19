@@ -13,8 +13,21 @@ SMTP_PORT = 587
 EMAIL_ADDRESS = os.getenv("MAIL_USERNAME")
 EMAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
 
-# Modified to accept attachment_paths (list of file paths)
+# ✅ FINAL CODE: The function definition uses 'attachment_paths'
 def send_email(to, subject, body, attachment_paths=None):
+    """
+    Sends an email with optional attachments using the SMTP configuration.
+    
+    Args:
+        to (str): Recipient email address.
+        subject (str): Email subject.
+        body (str): Email body text.
+        attachment_paths (list): List of local file paths to attach.
+    """
+    if not EMAIL_ADDRESS or not EMAIL_PASSWORD:
+        print("❌ Email sending failed: MAIL_USERNAME or MAIL_PASSWORD environment variables are not set.")
+        return
+
     try:
         msg = MIMEMultipart()
         msg["From"] = str(Header(EMAIL_ADDRESS, "utf-8"))
@@ -24,7 +37,7 @@ def send_email(to, subject, body, attachment_paths=None):
         # Email body
         msg.attach(MIMEText(body, "plain", "utf-8"))
 
-        # Attachments (Read from paths)
+        # Attachments
         if attachment_paths:
             for file_path in attachment_paths:
                 try:
@@ -34,6 +47,8 @@ def send_email(to, subject, body, attachment_paths=None):
                     
                     filename = os.path.basename(file_path)
                     part = MIMEApplication(file_bytes, Name=filename)
+                    
+                    # Add Content-Disposition header
                     part.add_header(
                         "Content-Disposition",
                         f'attachment; filename="{filename}"'
@@ -50,7 +65,7 @@ def send_email(to, subject, body, attachment_paths=None):
         server.sendmail(EMAIL_ADDRESS, to, msg.as_string())
         server.quit()
 
-        print(f"📧 Email sent → {to}")
+        print(f"📧 Email sent successfully to → {to}")
 
     except Exception as e:
         print(f"❌ Email sending failed: {e}")

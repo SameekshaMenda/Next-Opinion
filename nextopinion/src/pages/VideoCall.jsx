@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AgoraRTC from "agora-rtc-sdk-ng";
+import { useNavigate } from "react-router-dom"; // 👈 Ensure this is imported
 import API from "../api";
 
 export default function VideoCall({ channelName }) {
   const appId = import.meta.env.VITE_AGORA_APP_ID;
+  const navigate = useNavigate(); // 👈 Initialize navigate
 
   // Agora client instance
   const [client] = useState(() =>
@@ -17,27 +19,14 @@ export default function VideoCall({ channelName }) {
   const [micOn, setMicOn] = useState(true);
   const [camOn, setCamOn] = useState(true);
 
-  // -------------------------------------------
-  // 1️⃣ Generate Unique UID for this browser
-  // -------------------------------------------
+  // 1️⃣ Generate Unique UID
   const user = JSON.parse(sessionStorage.getItem("user") || "{}");
+  const safeUID = user?.id || Math.floor(Date.now() + Math.random() * 1000000);
 
-  // Use user's DB ID (guaranteed unique)
-  // fallback to timestamp-based ID
-  const safeUID =
-    user?.id ||
-    Math.floor(Date.now() + Math.random() * 1000000);
-
-  console.log("👉 Using UID:", safeUID);
-
-  // -------------------------------------------
   // 2️⃣ Fetch Agora Token from backend
-  // -------------------------------------------
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        console.log("Fetching token for channel:", channelName);
-
         const res = await API.post("/generate_token", {
           channel_name: channelName,
           uid: safeUID,
@@ -50,27 +39,23 @@ export default function VideoCall({ channelName }) {
 
       } catch (err) {
         console.error("❌ Token fetch failed:", err);
-        alert("Token generation failed");
+        alert("Token generation failed. Check backend server.");
       }
     };
 
     fetchToken();
-  }, [channelName]);
+  }, [channelName, safeUID]);
 
-  // -------------------------------------------
-  // 3️⃣ Initialize the Video Call
-  // -------------------------------------------
+  // 3️⃣ Initialize the Video Call (Core Logic & Fixes)
   useEffect(() => {
     if (!tokenData || joined) return;
 
     const initCall = async () => {
       try {
-        console.log("Initializing Agora Call with UID:", tokenData.uid);
+        const { uid, token } = tokenData;
 
         // Ask camera & mic permission
         await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-
-        const { uid, token } = tokenData;
 
         // Join Agora Channel
         await client.join(appId, channelName, token, uid);
@@ -87,28 +72,30 @@ export default function VideoCall({ channelName }) {
         // Publish Local Tracks
         await client.publish([micTrack, camTrack]);
 
-        console.log("🎉 Successfully joined Agora channel.");
-
         setJoined(true);
 
         // -------------------------------------------
-        // Remote User Published
+        // Remote User Published - FIX FOR CAMERA DISPLAY ASYMMETRY
         // -------------------------------------------
         client.on("user-published", async (user, mediaType) => {
-          console.log("📡 Remote user published:", user.uid);
-
           await client.subscribe(user, mediaType);
 
           if (mediaType === "video") {
             const playerId = `remote-${user.uid}`;
+            const remoteVideosContainer = document.getElementById("remote-videos"); // 👈 FIX: Get the main container first
 
+            // 🛑 CRITICAL FIX: Only proceed if the main container exists
+            if (!remoteVideosContainer) {
+                 console.warn("Remote videos container not found. Aborting remote video append.");
+                 return; 
+            }
+            
             let container = document.getElementById(playerId);
             if (!container) {
               container = document.createElement("div");
               container.id = playerId;
-              container.className =
-                "w-full h-full bg-black rounded-xl overflow-hidden";
-              document.getElementById("remote-videos").appendChild(container);
+              container.className = "w-full h-full bg-black rounded-xl overflow-hidden";
+              remoteVideosContainer.appendChild(container); // Append to the confirmed container
             }
 
             user.videoTrack.play(playerId);
@@ -123,23 +110,33 @@ export default function VideoCall({ channelName }) {
         // Remote User Left
         // -------------------------------------------
         client.on("user-unpublished", (user) => {
-          console.log("❌ Remote user left:", user.uid);
-
           const el = document.getElementById(`remote-${user.uid}`);
           if (el) el.remove();
         });
 
       } catch (err) {
         console.error("❌ Agora INIT Error:", err);
-        alert("Agora Call Failed");
+        alert("Agora Call Failed. Check permissions or try again.");
       }
     };
 
     initCall();
-  }, [tokenData, joined]);
+    
+    // Cleanup on unmount
+    return () => {
+        if (joined) {
+            localTracks.forEach(track => {
+                track.stop();
+                track.close();
+            });
+            client.leave();
+        }
+    };
+    
+  }, [tokenData, joined, appId, client, channelName, localTracks]); 
 
   // -------------------------------------------
-  // 4️⃣ Leave Call
+  // 4️⃣ Leave Call & Redirect (FINAL NAVIGATION)
   // -------------------------------------------
   const leaveCall = async () => {
     try {
@@ -148,19 +145,26 @@ export default function VideoCall({ channelName }) {
         track.close();
       });
 
-      await client.leave();
+      // Only attempt to leave if connected
+      if (client.connectionState.includes('CONNECTED')) {
+          await client.leave();
+      }
 
       document.getElementById("remote-videos").innerHTML = "";
       setJoined(false);
 
-      console.log("👋 Left the call");
+      // 👈 REDIRECT TO THANK YOU PAGE
+      navigate("/thank-you"); 
+
     } catch (err) {
       console.error("❌ Error leaving call:", err);
+      // Fallback: Always redirect for UX
+      navigate("/thank-you"); 
     }
   };
 
   // -------------------------------------------
-  // Toggle Mic
+  // Toggle Mic / Camera
   // -------------------------------------------
   const toggleMic = () => {
     if (localTracks[0]) {
@@ -169,9 +173,6 @@ export default function VideoCall({ channelName }) {
     }
   };
 
-  // -------------------------------------------
-  // Toggle Camera
-  // -------------------------------------------
   const toggleCam = () => {
     if (localTracks[1]) {
       localTracks[1].setEnabled(!camOn);
@@ -179,27 +180,34 @@ export default function VideoCall({ channelName }) {
     }
   };
 
+  // --- Render Call UI (Themed Controls) ---
   return (
     <div className="relative h-screen w-screen bg-gray-900 flex items-center justify-center overflow-hidden">
 
       {/* REMOTE VIDEO (large) */}
       <div
         id="remote-videos"
-        className="w-[90%] h-[80%] bg-black rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden"
-      ></div>
+        className="w-[90%] h-[80%] bg-black rounded-2xl shadow-2xl shadow-purple-500/20 flex items-center justify-center overflow-hidden"
+      >
+        {/* Fallback content when no remote streams are active */}
+        {!joined && (
+             <p className="text-xl font-medium text-gray-400">Joining consultation, please wait...</p>
+        )}
+      </div>
 
       {/* LOCAL VIDEO (small box) */}
       <div
         id="local-player"
-        className="absolute bottom-28 right-10 w-48 h-36 bg-black rounded-xl shadow-lg overflow-hidden border border-white/30"
+        className="absolute bottom-28 right-10 w-48 h-36 bg-black rounded-xl shadow-2xl overflow-hidden border-2 border-purple-500/50"
       ></div>
 
-      {/* Controls */}
-      <div className="absolute bottom-6 flex space-x-6 bg-white/10 backdrop-blur-lg px-8 py-4 rounded-full shadow-xl">
+      {/* Controls (Themed) */}
+      <div className="absolute bottom-6 flex space-x-6 bg-gray-800/70 backdrop-blur-md px-8 py-4 rounded-full shadow-2xl border border-gray-700">
+        
         <button
           onClick={toggleMic}
-          className={`p-4 rounded-full text-white ${
-            micOn ? "bg-gray-700" : "bg-red-600"
+          className={`p-4 rounded-full text-white transition-colors shadow-lg ${
+            micOn ? "bg-blue-600 hover:bg-blue-700" : "bg-red-600 hover:bg-red-700"
           }`}
         >
           {micOn ? "🎤" : "🔇"}
@@ -207,8 +215,8 @@ export default function VideoCall({ channelName }) {
 
         <button
           onClick={toggleCam}
-          className={`p-4 rounded-full text-white ${
-            camOn ? "bg-gray-700" : "bg-red-600"
+          className={`p-4 rounded-full text-white transition-colors shadow-lg ${
+            camOn ? "bg-blue-600 hover:bg-blue-700" : "bg-red-600 hover:bg-red-700"
           }`}
         >
           {camOn ? "📷" : "🚫"}
@@ -216,9 +224,9 @@ export default function VideoCall({ channelName }) {
 
         <button
           onClick={leaveCall}
-          className="p-4 rounded-full bg-red-600 text-white font-semibold"
+          className="p-4 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors shadow-lg"
         >
-          🚪
+          🚪 End Call
         </button>
       </div>
     </div>

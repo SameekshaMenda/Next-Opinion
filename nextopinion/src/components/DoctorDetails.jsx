@@ -60,7 +60,8 @@ export default function DoctorDetails() {
       const res = await API.post("/appointment/request", {
         doctor_id: Number(id),
         patient_id: Number(userId),
-        disease: "General Checkup",
+        // NOTE: Ideally, the disease should be pulled from a user report or input field
+        disease: "General Checkup", 
         slot_id: slotId
       });
 
@@ -79,45 +80,60 @@ export default function DoctorDetails() {
     }
   };
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
-  if (!doctor) return <p className="text-center text-red-500">Doctor not found.</p>;
+  if (loading) return <p className="text-center mt-10 text-white">Loading...</p>;
+  if (!doctor) return <p className="text-center text-red-400 mt-10">Doctor not found.</p>;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex justify-center items-start p-6">
-      <div className="bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full space-y-6">
+    // 🌌 Dark background container
+    <div className="min-h-screen bg-gray-900 flex justify-center items-start p-10">
+      
+      {/* Dark Details Card */}
+      <div className="bg-gray-800 shadow-2xl rounded-xl p-10 max-w-4xl w-full space-y-8 border border-purple-500/30">
 
         {/* Doctor Info */}
-        <h2 className="text-3xl font-bold text-center">{doctor.name}</h2>
-
-        <div className="text-gray-700 space-y-2 text-center">
-          <p><b>Speciality:</b> {doctor.speciality}</p>
-          <p><b>Experience:</b> {doctor.experience} years</p>
-          <p><b>Rating:</b> ⭐ {doctor.rating}</p>
-          <p><b>Location:</b> {doctor.location}</p>
-          <p><b>Email:</b> {doctor.email}</p>
-          <p><b>Phone:</b> {doctor.phone}</p>
+        <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          {doctor.name}
+        </h2>
+        
+        {/* Detail List */}
+        <div className="text-gray-300 space-y-3 text-center border-b border-gray-700 pb-6">
+          <p className="text-lg">
+            <b className="text-white">Speciality:</b> <span className="text-blue-400">{doctor.speciality}</span>
+          </p>
+          <p>
+            <b className="text-white">Experience:</b> {doctor.experience} years
+          </p>
+          <p>
+            <b className="text-white">Rating:</b> <span className="text-yellow-400">⭐ {doctor.rating}</span>
+          </p>
+          <p>
+            <b className="text-white">Location:</b> {doctor.location}
+          </p>
+          <p className="text-sm text-gray-500">
+            Email: {doctor.email} | Phone: {doctor.phone}
+          </p>
         </div>
 
-        {/* Slots */}
+        {/* Slots Section */}
         <div>
-          <h3 className="text-xl font-semibold text-center mt-4 mb-4">
-            Available Appointment Slots
+          <h3 className="text-xl font-bold text-center mt-4 mb-6 text-white">
+            Available Appointment Slots 🗓️
           </h3>
 
           {slots.length === 0 ? (
-            <p className="text-center text-gray-500">No slots available right now.</p>
+            <p className="text-center text-gray-500 p-4 bg-gray-700/50 rounded-lg">No slots available right now.</p>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {slots.map(slot => (
                 <button
                   key={slot.id}
                   disabled={slot.is_booked || booking}
                   onClick={() => handleBookSlot(slot.id, slot.start, slot.end)}
-                  className={`p-3 rounded-lg font-medium transition
+                  className={`p-4 rounded-full font-semibold transition-all shadow-md
                     ${
                       slot.is_booked
-                        ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                        : "bg-gray-900 text-white hover:bg-gray-700"
+                        ? "bg-gray-700 text-gray-500 cursor-not-allowed border border-gray-600"
+                        : "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-blue-500/50 hover:scale-[1.02]"
                     }
                   `}
                 >

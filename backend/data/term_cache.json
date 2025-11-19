@@ -743,5 +743,53 @@
     "gastric ulcer",
     "duodenal ulcer",
     "perforation"
+  ],
+  "gastritis (possible)": [
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "stomach inflammation",
+    "epigastric pain",
+    "helicobacter pylori",
+    "dyspepsia",
+    "endoscopy",
+    "ulcer",
+    "upper gi tract"
+  ],
+  "functional dyspepsia (possible)": [
+    "abdominal pain",
+    "bloating",
+    "nausea",
+    "early satiety",
+    "upper gi tract",
+    "gastroparesis",
+    "helicobacter pylori",
+    "motility issues",
+    "irritable bowel syndrome",
+    "stress"
+  ],
+  "h. pylori infection (early stage or low bacterial load)": [
+    "gastritis",
+    "dyspepsia",
+    "epigastric pain",
+    "abdominal discomfort",
+    "helicobacter pylori",
+    "mucosal inflammation",
+    "duodenitis",
+    "bacterial colonization",
+    "early infection",
+    "low bacterial load"
+  ],
+  "gastroesophageal reflux disease (gerd)": [
+    "heartburn",
+    "acid reflux",
+    "esophagus",
+    "stomach",
+    "regurgitation",
+    "dysphagia",
+    "hiatal hernia",
+    "gerd",
+    "barrett's esophagus",
+    "proton pump inhibitors (ppis)"
   ]
 }
