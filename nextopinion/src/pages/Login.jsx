@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // 👈 IMPORT LINK HERE
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -15,21 +15,15 @@ export default function Login() {
 
     try {
       const res = await API.post("/auth/login", form);
-
-      const userData = res.data.user; // <-- safer than destructuring
+      const userData = res.data.user;
 
       if (!userData) {
         alert("Invalid server response");
         return;
       }
 
-      // Store everything in localStorage
-      // localStorage.setItem("user", JSON.stringify(userData));
+      sessionStorage.setItem("user", JSON.stringify(userData));
 
-      sessionStorage.setItem("user", JSON.stringify(res.data.user));
-
-
-      // Redirect based on role
       if (userData.role === "doctor") {
         navigate("/doctor");
       } else {
@@ -74,6 +68,13 @@ export default function Login() {
             Login
           </button>
         </form>
+
+        <p className="text-center text-sm text-gray-600 mt-4">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-blue-600 hover:underline font-medium">
+            Register here
+          </Link>
+        </p>
       </div>
     </div>
   );
