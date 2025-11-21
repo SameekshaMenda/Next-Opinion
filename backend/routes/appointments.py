@@ -3,7 +3,7 @@ from core.database import db
 from core.models import Appointment, Notification, Slot, Doctor, User
 from core.notifications import send_notification
 from core.email_service import send_email   # ✅ EMAIL SUPPORT
-
+import json
 import os
 
 appointments_bp = Blueprint("appointments", __name__)
@@ -125,116 +125,129 @@ appointments_bp = Blueprint("appointments", __name__)
 @appointments_bp.route("/appointment/request", methods=["POST"])
 def request_appointment():
     data = request.get_json()
-    
-    doctor_id = data["doctor_id"]
-    patient_id = data["patient_id"]
-    disease = data["disease"]
-    slot_id = data.get("slot_id")
-    report_path = data.get("report_path")
-    report_name = data.get("report_name")
 
-    # 🔥 1. VALIDATE SLOT
-    slot = None
-    if slot_id:
-        slot = Slot.query.get(slot_id)
-        if not slot:
-            return jsonify({"error": "Slot not found"}), 404
-        if slot.is_booked:
-            return jsonify({"error": "This slot is already booked"}), 400
+    doctor_id       = data["doctor_id"]
+    patient_id      = data["patient_id"]
+    disease         = data["disease"]
+    slot_id         = data.get("slot_id")
 
-    # 🔥 2. GENERATE UNIQUE VIDEO CHANNEL
+    ai_result       = data.get("ai_result", [])
+    file_paths      = data.get("file_paths", [])
+    filenames       = data.get("filenames", [])
+    user_report_id  = data.get("user_report_id")
+
+    # ---------------------------------------
+    # 1️⃣ VALIDATE SLOT
+    # ---------------------------------------
+    slot = Slot.query.get(slot_id)
+    if not slot or slot.is_booked:
+        return jsonify({"error": "Slot unavailable"}), 400
+
+    # ---------------------------------------
+    # 2️⃣ UNIQUE VIDEO CHAT CHANNEL
+    # ---------------------------------------
     import uuid
-    video_channel = f"appt_{uuid.uuid4().hex[:10]}"
+    video_channel = f"channel_{uuid.uuid4().hex[:10]}"
 
-    # 🔥 3. CREATE APPOINTMENT
-    new_appt = Appointment(
+    # ---------------------------------------
+    # 3️⃣ CREATE APPOINTMENT ENTRY
+    # ---------------------------------------
+    appt = Appointment(
         doctor_id=doctor_id,
         patient_id=patient_id,
         disease=disease,
         slot_id=slot_id,
         status="accepted",
-        video_channel=video_channel
+        video_channel=video_channel,
+        ai_analysis=json.dumps(ai_result),
+        report_files=json.dumps(file_paths),
+        report_names=json.dumps(filenames),
+        user_report_id=user_report_id
     )
-    db.session.add(new_appt)
 
-    # Mark slot booked
-    if slot:
-        slot.is_booked = True
-        new_appt.slot_time = f"{slot.start} - {slot.end}"
+    slot.is_booked = True
+    appt.slot_time = f"{slot.start} - {slot.end}"
 
+    db.session.add(appt)
     db.session.commit()
 
-    # 🔥 4. EMAIL NOTIFICATION
-    patient = User.query.get(patient_id)
+    # ---------------------------------------
+    # 4️⃣ FETCH DOCTOR & PATIENT DETAILS
+    # ---------------------------------------
     doctor = Doctor.query.get(doctor_id)
+    patient = User.query.get(patient_id)
 
     call_link = f"http://localhost:5173/call/{video_channel}"
 
-    # Attachments (optional)
-    attachments = None
-    if report_path and report_name and os.path.exists(report_path):
-        with open(report_path, "rb") as fh:
-            attachments = [(report_name, fh.read())]
+    # ---------------------------------------
+    # 5️⃣ PREPARE ATTACHMENTS (IMPORTANT FIX)
+    # ---------------------------------------
+    attachment_paths = []
+    for p in file_paths:
+        if os.path.exists(p):
+            attachment_paths.append(p)
+        else:
+            print(f"❌ File missing, cannot attach: {p}")
 
-    # EMAIL TO PATIENT
-    try:
-        if patient:
-            send_email(
-                to=patient.email,
-                subject="Appointment Confirmed",
-                body=f"""
-Hello {patient.name},
-
-Your appointment with Dr. {doctor.user.name} is confirmed.
-
- Disease: {disease}
- Slot: {new_appt.slot_time}
- Video Consultation Link: {call_link}
-
-Regards,
-NextOpinion
-"""
-            )
-    except Exception as e:
-        print("❌ Email to patient failed:", e)
-
-    # EMAIL TO DOCTOR
-    try:
-        if doctor:
-            send_email(
-                to=doctor.email,
-                subject="New Appointment Booked",
-                body=f"""
+    # ---------------------------------------
+    # 6️⃣ EMAIL → DOCTOR
+    # ---------------------------------------
+    send_email(
+        to=doctor.email,
+        subject="New Second Opinion Appointment",
+        body=f"""
 Hello Dr. {doctor.user.name},
 
-A patient booked an appointment:
+A patient booked a second-opinion consultation.
 
 Patient: {patient.name}
 Disease: {disease}
-Slot: {new_appt.slot_time}
+Slot: {appt.slot_time}
 
-Video Call Link: {call_link}
+AI Analysis:
+{json.dumps(ai_result, indent=2)}
+
+Video Call Link:
+{call_link}
+
+Patient reports are attached.
 
 Regards,
 NextOpinion
 """,
-                attachments=attachments
-            )
-    except Exception as e:
-        print("❌ Email to doctor failed:", e)
+        attachment_paths=attachment_paths
+    )
 
-    # INTERNAL NOTIFICATION
-    try:
-        send_notification(doctor_id, f"New appointment booked for {disease}")
-    except:
-        pass
+    # ---------------------------------------
+    # 7️⃣ EMAIL → PATIENT
+    # ---------------------------------------
+    send_email(
+        to=patient.email,
+        subject="Your Appointment is Confirmed",
+        body=f"""
+Hello {patient.name},
+
+Your appointment with Dr. {doctor.user.name} is confirmed.
+
+Slot: {appt.slot_time}
+Video Call: {call_link}
+
+Regards,
+NextOpinion
+"""
+    )
+
+    # ---------------------------------------
+    # 8️⃣ IN-APP NOTIFICATION
+    # ---------------------------------------
+    send_notification(doctor_id, "New appointment request received")
 
     return jsonify({
         "status": "success",
-        "appointment_id": new_appt.id,
-        "video_channel": video_channel,
-        "call_link": call_link
+        "appointment_id": appt.id,
+        "video_channel": video_channel
     })
+
 
 
 # ------------------------------------------------
