@@ -104,13 +104,24 @@ class Report(db.Model):
     __tablename__ = "reports"
 
     id = db.Column(db.Integer, primary_key=True)
-    appointment_id = db.Column(db.Integer, db.ForeignKey("appointments.id"))
+    appointment_id = db.Column(db.Integer, db.ForeignKey("appointments.id"), nullable=False)
 
-    doctor_notes = db.Column(db.Text)
+    # OLD FIELDS (you already had)
+    doctor_notes = db.Column(db.Text)        # consultation_summary
     final_diagnosis = db.Column(db.Text)
     prescription = db.Column(db.Text)
 
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    # NEW FIELDS (required for FinalReportPage)
+    symptoms = db.Column(db.Text)
+    clinical_findings = db.Column(db.Text)
+    recommended_tests = db.Column(db.Text)
+    lifestyle_advice = db.Column(db.Text)
+    follow_up_days = db.Column(db.String(20))
+    pdf_path = db.Column(db.String(1024)) 
+
+    # Timestamp
+    created_at = db.Column(db.DateTime, default=db.func.now())
+
 
 
 # ============================
@@ -137,6 +148,8 @@ class Appointment(db.Model):
 
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     slot = db.relationship("Slot", backref="appointments")
+    final_report_path = db.Column(db.Text, nullable=True)
+
 
 
 

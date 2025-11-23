@@ -1,111 +1,84 @@
 import React, { useState } from "react";
 import UploadReports from "../components/UploadReports";
 import DoctorList from "../components/DoctorList";
-import Chat from "../components/Chat";
-import FinalReportForm from "../components/FinalReportForm";
 import AppointmentList from "../components/AppointmentList";
-import { Link } from "react-router-dom"; // For dashboard navigation links
-
-// NOTE: Assuming you have a standard Navbar/Header component, 
-// this code focuses only on the main dashboard content area.
 
 export default function UserDashboard() {
   const [reportId, setReportId] = useState(null);
-  const [activeView, setActiveView] = useState('appointments'); // State to manage which component is shown in the main area
+  const [activeView, setActiveView] = useState("appointments"); 
 
   const renderMainContent = () => {
     switch (activeView) {
-      case 'upload':
+      case "upload":
         return <UploadReports onReportCreated={setReportId} />;
-      case 'appointments':
+
+      case "appointments":
         return <AppointmentList />;
-      case 'doctors':
+
+      case "doctors":
         return <DoctorList />;
-      case 'chat':
-        if (reportId) {
-            return (
-                <>
-                    <Chat reportId={reportId} />
-                    {/* Assuming FinalReportForm is related to the chat/report cycle */}
-                    <FinalReportForm reportId={reportId} /> 
-                </>
-            );
-        }
-        return <div className="text-gray-400 p-4">Please upload a report first to start a chat.</div>;
+
       default:
         return <AppointmentList />;
     }
   };
 
   return (
-    // 🌌 Outer container with Dark Theme BG
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       
-      {/* 🚀 Simple Header (Optional - often imported separately) */}
+      {/* Header */}
       <header className="p-4 bg-gray-900 border-b border-gray-700 shadow-md">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
           Patient Dashboard
         </h1>
       </header>
 
-      {/* --- */}
-
-      {/* Main Layout: Sidebar and Content Area */}
+      {/* Layout */}
       <div className="flex">
-        
-        {/* Sidebar (Navigation) - Fixed width, dark background */}
+
+        {/* Sidebar */}
         <nav className="w-64 bg-gray-800 p-6 space-y-4 shadow-xl min-h-[calc(100vh-69px)] border-r border-gray-700">
-          <h3 className="text-sm font-semibold uppercase text-gray-400 mb-6 border-b border-gray-700 pb-2">Navigation</h3>
+
+          <h3 className="text-sm font-semibold uppercase text-gray-400 mb-6 border-b border-gray-700 pb-2">
+            Navigation
+          </h3>
 
           <button
-            onClick={() => setActiveView('appointments')}
+            onClick={() => setActiveView("appointments")}
             className={`w-full text-left py-3 px-4 rounded-lg font-medium transition-all ${
-              activeView === 'appointments'
-                ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                : 'text-gray-300 hover:bg-gray-700/50'
+              activeView === "appointments"
+                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
+                : "text-gray-300 hover:bg-gray-700/50"
             }`}
           >
             🗓️ My Appointments
           </button>
-          
+
           <button
-            onClick={() => setActiveView('upload')}
+            onClick={() => setActiveView("upload")}
             className={`w-full text-left py-3 px-4 rounded-lg font-medium transition-all ${
-              activeView === 'upload'
-                ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                : 'text-gray-300 hover:bg-gray-700/50'
+              activeView === "upload"
+                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
+                : "text-gray-300 hover:bg-gray-700/50"
             }`}
           >
             📤 Upload New Report
           </button>
 
           <button
-            onClick={() => setActiveView('doctors')}
+            onClick={() => setActiveView("doctors")}
             className={`w-full text-left py-3 px-4 rounded-lg font-medium transition-all ${
-              activeView === 'doctors'
-                ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                : 'text-gray-300 hover:bg-gray-700/50'
+              activeView === "doctors"
+                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
+                : "text-gray-300 hover:bg-gray-700/50"
             }`}
           >
             🧑‍⚕️ Find Specialists
           </button>
 
-          <button
-            onClick={() => setActiveView('chat')}
-            disabled={!reportId}
-            className={`w-full text-left py-3 px-4 rounded-lg font-medium transition-all ${
-              activeView === 'chat' && reportId
-                ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-                : !reportId
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                : 'text-gray-300 hover:bg-gray-700/50'
-            }`}
-          >
-            💬 Consult & Chat
-          </button>
         </nav>
 
-        {/* Main Content Area - Scrollable */}
+        {/* Main Content */}
         <main className="flex-1 p-8 bg-gray-900/95">
           <div className="max-w-7xl mx-auto">
             {renderMainContent()}

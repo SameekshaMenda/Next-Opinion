@@ -86,11 +86,11 @@ export default function LandingPage() {
         <div className="md:w-1/2 flex justify-center md:justify-end relative">
           <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/30">
             {/* The generated image */}
-            <img
+            {/* <img
               src="https://th.bing.com/th/id/OIP.aUQJ8wu17evAw4WthXFNTwHaMC?w=115&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3"
               alt="Stethoscope turning into a heart, symbolizing health and care"
               className="w-full h-full object-cover object-center"
-            />
+            /> */}
             {/* Optional: Overlay for subtle effects, matching the theme */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
           </div>

@@ -6,9 +6,11 @@ import Register from "./pages/Register";
 import UserDashboard from "./pages/UserDashboard";
 import DoctorDashboard from "./pages/DoctorDashboard";
 import ThankYouPage from "./pages/ThankYouPage";
+import FinalReportPage from "./pages/FinalReportPage";
 import VideoCallWrapper from "./pages/VideoCallWrapper";  // ✅ correct import
 import VideoCallDebug from "./components/VideoCallDebug";
 import DoctorDetails from "./components/DoctorDetails";
+import PatientReports from "./components/PatientReports";
 export default function App() {
   return (
     <BrowserRouter>
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/call/:channel" element={<VideoCallWrapper />} />
+        <Route path="/final-report/:appointmentId" element={<FinalReportPage />} />
+        <Route path="/my-reports" element={<PatientReports />} />
 
       </Routes>
     </BrowserRouter>

@@ -138,30 +138,42 @@ export default function VideoCall({ channelName }) {
   // -------------------------------------------
   // 4️⃣ Leave Call & Redirect (FINAL NAVIGATION)
   // -------------------------------------------
-  const leaveCall = async () => {
-    try {
-      localTracks.forEach((track) => {
-        track.stop();
-        track.close();
-      });
+const leaveCall = async () => {
+  try {
+    // stop local tracks
+    localTracks.forEach((track) => {
+      track.stop();
+      track.close();
+    });
 
-      // Only attempt to leave if connected
-      if (client.connectionState.includes('CONNECTED')) {
-          await client.leave();
-      }
-
-      document.getElementById("remote-videos").innerHTML = "";
-      setJoined(false);
-
-      // 👈 REDIRECT TO THANK YOU PAGE
-      navigate("/thank-you"); 
-
-    } catch (err) {
-      console.error("❌ Error leaving call:", err);
-      // Fallback: Always redirect for UX
-      navigate("/thank-you"); 
+    // leave channel
+    if (client.connectionState.includes("CONNECTED")) {
+      await client.leave();
     }
-  };
+
+    document.getElementById("remote-videos").innerHTML = "";
+    setJoined(false);
+
+    // get role + appointment id
+    const user = JSON.parse(sessionStorage.getItem("user") || "{}");
+    const role = user?.role;
+    const lastAppointment = sessionStorage.getItem("activeAppointmentId");
+
+    if (role === "doctor") {
+      // redirect to final report page
+      navigate(`/final-report/${lastAppointment}`);
+    } else {
+      // patient
+      navigate("/thank-you");
+    }
+
+  } catch (err) {
+    console.error("Error leaving call:", err);
+    navigate("/thank-you");
+  }
+};
+
+
 
   // -------------------------------------------
   // Toggle Mic / Camera

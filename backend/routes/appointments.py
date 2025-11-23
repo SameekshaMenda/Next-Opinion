@@ -12,115 +12,22 @@ appointments_bp = Blueprint("appointments", __name__)
 # 1️⃣ USER REQUESTS APPOINTMENT (AUTO-ACCEPT)
 #    Accepts optional report_path & report_name to attach to doctor email
 # ------------------------------------------------
-# @appointments_bp.route("/appointment/request", methods=["POST"])
-# def request_appointment():
-#     data = request.get_json()
-#     doctor_id = data["doctor_id"]
-#     patient_id = data["patient_id"]
-#     disease = data["disease"]
-#     slot_id = data.get("slot_id")
-#     report_path = data.get("report_path")      # optional: full file path on server
-#     report_name = data.get("report_name")      # optional: original filename
+def format_ai_analysis(ai_list):
+    if not ai_list or not isinstance(ai_list, list):
+        return "No AI analysis available."
 
-#     # 🔥 STEP 1: Validate slot
-#     slot = None
-#     if slot_id:
-#         slot = Slot.query.get(slot_id)
+    lines = ["AI Analysis Summary:\n"]
 
-#         if not slot:
-#             return jsonify({"error": "Slot not found"}), 404
+    for item in ai_list:
+        disease = item.get("disease", "Unknown condition")
+        risk = item.get("risk", "N/A")
+        explanation = item.get("explanation", "").strip()
 
-#         if slot.is_booked:
-#             return jsonify({"error": "This slot is already booked"}), 400
+        lines.append(f"• {disease} — Risk: {risk}")
+        if explanation:
+            lines.append(f"  {explanation}\n")
 
-#     # 🔥 STEP 2: Create appointment (auto-accepted)
-#     new_appt = Appointment(
-#         doctor_id=doctor_id,
-#         patient_id=patient_id,
-#         disease=disease,
-#         slot_id=slot_id,
-#         status="accepted"
-#     )
-
-#     db.session.add(new_appt)
-
-#     # 🔥 STEP 3: Mark slot as booked and set readable slot_time
-#     if slot:
-#         slot.is_booked = True
-#         new_appt.slot_time = f"{slot.start} - {slot.end}"
-
-#     db.session.commit()
-
-#     # ------------------------------------------------
-#     # EMAIL SENDING (Patient + Doctor)
-#     # Attach report to doctor's email if provided and exists
-#     # ------------------------------------------------
-#     patient = User.query.get(patient_id)
-#     doctor = Doctor.query.get(doctor_id)
-
-#     # Prepare doctor's attachments list (if any)
-#     attachments = None
-#     if report_path and report_name:
-#         try:
-#             if os.path.exists(report_path) and os.path.isfile(report_path):
-#                 with open(report_path, "rb") as fh:
-#                     file_bytes = fh.read()
-#                 attachments = [(report_name, file_bytes)]
-#             else:
-#                 # file not found — log and continue without attachment
-#                 print(f"⚠️ Report file not found: {report_path}")
-#         except Exception as e:
-#             print(f"⚠️ Error reading report file for attachment: {e}")
-
-#     # Send emails if patient/doctor exist (fail silently otherwise)
-#     if patient:
-#         try:
-#             send_email(
-#                 to=patient.email,
-#                 subject="Appointment Confirmed",
-#                 body=f"""Hello {patient.name},
-
-# Your appointment with Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'} is confirmed.
-
-# Disease: {disease}
-# Slot: {new_appt.slot_time or 'Not assigned'}
-
-# Thank you for using NextOpinion.
-# """
-#             )
-#         except Exception as e:
-#             print(f"⚠️ Failed to send patient email: {e}")
-
-#     if doctor:
-#         try:
-#             send_email(
-#                 to=doctor.email,
-#                 subject="New Appointment Booked",
-#                 body=f"""Hello Dr. {doctor.user.name if doctor and doctor.user else 'Doctor'},
-
-# A new appointment has been booked.
-
-# Patient: {patient.name if patient else 'Unknown'}
-# Disease: {disease}
-# Slot: {new_appt.slot_time or 'Not assigned'}
-
-# Regards,
-# NextOpinion System
-# """,
-#                 attachments=attachments
-#             )
-#         except Exception as e:
-#             print(f"⚠️ Failed to send doctor email: {e}")
-
-#     # 🔥 STEP 4: Internal notification
-#     try:
-#         send_notification(doctor_id, f"New appointment booked for {disease}")
-#     except Exception as e:
-#         print(f"⚠️ Failed to create notification: {e}")
-
-#     return jsonify({"status": "success", "appointment_id": new_appt.id})
-
-
+    return "\n".join(lines)
 
 @appointments_bp.route("/appointment/request", methods=["POST"])
 def request_appointment():
@@ -137,20 +44,20 @@ def request_appointment():
     user_report_id  = data.get("user_report_id")
 
     # ---------------------------------------
-    # 1️⃣ VALIDATE SLOT
+    # SLOT VALIDATION
     # ---------------------------------------
     slot = Slot.query.get(slot_id)
     if not slot or slot.is_booked:
         return jsonify({"error": "Slot unavailable"}), 400
 
     # ---------------------------------------
-    # 2️⃣ UNIQUE VIDEO CHAT CHANNEL
+    # UNIQUE VIDEO CHANNEL
     # ---------------------------------------
     import uuid
     video_channel = f"channel_{uuid.uuid4().hex[:10]}"
 
     # ---------------------------------------
-    # 3️⃣ CREATE APPOINTMENT ENTRY
+    # CREATE APPOINTMENT
     # ---------------------------------------
     appt = Appointment(
         doctor_id=doctor_id,
@@ -172,7 +79,7 @@ def request_appointment():
     db.session.commit()
 
     # ---------------------------------------
-    # 4️⃣ FETCH DOCTOR & PATIENT DETAILS
+    # FETCH USER DETAILS
     # ---------------------------------------
     doctor = Doctor.query.get(doctor_id)
     patient = User.query.get(patient_id)
@@ -180,32 +87,39 @@ def request_appointment():
     call_link = f"http://localhost:5173/call/{video_channel}"
 
     # ---------------------------------------
-    # 5️⃣ PREPARE ATTACHMENTS (IMPORTANT FIX)
+    # CLEAN AI SUMMARY (NO EMOJIS, NO SPECIAL SYMBOLS)
+    # ---------------------------------------
+    ai_summary = "AI Analysis Summary:\n\n"
+    for item in ai_result:
+        disease_text = item.get("disease", "Condition")
+        risk = item.get("risk", "N/A")
+        explanation = item.get("explanation", "")
+
+        ai_summary += f"Disease: {disease_text}\n"
+        ai_summary += f"Risk: {risk}\n"
+        ai_summary += f"Explanation: {explanation}\n\n"
+
+    # ---------------------------------------
+    # ATTACHMENTS
     # ---------------------------------------
     attachment_paths = []
     for p in file_paths:
         if os.path.exists(p):
             attachment_paths.append(p)
-        else:
-            print(f"❌ File missing, cannot attach: {p}")
 
     # ---------------------------------------
-    # 6️⃣ EMAIL → DOCTOR
+    # EMAIL → DOCTOR
     # ---------------------------------------
-    send_email(
-        to=doctor.email,
-        subject="New Second Opinion Appointment",
-        body=f"""
+    doctor_email_body = f"""
 Hello Dr. {doctor.user.name},
 
-A patient booked a second-opinion consultation.
+A patient has booked a second-opinion consultation.
 
 Patient: {patient.name}
 Disease: {disease}
 Slot: {appt.slot_time}
 
-AI Analysis:
-{json.dumps(ai_result, indent=2)}
+{ai_summary}
 
 Video Call Link:
 {call_link}
@@ -214,31 +128,38 @@ Patient reports are attached.
 
 Regards,
 NextOpinion
-""",
+"""
+
+    send_email(
+        to=doctor.email,
+        subject="New Second Opinion Appointment",
+        body=doctor_email_body,
         attachment_paths=attachment_paths
     )
 
     # ---------------------------------------
-    # 7️⃣ EMAIL → PATIENT
+    # EMAIL → PATIENT
     # ---------------------------------------
-    send_email(
-        to=patient.email,
-        subject="Your Appointment is Confirmed",
-        body=f"""
+    patient_email_body = f"""
 Hello {patient.name},
 
-Your appointment with Dr. {doctor.user.name} is confirmed.
+Your appointment with Dr. {doctor.user.name} has been confirmed.
 
 Slot: {appt.slot_time}
-Video Call: {call_link}
+Video Call Link: {call_link}
 
 Regards,
 NextOpinion
 """
+
+    send_email(
+        to=patient.email,
+        subject="Your Appointment is Confirmed",
+        body=patient_email_body
     )
 
     # ---------------------------------------
-    # 8️⃣ IN-APP NOTIFICATION
+    # IN-APP NOTIFICATION
     # ---------------------------------------
     send_notification(doctor_id, "New appointment request received")
 
@@ -247,6 +168,7 @@ NextOpinion
         "appointment_id": appt.id,
         "video_channel": video_channel
     })
+
 
 
 
@@ -267,7 +189,8 @@ def get_patient_appointments(patient_id):
             "slot_end": a.slot.end if a.slot else "-",
             "status": a.status,
             "date": a.created_at.strftime("%Y-%m-%d"),
-            "video_channel": a.video_channel
+            "video_channel": a.video_channel,
+            "final_report_path": a.final_report_path 
         })
 
     return jsonify({"appointments": result})
