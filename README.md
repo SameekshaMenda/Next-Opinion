@@ -86,7 +86,7 @@ The goal is to **simplify remote healthcare** and ensure patients receive trustw
 git clone https://github.com/yourusername/nextopinion.git
 cd nextopinion
 ```
----
+
 ## 🔧 Backend Setup (Flask)
 
 ### 2️⃣ Create Virtual Environment
@@ -99,7 +99,7 @@ venv/Scripts/activate   # Windows
 ```sh
 pip install -r requirements.txt
 ```
----
+
 
 ### 4️⃣ Create .env
 ```sh
@@ -109,7 +109,6 @@ DATABASE_URL=postgresql://username:password@localhost/nextopinion
 AGORA_APP_ID=xxxx
 AGORA_CERTIFICATE=xxxx
 ```
---- 
 
 ### 5️⃣ Run Backend
 ```sh
@@ -128,7 +127,7 @@ cd frontend
 npm install
 npm run dev
 ```
----
+
 
 ### Frontend runs at:
 ```sh
